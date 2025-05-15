@@ -116,6 +116,12 @@
         Structural: 20
     soundHit:
       collection: MetalThud
+  - type: Tool
+    qualities:
+      - Prying
+  - type: Prying
+    useSound:
+      path: /Audio/Items/crowbar.ogg
   - type: Puller
     needsHands: false
   - type: InputMover
