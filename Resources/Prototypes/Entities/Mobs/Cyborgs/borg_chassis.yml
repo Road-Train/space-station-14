@@ -169,6 +169,8 @@
     - type: TextToSpeech
     - type: Sprite
       layers:
+        - state: engineer
+          map: ["enum.BorgVisualLayers.Body", "movement"]
         - state: synd_engi
         - state: synd_engi_e
           map: ["enum.BorgVisualLayers.Light"]
@@ -179,7 +181,7 @@
           map: ["light"]
           visible: false
     - type: BorgChassis
-      maxModules: 3
+      maxModules: 4
       moduleWhitelist:
         tags:
           - BorgModuleGeneric
@@ -187,6 +189,8 @@
           - BorgModuleSyndicate
       hasMindState: synd_engi_e
       noMindState: synd_engi
+    - type: ToggleableVisuals
+      spriteLayer: body
     - type: ShowHealthBars
       damageContainers:
       - Inorganic
