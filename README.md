@@ -4,7 +4,7 @@
 
 <div class="header" align="center">
 
-<!-->[![Discord](https://img.shields.io/discord/1272545509562777621?label=Discord&logo=discord&logoColor=white)](https://discord.gg/ssJTANEa)</!-->
+<!-- [![Discord](https://img.shields.io/discord/1272545509562777621?label=Discord&logo=discord&logoColor=white)](https://discord.gg/ssJTANEa) -->
 [![Steam](https://img.shields.io/badge/Steam-SS14%20-blue)](https://store.steampowered.com/app/1255460/Space_Station_14/)
 [![Client](https://img.shields.io/badge/Client-Download-blue)](https://spacestation14.io/about/nightlies/)
 [![GitHub](https://img.shields.io/github/stars/Afterlight-RnD/Afterlight-14?style=social)]([https://github.com/Afterlight-RnD/Afterlight-14])
@@ -27,7 +27,7 @@ a game about survival on a space station where there are constant confrontations
 Space-Station 14 has [docs site](https://docs.spacestation14.io/) documentation on SS14s content, engine, game design and more. We also have lots of resources for new contributors to the project.
 
 ## Project Activity
-<!-->![Alt](https://repobeats.axiom.co/api/embed/6d9d589842ff6980c7972b18cf09d8b5b0365de5.svg "Repobeats analytics image")</!-->
+<!-- ![Alt](https://repobeats.axiom.co/api/embed/6d9d589842ff6980c7972b18cf09d8b5b0365de5.svg "Repobeats analytics image") -->
 
 ---
 
