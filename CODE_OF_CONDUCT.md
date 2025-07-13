@@ -17,7 +17,7 @@ If you believe someone is violating the code of conduct, we ask that you report 
 - **Be careful in the words that you choose.** We are a community of professionals, and we conduct ourselves professionally. Be kind to others. Do not insult or put down other participants. Harassment and other exclusionary behavior aren't acceptable. This includes, but is not limited to:
   - Violent threats or language directed against another person.
   - Discriminatory jokes and language.
-  - Posting sexually explicit or violent material.
+  - Posting violent or "shock" material.
   - Posting (or threatening to post) other people's personally identifying information ("doxing").
   - Personal insults, especially those using racist or sexist terms.
   - Unwelcome sexual attention.
