@@ -18,9 +18,7 @@
 
 </div>
 
-AFTERLIGHT is an open source project aimed at creating unique mechanics, and adult-oriented roleplay in the game Space Station 14, 
-
-a game about survival on a space station where there are constant confrontations between the crew and antagonists created to prevent the crew from achieving their goals.
+AFTERLIGHT is an open source project aimed at creating unique mechanics, inspiring imaginative atmospheres, and adult-oriented roleplay in the game Space Station 14, a game about survival on a space station where there are constant confrontations between the crew and antagonists created to prevent the crew from achieving their goals.
 
 ## Space-Station 14 Documentation/Wiki
 
