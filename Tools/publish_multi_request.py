@@ -4,7 +4,6 @@ import argparse
 import requests
 import os
 import subprocess
-import xml.etree.ElementTree as ET
 from typing import Iterable
 
 PUBLISH_TOKEN = os.environ["PUBLISH_TOKEN"]
@@ -16,8 +15,8 @@ RELEASE_DIR = "release"
 # CONFIGURATION PARAMETERS
 # Forks should change these to publish to their own infrastructure.
 #
-ROBUST_CDN_URL = "https://ss14-starlight-alfa.online/"
-FORK_ID = "starlight"
+ROBUST_CDN_URL = "https://cdn.rouny-ss14.com/"
+FORK_ID = "rmc14"
 
 def main():
     parser = argparse.ArgumentParser()
@@ -75,22 +74,11 @@ def get_files_to_publish() -> Iterable[str]:
         yield os.path.join(RELEASE_DIR, file)
 
 
-def get_engine_version():
-    try:
-        version_file = "RobustToolbox/MSBuild/Robust.Engine.Version.props"
-        
-        tree = ET.parse(version_file)
-        root = tree.getroot()
-        
-        version = root.find(".//Version")
-        
-        if version is None or not version.text:
-            raise ValueError(f"Version not found in {version_file}")
-        
-        return version.text.strip()
-    except Exception as e:
-        print(f"Error reading version from {version_file}: {e}")
-        raise
+def get_engine_version() -> str:
+    proc = subprocess.run(["git", "describe","--tags", "--abbrev=0"], stdout=subprocess.PIPE, cwd="RobustToolbox", check=True, encoding="UTF-8")
+    tag = proc.stdout.strip()
+    assert tag.startswith("v")
+    return tag[1:] # Cut off v prefix.
 
 
 if __name__ == '__main__':
