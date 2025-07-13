@@ -43,7 +43,7 @@ Space-Station 14 has [docs site](https://docs.spacestation14.io/) documentation 
 <details>
 <summary><a href="#"><img src="https://img.shields.io/badge/licence-MIT-green?style=for-the-badge" alt="Afterlight MIT license"></a></summary>
   
->Some files are licensed under [The Afterlight license](https://github.com/Afterlight-RnD/Afterlight-14) , these files are Starlight-14 code.
+>Some files are licensed under [The Afterlight license](https://github.com/Afterlight-RnD/Afterlight-14) , these files are Afterlight-14 code.
 </details>
 
 <details>
