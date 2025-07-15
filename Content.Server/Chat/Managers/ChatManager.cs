@@ -311,6 +311,7 @@ internal sealed partial class ChatManager : IChatManager
             var prefs = _preferencesManager.GetPreferences(player.UserId);
             colorOverride = prefs.AdminOOCColor;
             messageColor = prefs.AdminOOCColor;
+            nameColor = prefs.AdminOOCNameColor;
         }
 
         var wrappedMessage = Loc.GetString("chat-manager-send-ooc-wrap-message", ("playerTitle", playerTitle), ("titleColor", titleColor), ("nameColor", nameColor), ("messageColor", messageColor), ("playerName", playerName), ("message", FormattedMessage.EscapeText(message)));
