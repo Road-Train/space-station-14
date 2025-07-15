@@ -77,7 +77,7 @@ namespace Content.Server.Database
             
             var jobPriorities = prefs.JobPriorities.ToDictionary(j => new ProtoId<JobPrototype>(j.JobName), j => (JobPriority) j.Priority);
 
-            return new PlayerPreferences(profiles, Color.FromHex(prefs.AdminOOCColor), constructionFavorites, jobPriorities);
+            return new PlayerPreferences(profiles, Color.FromHex(prefs.AdminOOCColor), Color.FromHex(prefs.AdminOOCNameColor), constructionFavorites, jobPriorities);
         }
 
         public async Task SaveCharacterSlotAsync(NetUserId userId, ICharacterProfile? profile, int slot)
@@ -178,6 +178,7 @@ namespace Content.Server.Database
             {
                 UserId = userId.UserId,
                 AdminOOCColor = Color.Red.ToHex(),
+                AdminOOCNameColor = Color.Red.ToHex(),
                 ConstructionFavorites = [],
                 JobPriorities = dbPriorities,
             };
@@ -191,6 +192,7 @@ namespace Content.Server.Database
             return new PlayerPreferences(
                 new[] {new KeyValuePair<int, ICharacterProfile>(0, defaultProfile)},
                 Color.FromHex(prefs.AdminOOCColor),
+                Color.FromHex(prefs.AdminOOCNameColor),
                 [],
                 priorities
                 );
@@ -205,6 +207,18 @@ namespace Content.Server.Database
                 .SingleAsync(p => p.UserId == userId.UserId);
             prefs.AdminOOCColor = color.ToHex();
 
+            await db.DbContext.SaveChangesAsync();
+        }
+        
+        public async Task SaveAdminOOCNameColorAsync(NetUserId userId, Color color)
+        {
+            await using var db = await GetDb();
+            var prefs = await db.DbContext
+                .Preference
+                .Include(p => p.Profiles)
+                .SingleAsync(p => p.UserId == userId.UserId);
+            prefs.AdminOOCNameColor = color.ToHex();
+            
             await db.DbContext.SaveChangesAsync();
         }
 

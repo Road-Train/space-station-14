@@ -1,17 +1,18 @@
 using System.Linq;
+using Content.Server.Administration;
 using Content.Server.Database;
 using Content.Server.Preferences.Managers;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 
-namespace Content.Server.Administration.Commands
+namespace Content.Server._Afterlight.Administration.Commands
 {
     [AdminCommand(AdminFlags.NameColor)]
-    internal sealed class SetAdminOOC : IConsoleCommand
+    internal sealed class SetAdminNameOOC : IConsoleCommand
     {
-        public string Command => "setadminooc";
-        public string Description => Loc.GetString("set-admin-ooc-command-description", ("command", Command));
-        public string Help => Loc.GetString("set-admin-ooc-command-help-text", ("command", Command));
+        public string Command => "setadminnameooc";
+        public string Description => Loc.GetString("set-admin-ooc-name-command-description", ("command", Command));
+        public string Help => Loc.GetString("set-admin-ooc-name-command-help-text", ("command", Command));
 
         public void Execute(IConsoleShell shell, string argStr, string[] args)
         {
@@ -23,7 +24,7 @@ namespace Content.Server.Administration.Commands
 
             if (args.Length < 1)
                 return;
-
+            
             var colorArg = string.Join(" ", args).Trim();
             if (string.IsNullOrEmpty(colorArg))
                 return;
@@ -40,18 +41,18 @@ namespace Content.Server.Administration.Commands
 
             // if (luminance is < 0.2f or > 0.8f)
             // {
-            //     shell.WriteError("The color is too close to black or white — pick a more contrasting shade.");
+            //     shell.WriteError("The color is too close to black or white â€” pick a more contrasting shade.");
             //     return;
             // }
 
             var userId = shell.Player.UserId;
             // Save the DB
             var dbMan = IoCManager.Resolve<IServerDbManager>();
-            dbMan.SaveAdminOOCColorAsync(userId, color.Value);
+            dbMan.SaveAdminOOCNameColorAsync(userId, color.Value);
             // Update the cached preference
             var prefManager = IoCManager.Resolve<IServerPreferencesManager>();
             var prefs = prefManager.GetPreferences(userId);
-            prefs.AdminOOCColor = color.Value;
+            prefs.AdminOOCNameColor = color.Value;
         }
     }
 }

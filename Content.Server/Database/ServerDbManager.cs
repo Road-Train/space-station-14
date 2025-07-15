@@ -42,6 +42,8 @@ namespace Content.Server.Database
         Task SaveJobPrioritiesAsync(NetUserId userId, Dictionary<ProtoId<JobPrototype>, JobPriority> newJobPriorities);
 
         Task SaveAdminOOCColorAsync(NetUserId userId, Color color);
+        
+        Task SaveAdminOOCNameColorAsync(NetUserId userId, Color color); // AFTERLIGHT
 
         Task SaveConstructionFavoritesAsync(NetUserId userId, List<ProtoId<ConstructionPrototype>> constructionFavorites);
 
@@ -491,7 +493,14 @@ namespace Content.Server.Database
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.SaveAdminOOCColorAsync(userId, color));
         }
-
+        
+        //  AFTERLIGHT
+        public Task SaveAdminOOCNameColorAsync(NetUserId userId, Color color)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.SaveAdminOOCNameColorAsync(userId, color));
+        }
+        
         public Task SaveConstructionFavoritesAsync(NetUserId userId, List<ProtoId<ConstructionPrototype>> constructionFavorites)
         {
             DbWriteOpsMetric.Inc();
