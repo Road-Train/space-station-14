@@ -858,6 +858,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text")
                         .HasColumnName("admin_ooc_color");
 
+                    b.Property<string>("AdminOOCNameColor")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("admin_ooc_name_color");
+
                     b.PrimitiveCollection<List<string>>("ConstructionFavorites")
                         .IsRequired()
                         .HasColumnType("text[]")

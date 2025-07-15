@@ -411,6 +411,7 @@ namespace Content.Server.Database
         public int Id { get; set; }
         public Guid UserId { get; set; }
         public string AdminOOCColor { get; set; } = null!;
+        public string AdminOOCNameColor { get; set; } = null!; // Afterlight
         public List<string> ConstructionFavorites { get; set; } = new();
         public List<Profile> Profiles { get; } = new();
         public List<JobPriorityEntry> JobPriorities { get; set; } = new();
