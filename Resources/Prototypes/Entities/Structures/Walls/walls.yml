@@ -715,10 +715,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/reinforced_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/reinforced_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Icon
-    sprite: Structures/Walls/reinforced_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/reinforced_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -1046,10 +1046,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/solid_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Icon
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/solid_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Ricochetable
     chance: 0.4
