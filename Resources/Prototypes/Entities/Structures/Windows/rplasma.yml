@@ -5,9 +5,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/reinforced_plasma_window.rsi
+    sprite: _Afterlight/Structures/Windows/reinforced_plasma_window.rsi # Pulls from _Afterlight
   - type: Icon
-    sprite: Structures/Windows/reinforced_plasma_window.rsi
+    sprite: _Afterlight/Structures/Windows/reinforced_plasma_window.rsi # Pulls from _Afterlight
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: RGlass
@@ -78,10 +78,10 @@
     - Window
   components:
   - type: Sprite
-    sprite: Structures/Windows/directional.rsi
+    sprite: _Afterlight/Structures/Windows/directional.rsi # Pulls from _Afterlight
     state: plasma_reinforced_window
   - type: Icon
-    sprite: Structures/Windows/directional.rsi
+    sprite: _Afterlight/Structures/Windows/directional.rsi # Pulls from _Afterlight
     state: plasma_reinforced_window
   - type: Construction
     graph: WindowDirectional
@@ -136,7 +136,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/reinforced_plasma_diagonal.rsi
+    sprite: _Afterlight/Structures/Windows/reinforced_plasma_diagonal.rsi # Pulls from __Afterlight
     state: state0
   - type: Tag
     tags:
@@ -146,7 +146,7 @@
     key: windows
     base: state
   - type: Icon
-    sprite: Structures/Windows/reinforced_plasma_diagonal.rsi
+    sprite: _Afterlight/Structures/Windows/reinforced_plasma_diagonal.rsi # Pulls from _Afterlight
     state: state0
   - type: Fixtures
     fixtures:

@@ -64,10 +64,10 @@
     - Window
   components:
   - type: Sprite
-    sprite: Structures/Windows/directional.rsi
+    sprite: _Afterlight/Structures/Windows/directional.rsi # Pulls from _Afterlight
     state: clock_window
   - type: Icon
-    sprite: Structures/Windows/directional.rsi
+    sprite: _Afterlight/Structures/Windows/directional.rsi # Pulls from _Afterlight
     state: clock_window
   - type: Construction
     graph: WindowDirectional

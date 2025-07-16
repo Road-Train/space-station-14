@@ -605,9 +605,9 @@
   - type: Ricochetable
     chance: 0.75
   - type: Sprite
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Afterlight/Structures/Walls/solid.rsi # pulls from _Afterlight
   - type: Icon
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Afterlight/Structures/Walls/solid.rsi # pulls from _Afterlight
     state: rgeneric
   - type: Construction
     graph: Girder
@@ -675,9 +675,9 @@
   suffix: rusted
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Afterlight/Structures/Walls/solid_rust.rsi # pulls from _Afterlight
   - type: Icon
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Afterlight/Structures/Walls/solid_rust.rsi # pulls from _Afterlight
     state: rgeneric
   - type: Construction
     graph: Girder
@@ -715,10 +715,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/reinforced_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/reinforced_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Icon
-    sprite: Structures/Walls/reinforced_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/reinforced_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -1002,13 +1002,13 @@
   name: solid wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Afterlight/Structures/Walls/solid.rsi # Pulls from _Afterlight
   - type: WallReplacementMarker
   - type: Construction
     graph: Girder
     node: wall
   - type: Icon
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Afterlight/Structures/Walls/solid.rsi # Pulls from _Afterlight
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -1046,10 +1046,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/solid_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Icon
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/solid_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Ricochetable
     chance: 0.4
@@ -1082,9 +1082,9 @@
   suffix: rusted
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Afterlight/Structures/Walls/solid_rust.rsi # Pulls from _Afterlight
   - type: Icon
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Afterlight/Structures/Walls/solid_rust.rsi # Pulls from _Afterlight
     state: full
   - type: Construction
     graph: Girder
