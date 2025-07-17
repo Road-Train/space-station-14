@@ -14,7 +14,7 @@ Media Links here
 - [ ] I affirm that my changes are licensed under the [AFTERLIGHT Fork License](https://github.com/Afterlight-RnD/Afterlight-14/blob/main/LICENSE-Afterlight.TXT) and grant permission for use in this repository under its conditions.
 
 **Changelog**
-:cl: AFTERLIGHT TEAM
+:cl:
 - add: ur mom
 - fix: deez nuts
 - removed: herobrine
