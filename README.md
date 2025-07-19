@@ -32,7 +32,7 @@ Space-Station 14 has [docs site](https://docs.spacestation14.io/) documentation 
 ## License
 
 > [!CAUTION]
-> The repository code is licensed both multiple licenses: MIT - this applies to Space Wizards Federation code, modified MIT - this applies to code from Starlight-14, and Modified BSL - this applies to Afterlight-14's Code.
+> The repository code is licensed both multiple licenses: MIT - this applies to Space Wizards Federation code, modified MIT - this applies to code from Starlight-14, and a custom source license inspired by MariaDB's BSL, but not endorsed by MariaDB, and does not conform to the BSL specification known as the AFTERLIGHT SL - this applies to Afterlight-14's Code.
 
 > [!IMPORTANT] 
 > Afterlight-14 code and contributions are covered by [The Afterlight-14 CLA](https://gist.github.com/afterlight-ss14/e60089f7e2e66a1b190b8413fcad9343). Approved licenses for this project are listed below. The default license for original content is CC-BY-SA 4.0 (for sprites/art) and the Afterlight License for code/yaml.
