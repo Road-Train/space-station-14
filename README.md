@@ -41,9 +41,9 @@ Space-Station 14 has [docs site](https://docs.spacestation14.io/) documentation 
 ---
 
 <details>
-<summary><a href="#"><img src="https://img.shields.io/badge/LICENSE-AFTERLIGHT_BSL-purple?style=for-the-badge" alt="Afterlight BSL license"></a></summary>
+<summary><a href="#"><img src="https://img.shields.io/badge/LICENSE-AFTERLIGHT_SL-purple?style=for-the-badge" alt="Afterlight SL license"></a></summary>
   
->Some files are licensed under [The Afterlight license](https://github.com/Afterlight-RnD/Afterlight-14) , these files are Afterlight-14 code.
+>Some files are licensed under [The Afterlight Source license](https://github.com/Afterlight-RnD/Afterlight-14) , these files are Afterlight-14 code.
 </details>
 
 <details>
