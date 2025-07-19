@@ -1,15 +1,58 @@
-Modified MIT License, henceforth referred to as the Afterlight License
+AFTERLIGHT Source License v1.0
 
-Copyright (c) 2024 Afterlight
+Licensor: AFTERLIGHT RnD  
+Licensed Work: Afterlight14-Namespace Content
 
-Permission is hereby granted, free of charge, 
-to any person obtaining a copy of this software and associated documentation files (the "Software"), 
-to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
-and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+This license is a custom source-available license developed by AFTERLIGHT RnD, inspired by the Business Source License (BSL) v1.1 by MariaDB Corporation.
 
-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+It is not affiliated with or endorsed by MariaDB, and does not conform to the BSL specification, as it omits or modifies key components such as the Change Date.
 
-- Any use of the Software in accordance with the rights granted above must attribute the Afterlight project as its source, hosted on the following GitHub repository: https://github.com/Afterlight-RnD/Afterlight-14
+-----------------------------------------------------------------------------
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+1. Purpose and Intent
+
+This license allows the source code of the Licensed Work to be openly readable, modifiable, and redistributable, including for commercial, academic, and organizational use. It is intended to promote transparency and collaboration while protecting the integrity of the Licensed Work.
+
+2. Grant of Use
+
+You must:
+- Include a copy of this license in any copies or substantial portions of the Licensed Work or its derivative works.
+- Provide reasonable attribution to AFTERLIGHT RnD in documentation, user interfaces, or README files associated with the distribution or deployment of the Licensed Work.
+
+You may:
+- Use, modify, and distribute the Licensed Work for any lawful purpose, including commercial, academic, and production uses.
+- Create and distribute derivative works under the same license terms.
+- Publicly host, publish, or share the Licensed Work or its derivatives, with proper attribution.
+
+You may not:
+- Remove or obscure any copyright, license, or attribution notices.
+
+3. No Change Date
+
+This license does not convert to an open source or permissive license at a later time. Any such relicensing may occur at the discretion of AFTERLIGHT RnD or as laid out in Section 6.
+
+4. Warranty Disclaimer
+
+THE LICENSED WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.  
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY,  
+WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM THE USE OF THIS SOFTWARE.
+
+5. Governing Law
+
+This License shall be governed by and construed in accordance with the federal laws of the nation of Canada.
+
+6. License Continuity Upon Dissolution
+
+If the organization AFTERLIGHT RnD permanently ceases to exist — through legal dissolution, bankruptcy, or verifiable abandonment (defined as no public activity, updates, or statements for a period of 48 consecutive months) — then the Licensed Work shall automatically and irrevocably be re-licensed under the terms of the MIT License.
+
+This transition will not occur if a legal successor entity to AFTERLIGHT RnD is publicly designated within 6 months of such dissolution or inactivity and assumes stewardship of the Licensed Work under this license or a compatible one.
+
+7. No Hostile Reuse
+
+You may not use the Licensed Work, or any derivative works, in any way that constitutes a hostile, competitive, or adversarial use against AFTERLIGHT RnD or its affiliated projects. This includes (but is not limited to):
+
+- Forking or reusing the Licensed Work in a manner intended to replicate, replace, compete with, or commercially undercut the original Licensed Work without explicit permission.
+- Incorporating the Licensed Work into services, frameworks, or platforms whose primary intent is to diminish, harm, or displace AFTERLIGHT RnD’s offered materials.
+- Using the Licensed Work in a way that materially harms the ecosystem, community, or business viability of the organization, AFTERLIGHT RnD.
+
+Violations of this clause will result in immediate termination of the license, and may be subject to further legal action.
