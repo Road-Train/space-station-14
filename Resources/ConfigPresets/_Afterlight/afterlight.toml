@@ -1,0 +1,39 @@
+﻿[adminlogs]
+server_name = "afterlight"
+
+[game]
+desc = ""
+hostname = "[EN][18+] Afterlight [US East]"
+role_timers = false # Testing Server
+
+[hub]
+tags = "lang:en,region:am_n_e,18+"
+
+[ic]
+flavor_text = true
+
+[infolinks]
+#appeal = "https://appeal.afterlight-14.space"
+bug_report = "https://github.com/Afterlight-RnD/Afterlight-14/issues/new?template=issue_report.md"
+discord = "https://discord.gg/JnnPYHvJ3s"
+#forum = "https://forum.afterlight-14.space"
+github = "https://github.com/Afterlight-RnD/Afterlight-14"
+#website = ""
+wiki = "https://wiki.afterlight-14.space"
+
+[loki]
+name = "afterlight"
+
+#[replay]
+#auto_record = true
+#max_compressed_size = 4194304
+#max_uncompressed_size = 8388608
+#auto_record_temp_dir = "recording"
+#auto_record_name = "done/{year}_{month}_{day}-{hour}_{minute}-round_{round}.zip"
+
+[tts]
+enabled = true
+
+# Testing Server
+[whitelist]
+enabled = true
