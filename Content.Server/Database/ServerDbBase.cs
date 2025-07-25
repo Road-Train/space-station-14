@@ -27,7 +27,7 @@ using Content.Server.Humanoid.Markings.Extensions;
 
 namespace Content.Server.Database
 {
-    public abstract class ServerDbBase
+    public abstract partial class ServerDbBase
     {
         private readonly ISawmill _opsLog;
 
