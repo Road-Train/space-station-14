@@ -761,42 +761,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("player", (string)null);
                 });
 
-            modelBuilder.Entity("Content.Server.Database.PlayerDataDTO", b =>
-                {
-                    b.Property<Guid>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("user_id");
-
-                    b.Property<int>("Balance")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("balance");
-
-                    b.Property<string>("DiscordId")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("discord_id");
-
-                    b.Property<int>("Flags")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("flags");
-
-                    b.Property<string>("GhostTheme")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("ghost_theme");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("title");
-
-                    b.HasKey("UserId")
-                        .HasName("PK_player_data");
-
-                    b.HasIndex("DiscordId")
-                        .HasDatabaseName("IX_player_data_discord_id");
-
-                    b.ToTable("player_data", (string)null);
-                });
-
             modelBuilder.Entity("Content.Server.Database.Preference", b =>
                 {
                     b.Property<int>("Id")
@@ -1357,6 +1321,42 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsUnique();
 
                     b.ToTable("server_unban", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.StarLightModel+PlayerDataDTO", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("user_id");
+
+                    b.Property<int>("Balance")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("balance");
+
+                    b.Property<string>("DiscordId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("discord_id");
+
+                    b.Property<int>("Flags")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("flags");
+
+                    b.Property<string>("GhostTheme")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("ghost_theme");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("title");
+
+                    b.HasKey("UserId")
+                        .HasName("PK_player_data");
+
+                    b.HasIndex("DiscordId")
+                        .HasDatabaseName("IX_player_data_discord_id");
+
+                    b.ToTable("player_data", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.StarLightModel+StarLightProfile", b =>

@@ -765,13 +765,13 @@ namespace Content.Server.Database
         /*
          * Player data 🌟Starlight🌟
          */
-        public async Task<PlayerDataDTO?> GetPlayerDataDTOForAsync(NetUserId userId, CancellationToken cancel)
+        public async Task<StarLightModel.PlayerDataDTO?> GetPlayerDataDTOForAsync(NetUserId userId, CancellationToken cancel)
         {
             await using var db = await GetDb(cancel);
             return await db.DbContext.PlayerData
                 .SingleOrDefaultAsync(p => p.UserId == userId.UserId, cancel);
         }
-        public async Task SetPlayerDataForAsync(NetUserId userId, PlayerDataDTO data, CancellationToken cancel)
+        public async Task SetPlayerDataForAsync(NetUserId userId, StarLightModel.PlayerDataDTO data, CancellationToken cancel)
         {
             await using var db = await GetDb(cancel);
 

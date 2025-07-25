@@ -25,7 +25,7 @@ using MSLogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 namespace Content.Server.Database
 {
-    public interface IServerDbManager
+    public partial interface IServerDbManager
     {
         void Init();
 
@@ -206,13 +206,6 @@ namespace Content.Server.Database
             int serverId);
 
         Task AddServerBanHitsAsync(int connection, IEnumerable<ServerBanDef> bans);
-
-        #endregion
-
-        #region Player data
-        /// 🌟Starlight🌟
-        Task SetPlayerDataForAsync(NetUserId userId, PlayerDataDTO data, CancellationToken cancel = default);
-        Task<PlayerDataDTO?> GetPlayerDataForAsync(NetUserId userId, CancellationToken cancel = default);
 
         #endregion
 
@@ -397,7 +390,7 @@ namespace Content.Server.Database
         public string? Payload { get; set; }
     }
 
-    public sealed class ServerDbManager : IServerDbManager
+    public sealed partial class ServerDbManager : IServerDbManager
     {
         public static readonly Counter DbReadOpsMetric = Metrics.CreateCounter(
             "db_read_ops",
@@ -675,19 +668,6 @@ namespace Content.Server.Database
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.AddServerBanHitsAsync(connection, bans));
         }
-        //🌟Starlight🌟 start
-        public Task<PlayerDataDTO?> GetPlayerDataForAsync(NetUserId userId, CancellationToken cancel = default)
-        {
-            DbReadOpsMetric.Inc();
-            return RunDbCommand(() => _db.GetPlayerDataDTOForAsync(userId, cancel));
-        }
-        public Task SetPlayerDataForAsync(NetUserId userId, PlayerDataDTO data, CancellationToken cancel = default)
-        {
-            DbReadOpsMetric.Inc();
-            return RunDbCommand(() => _db.SetPlayerDataForAsync(userId, data, cancel));
-        }
-
-        //🌟Starlight🌟 end
 
         public Task<Admin?> GetAdminDataForAsync(NetUserId userId, CancellationToken cancel = default)
         {
