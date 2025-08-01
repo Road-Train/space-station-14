@@ -428,6 +428,8 @@ namespace Content.Server.Database
         public List<ProfileRoleLoadout> Loadouts { get; } = new();
         public int PreferenceId { get; set; }
         public Preference Preference { get; set; } = null!;
+
+        public StarLightModel.StarLightProfile? StarLightProfile { get; set; } // Starlight
     }
 
     public class Job
