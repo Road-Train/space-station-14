@@ -13,7 +13,6 @@ public partial class Profile
     public bool FacialHairGlowing { get; set; } = false;
     public bool EyeGlowing { get; set; } = false;
     public bool Enabled { get; set; }
-    public StarLightModel.StarLightProfile? StarLightProfile { get; set; }
 
     // public StarLightModel.CharacterInfo? CharacterInfo { get; set; }
 }
