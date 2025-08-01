@@ -13,13 +13,10 @@ jobs:
     name: Diff
     runs-on: ubuntu-latest
     steps:
-      - name: SSH key
-        run: |
-          eval `ssh-agent -s`
-          ssh-add - <<< '${{ secrets.RSI_DIFF_KEY }}'
-    
       - name: Checkout
         uses: actions/checkout@v4.2.2
+        with:
+          token: ${{ github.token }}
 
       - name: Get changed files
         id: files
