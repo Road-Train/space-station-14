@@ -5,9 +5,6 @@ on:
     paths:
       - '**.rsi/**.png'
 
-permissions:
-  actions: read
-
 jobs:
   diff:
     name: Diff
