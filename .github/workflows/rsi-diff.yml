@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
         with:
-          token: ${{ secrets.RSI_DIFF_KEY }}
+          token: ${{ github.token }}
 
       - name: Get changed files
         id: files
@@ -46,7 +46,7 @@ jobs:
           issue-number: ${{ github.event.number }}
           comment-author: 'github-actions[bot]'
           body-includes: RSI Diff Bot
-          token: ${{ secrets.RSI_DIFF_KEY }}
+          token: ${{ github.token }}
 
       - name: Create comment if it doesn't exist
         if: steps.fc.outputs.comment-id == ''
@@ -55,7 +55,7 @@ jobs:
           issue-number: ${{ github.event.number }}
           body: |
             ${{ steps.diff.outputs.summary-details }}
-          token: ${{ secrets.RSI_DIFF_KEY }}
+          token: ${{ github.token }}
 
       - name: Update comment if it exists
         if: steps.fc.outputs.comment-id != ''
