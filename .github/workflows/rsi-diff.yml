@@ -15,7 +15,8 @@ jobs:
     steps:
       - name: SSH key
         run: |
-          token: ${{ secrets.GH_PAT }}
+          eval `ssh-agent -s`
+          ssh-add - <<< '${{ secrets.RSI_DIFF_KEY }}'
     
       - name: Checkout
         uses: actions/checkout@v4.2.2
