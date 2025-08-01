@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
         with:
-          token: ${{ RSI_DIFF_KEY }}
+          token: ${{ secrets.RSI_DIFF_KEY }}
 
       - name: Get changed files
         id: files
