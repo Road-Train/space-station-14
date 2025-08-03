@@ -1,4 +1,0 @@
-author: DrSmugleaf
-changes:
-  - type: Fix
-    message: Fixed not being able to open the kinks window for someone else if you reconnect to the server without restarting your game.

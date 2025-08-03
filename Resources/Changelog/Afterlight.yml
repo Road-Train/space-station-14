@@ -52,4 +52,12 @@
   id: 7
   time: '2025-08-03T04:03:56.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/32
+- author: DrSmugleaf
+  changes:
+  - message: Fixed not being able to open the kinks window for someone else if you
+      reconnect to the server without restarting your game.
+    type: Fix
+  id: 8
+  time: '2025-08-03T23:25:55.709706+00:00'
+  url: null
 Order: -100
