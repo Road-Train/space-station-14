@@ -24,13 +24,7 @@ public sealed class KinksUIController : UIController, IOnStateChanged<LobbyState
     private KinksEditingWindow? _kinksWindow;
     private readonly Dictionary<EntityUid, KinksListWindow> _openKinkWindows = new();
 
-    public override void Initialize()
-    {
-        SubscribeNetworkEvent<KinkImportedFlistServerEvent>(OnKinksImported);
-        SubscribeLocalEvent<OpenKinksWindowEvent>(OnOpenKinksWindow);
-    }
-
-    private void OnKinksImported(KinkImportedFlistServerEvent msg, EntitySessionEventArgs args)
+    public void OnKinksImported()
     {
         if (_kinksWindow?.Control is not { } kinks)
             return;
@@ -39,7 +33,7 @@ public sealed class KinksUIController : UIController, IOnStateChanged<LobbyState
         kinks.ImportFlistButton.Text = Loc.GetString("al-kinks-import-f-list");
     }
 
-    private void OnOpenKinksWindow(OpenKinksWindowEvent ev)
+    public void OnOpenKinksWindow(OpenKinksWindowEvent ev)
     {
         if (EntityManager.GetEntity(ev.Target) is not { Valid: true } target)
             return;

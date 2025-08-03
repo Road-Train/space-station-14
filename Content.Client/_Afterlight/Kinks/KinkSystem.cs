@@ -1,8 +1,10 @@
+using Content.Client._Afterlight.Kinks.UI;
 using Content.Shared._Afterlight.Kinks;
 using Content.Shared.Database._Afterlight;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
 using Robust.Client.ResourceManagement;
+using Robust.Client.UserInterface;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client._Afterlight.Kinks;
@@ -12,6 +14,9 @@ public sealed class KinkSystem : SharedKinkSystem
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IResourceCache _resource = default!;
     [Dependency] private readonly SpriteSystem _sprite = default!;
+    [Dependency] private readonly IUserInterfaceManager _ui = default!;
+
+    private KinksUIController Controller => _ui.GetUIController<KinksUIController>();
 
     private EntityQuery<SpriteComponent> _spriteQuery;
 
@@ -21,9 +26,23 @@ public sealed class KinkSystem : SharedKinkSystem
 
         _spriteQuery = GetEntityQuery<SpriteComponent>();
 
+        SubscribeNetworkEvent<KinkImportedFlistServerEvent>(OnKinksImported);
+        SubscribeLocalEvent<OpenKinksWindowEvent>(OnOpenKinksWindow);
         SubscribeLocalEvent<KinksUpdatedEvent>(OnKinksUpdated);
 
         SubscribeLocalEvent<KinkAlternateSpriteComponent, ComponentStartup>(OnStartup);
+    }
+
+    private void OnKinksImported(KinkImportedFlistServerEvent ev)
+    {
+        // TODO AFTERLIGHT move to the UI controller when subscriptions there don't get wiped by disconnecting without restarting
+        Controller.OnKinksImported();
+    }
+
+    private void OnOpenKinksWindow(OpenKinksWindowEvent ev)
+    {
+        // TODO AFTERLIGHT move to the UI controller when subscriptions there don't get wiped by disconnecting without restarting
+        Controller.OnOpenKinksWindow(ev);
     }
 
     private void OnKinksUpdated(KinksUpdatedEvent ev)
