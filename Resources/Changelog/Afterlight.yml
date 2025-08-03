@@ -14,3 +14,34 @@
   id: 2
   time: '2025-08-03T02:29:49.428717+00:00'
   url: null
+- author: DrSmugleaf
+  changes:
+  - message: Added cassettes and the cassette player. The custom cassette allows you
+      to play any ogg file on your computer, but only you can hear it.
+    type: Add
+  id: 3
+  time: '2025-08-03T02:35:16.105760+00:00'
+  url: null
+- author: InanimateIJK, Conflee
+  changes:
+  - message: Secret Door Textures Fixed
+    type: Fix
+  id: 4
+  time: '2025-08-03T02:35:16.106250+00:00'
+  url: null
+- author: InanimateIJK
+  changes:
+  - message: Legal.MD is implemented.
+    type: Add
+  - message: AFTERLIGHT Source License 1.1 is implemented.
+    type: Tweak
+  id: 5
+  time: '2025-08-03T02:35:16.106999+00:00'
+  url: null
+- author: DrSmugleaf
+  changes:
+  - message: Added xeno hybrids as a playable species.
+    type: Add
+  id: 6
+  time: '2025-08-03T02:35:16.107402+00:00'
+  url: null
