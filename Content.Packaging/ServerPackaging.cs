@@ -57,6 +57,8 @@ public static class ServerPackaging
         "System", // Starlight
         "Newtonsoft", // Starlight
         "Pipelines", // Starlight
+        "AngleSharp", // Afterlight
+        "AngleSharp.Io", // Afterlight
     };
 
     private static readonly List<string> ServerNotExtraAssemblies = new()
