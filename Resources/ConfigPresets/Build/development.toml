@@ -43,3 +43,8 @@ flavor_text = true
 random_characters = false
 random_species_weights = ""
 ssd_sleep_time = 3600
+
+# Afterlight
+[lobby]
+server_name = "Afterlight"
+# Afterlight

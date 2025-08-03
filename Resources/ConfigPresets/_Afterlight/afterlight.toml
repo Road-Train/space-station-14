@@ -21,6 +21,9 @@ github = "https://github.com/Afterlight-RnD/Afterlight-14"
 #website = ""
 wiki = "https://wiki.afterlight-14.space"
 
+[lobby]
+server_name = "Afterlight"
+
 [loki]
 name = "afterlight"
 
