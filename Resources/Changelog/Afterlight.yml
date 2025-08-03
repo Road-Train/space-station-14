@@ -1,1 +1,16 @@
-﻿Entries: []
+﻿Entries:
+- author: InanimateIJK
+  changes:
+  - message: Commented out Skubstep, no more earblast.
+    type: Tweak
+  id: 1
+  time: '2025-08-03T02:29:49.427366+00:00'
+  url: null
+- author: Conflee, Salem, InanimateIJK
+  changes:
+  - message: Resprited Most Common Windows, Solid Walls, Reinforced Walls, Rusted
+      Walls.
+    type: Tweak
+  id: 2
+  time: '2025-08-03T02:29:49.428717+00:00'
+  url: null
