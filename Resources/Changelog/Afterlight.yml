@@ -1,34 +1,35 @@
-﻿Entries:
-- author: InanimateIJK
-  changes:
-  - message: Commented out Skubstep, no more earblast.
-    type: Tweak
-  id: 1
-  time: '2025-08-03T02:29:49.427366+00:00'
-  url: null
+﻿Order: -100
+Entries:
 - author: Conflee, Salem, InanimateIJK
   changes:
   - message: Resprited Most Common Windows, Solid Walls, Reinforced Walls, Rusted
       Walls.
     type: Tweak
+  id: 1
+  time: '2025-07-16T11:49:54.428717+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/4
+- author: InanimateIJK
+  changes:
+  - message: Commented out Skubstep, no more earblast.
+    type: Tweak
   id: 2
-  time: '2025-08-03T02:29:49.428717+00:00'
-  url: null
+  time: '2025-07-19T05:53:06.427366+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/6
+- author: InanimateIJK, Conflee
+  changes:
+  - message: Secret Door Textures Fixed
+    type: Fix
+  id: 3
+  time: '2025-07-22T01:10:37.106250+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/11
 - author: DrSmugleaf
   changes:
   - message: Added cassettes and the cassette player. The custom cassette allows you
       to play any ogg file on your computer, but only you can hear it.
     type: Add
-  id: 3
-  time: '2025-08-03T02:35:16.105760+00:00'
-  url: null
-- author: InanimateIJK, Conflee
-  changes:
-  - message: Secret Door Textures Fixed
-    type: Fix
   id: 4
-  time: '2025-08-03T02:35:16.106250+00:00'
-  url: null
+  time: '2025-08-02T23:56:32.105760+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/36
 - author: InanimateIJK
   changes:
   - message: Legal.MD is implemented.
@@ -36,12 +37,12 @@
   - message: AFTERLIGHT Source License 1.1 is implemented.
     type: Tweak
   id: 5
-  time: '2025-08-03T02:35:16.106999+00:00'
-  url: null
+  time: '2025-08-03T01:56:16.106999+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/38
 - author: DrSmugleaf
   changes:
   - message: Added xeno hybrids as a playable species.
     type: Add
   id: 6
-  time: '2025-08-03T02:35:16.107402+00:00'
-  url: null
+  time: '2025-08-03T02:10:08.107402+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/34
