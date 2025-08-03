@@ -18,6 +18,7 @@ namespace Content.Server.Database
         protected ServerDbContext(DbContextOptions options) : base(options)
         {
             RegisterDataModel<StarLightModel>();
+            RegisterDataModel<AfterlightModel>();
         }
 
         public DbSet<Preference> Preference { get; set; } = null!;
@@ -603,6 +604,10 @@ namespace Content.Server.Database
         public List<ServerRoleBan> AdminServerRoleBansCreated { get; set; } = null!;
         public List<ServerRoleBan> AdminServerRoleBansLastEdited { get; set; } = null!;
         public List<RoleWhitelist> JobWhitelists { get; set; } = null!;
+
+        // Afterlight
+        public List<ALKinks> Kinks { get; set; } = null!;
+        // Afterlight
     }
 
     [Table("whitelist")]

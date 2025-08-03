@@ -17,6 +17,26 @@ namespace Content.Server.Database.Migrations.Sqlite
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
 
+            modelBuilder.Entity("Content.Server.Database.ALKinks", b =>
+                {
+                    b.Property<Guid>("PlayerId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("player_id");
+
+                    b.Property<string>("KinkId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("kink_id");
+
+                    b.Property<int>("Preference")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("preference");
+
+                    b.HasKey("PlayerId", "KinkId")
+                        .HasName("PK_al_kinks");
+
+                    b.ToTable("al_kinks", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.Admin", b =>
                 {
                     b.Property<Guid>("UserId")
@@ -1485,6 +1505,19 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("player_round", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.ALKinks", b =>
+                {
+                    b.HasOne("Content.Server.Database.Player", "Player")
+                        .WithMany("Kinks")
+                        .HasForeignKey("PlayerId")
+                        .HasPrincipalKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_al_kinks_player_player_id");
+
+                    b.Navigation("Player");
+                });
+
             modelBuilder.Entity("Content.Server.Database.Admin", b =>
                 {
                     b.HasOne("Content.Server.Database.AdminRank", "AdminRank")
@@ -2129,6 +2162,8 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("AdminWatchlistsReceived");
 
                     b.Navigation("JobWhitelists");
+
+                    b.Navigation("Kinks");
                 });
 
             modelBuilder.Entity("Content.Server.Database.Preference", b =>

@@ -1,9 +1,10 @@
-﻿using Content.Client._Starlight.Managers;
-using Content.Client.Administration.Managers;
+﻿using Content.Client._Afterlight.Kinks.UI;
+using Content.Client._Starlight.Managers;
 using Content.Client.Gameplay;
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Client.UserInterface.Systems.Info;
+using Content.Client.UserInterface.Systems.MenuBar.Widgets;
 using Content.Shared.CCVar;
 using JetBrains.Annotations;
 using Robust.Client.Console;
@@ -29,9 +30,13 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
     [Dependency] private readonly OptionsUIController _options = default!;
     [Dependency] private readonly GuidebookUIController _guidebook = default!;
 
+    // Afterlight
+    [Dependency] private readonly KinksUIController _kinks = default!;
+    // Afterlight
+
     private Options.UI.EscapeMenu? _escapeWindow;
 
-    private Controls.MenuButton? EscapeButton => UIManager.GetActiveUIWidgetOrNull<MenuBar.Widgets.GameTopMenuBar>()?.EscapeButton;
+    private MenuButton? EscapeButton => UIManager.GetActiveUIWidgetOrNull<GameTopMenuBar>()?.EscapeButton;
 
     public void UnloadButton()
     {
@@ -119,6 +124,10 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
             .Bind(EngineKeyFunctions.EscapeMenu,
                 InputCmdHandler.FromDelegate(_ => ToggleWindow()))
             .Register<EscapeUIController>();
+
+        // Afterlight
+        _escapeWindow.KinksButton.OnPressed += _ => _kinks.OpenWindow();
+        // Afterlight
     }
 
     public void OnStateExited(GameplayState state)
