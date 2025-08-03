@@ -19,7 +19,7 @@ By submitting code to the Afterlight14 repository, contributors acknowledge and 
 
 ## Code license
 
-Unless otherwise explicitly stated in a subdirectory, **the Afterlight14 project is licensed under the terms of the [AFTERLIGHT Source License v1.0](/LICENSE-Afterlight.TXT)**.
+Unless otherwise explicitly stated in a subdirectory, **the Afterlight14 project is licensed under the terms of the [AFTERLIGHT Source License v1.1(/LICENSE-Afterlight.TXT)**.
 
 This license allows for use, modification, and redistribution of source code (including commercial use), while protecting against hostile reuse and requiring clear attribution to AFTERLIGHT RnD.
 
