@@ -1,0 +1,23 @@
+﻿{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from S.P.L.U.R.T-tg at https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/15908b1183be72020f98bcff7cf50622cc5e68a9/modular_skyrat/master_files/icons/mob/sprite_accessory/xeno_parts.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "m_xenodorsal_standard",
+      "directions": 4
+    },
+    {
+      "name": "m_xenodorsal_standard_behind",
+      "directions": 4
+    },
+    {
+      "name": "m_xenodorsal_standard_front",
+      "directions": 4
+    }
+  ]
+}

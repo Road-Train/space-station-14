@@ -1,4 +1,4 @@
-using System.Numerics; //starlight
+using System.Numerics;  //starlight
 using Content.Client.DisplacementMap;
 using Content.Shared.CCVar;
 using Content.Shared.Humanoid;
@@ -57,7 +57,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         //starlight start
         if (humanoidAppearance.EyeGlowing)
             sprite.LayerSetShader(HumanoidVisualLayers.Eyes, "unshaded");
-        else 
+        else
             if(_sprite.LayerMapTryGet((entity.Owner, sprite), HumanoidVisualLayers.Eyes, out var layerIndex, true))
                 sprite.LayerSetShader(layerIndex, (ShaderInstance?)null);
 
@@ -249,7 +249,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         {
             return;
         }
-        
+
         humanoid.CustomBaseLayers = layers;
         UpdateSprite((uid, humanoid, Comp<SpriteComponent>(uid)));
     }
@@ -401,6 +401,10 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             }
 
             _sprite.LayerSetVisible((entity.Owner, sprite), layerId, visible);
+
+            // Afterlight
+            _sprite.LayerSetOffset((entity.Owner, sprite), layerId, markingPrototype.Offset);
+            // Afterlight
 
             if (!visible || setting == null) // this is kinda implied
             {

@@ -1,0 +1,4 @@
+﻿- type: marking
+  abstract: true
+  id: XenoHybridBase
+  speciesRestriction: [ XenoHybrid ]
