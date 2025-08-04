@@ -15,7 +15,7 @@ jobs:
       contents: read
       pull-requests: write
       issues: write
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     steps:
       - name: Check for Merge Conflicts
         uses: eps1lon/actions-label-merge-conflict@v3.0.0

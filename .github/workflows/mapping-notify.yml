@@ -6,7 +6,7 @@ on:
 
 jobs:
   notify_discord:
-    runs-on: self-hosted
+    runs-on: arc-runner-set
     steps:
       - name: Check for label
         id: check-label
