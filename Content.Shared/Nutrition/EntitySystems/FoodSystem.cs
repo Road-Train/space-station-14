@@ -43,7 +43,7 @@ namespace Content.Shared.Nutrition.EntitySystems;
 public sealed class FoodSystem : EntitySystem
 {
     private bool _isContextMenuAction = false; // Starlight
-    
+
     [Dependency] private readonly SharedBodySystem _body = default!;
     [Dependency] private readonly FlavorProfileSystem _flavorProfile = default!;
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
@@ -85,7 +85,7 @@ public sealed class FoodSystem : EntitySystem
     {
         if (ev.Handled)
             return;
-            
+
         // Starlight: Skip if this food should only be eaten via context menu
         if (HasComp<ContextMenuFoodComponent>(entity))
             return;
@@ -115,11 +115,11 @@ public sealed class FoodSystem : EntitySystem
         // Starlight: The food should only be eaten via context menu and allow the event to continue for other interactions (like inserting into uplink)
         bool isContextMenuAction = _isContextMenuAction;
         _isContextMenuAction = false; // Reset the flag
-        
+
         if (user == target && HasComp<ContextMenuFoodComponent>(food) && !isContextMenuAction)
             return (false, false);
         // Starlight End
-            
+
         //Suppresses eating yourself and alive mobs
         if (food == user || (_mobState.IsAlive(food) && foodComp.RequireDead))
             return (false, false);
@@ -217,7 +217,7 @@ public sealed class FoodSystem : EntitySystem
             BreakOnHandChange = false,
             BreakOnMove = forceFeed,
             BreakOnDamage = true,
-            MovementThreshold = 0.01f,
+            MovementThreshold = 0.5f, // Afterlight
             DistanceThreshold = MaxFeedDistance,
             // do-after will stop if item is dropped when trying to feed someone else
             // or if the item started out in the user's own hands

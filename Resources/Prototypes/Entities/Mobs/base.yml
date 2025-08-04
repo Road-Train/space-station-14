@@ -8,7 +8,7 @@
   - type: Sprite
     noRot: true
     drawdepth: Mobs
-  - type: MobCollision
+#  - type: MobCollision # AFTERLIGHT
   - type: Physics
     bodyType: KinematicController
   - type: Fixtures

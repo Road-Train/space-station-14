@@ -75,7 +75,7 @@ public sealed class EnvelopeSystem : EntitySystem
             BreakOnDamage = true,
             NeedHand = true,
             BreakOnHandChange = true,
-            MovementThreshold = 0.01f,
+            MovementThreshold = 0.5f, // Afterlight
             DistanceThreshold = 1.0f,
         };
 

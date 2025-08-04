@@ -39,7 +39,7 @@ public sealed class CassetteSystem : SharedCassetteSystem
 
         SubscribeNetworkEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
 
-        Subs.CVar(_config, ALCVars.VolumeGainCassettes, SetGain, true);
+        Subs.CVar(_config, ALCVars.ALVolumeGainCassettes, SetGain, true);
 
         try
         {

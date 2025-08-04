@@ -134,7 +134,7 @@ public abstract class SharedInternalsSystem : EntitySystem
             {
                 BreakOnDamage = true,
                 BreakOnMove = true,
-                MovementThreshold = 0.1f,
+                MovementThreshold = 0.5f, // Afterlight
             });
     }
 

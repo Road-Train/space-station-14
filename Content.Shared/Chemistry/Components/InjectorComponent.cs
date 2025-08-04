@@ -119,7 +119,7 @@ public sealed partial class InjectorComponent : Component
 
     /// <inheritdoc cref=DoAfterArgs.MovementThreshold>
     [DataField]
-    public float MovementThreshold = 0.1f;
+    public float MovementThreshold = 0.75f; // Afterlight
 
     #endregion
 }

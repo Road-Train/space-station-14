@@ -230,7 +230,7 @@ namespace Content.Server.Forensics
                     NeedHand = true,
                     BreakOnDamage = true,
                     BreakOnMove = true,
-                    MovementThreshold = 0.01f,
+                    MovementThreshold = 0.5f, // Afterlight
                     DistanceThreshold = forensicsComp.CleanDistance,
                 };
 

@@ -86,5 +86,10 @@ public enum CollisionGroup
     // FlyingMob can go past
     FullTileLayer = Opaque | HighImpassable | MidImpassable | LowImpassable | BulletImpassable | InteractImpassable,
 
-    SubfloorMask = Impassable | LowImpassable
+    SubfloorMask = Impassable | LowImpassable,
+
+    // Afterlight
+    // Taken from https://github.com/RMC-14/RMC-14
+    MobCollision = 1 << 24,
+    // Afterlight
 }

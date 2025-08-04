@@ -58,7 +58,7 @@ public sealed partial class AudioTab : Control
         // Afterlight
         // Taken from https://github.com/RMC-14/RMC-14
         Control.AddOptionPercentSlider(
-            ALCVars.VolumeGainCassettes,
+            ALCVars.ALVolumeGainCassettes,
             SliderVolumeCassettes,
             scale: 1f);
         // Afterlight

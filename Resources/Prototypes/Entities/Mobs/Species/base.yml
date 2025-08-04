@@ -218,6 +218,8 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
+  - type: MobCollision # AFTERLIGHT
+  - type: ALMobCollision # AFTERLIGHT
 
 - type: entity
   save: false

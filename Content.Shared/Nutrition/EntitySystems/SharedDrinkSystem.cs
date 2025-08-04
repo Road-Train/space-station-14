@@ -201,7 +201,7 @@ public abstract partial class SharedDrinkSystem : EntitySystem
             BreakOnHandChange = false,
             BreakOnMove = forceDrink,
             BreakOnDamage = true,
-            MovementThreshold = 0.01f,
+            MovementThreshold = 0.5f, // Afterlight
             DistanceThreshold = 1.0f,
             // do-after will stop if item is dropped when trying to feed someone else
             // or if the item started out in the user's own hands

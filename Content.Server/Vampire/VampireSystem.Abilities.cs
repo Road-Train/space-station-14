@@ -505,7 +505,7 @@ public sealed partial class VampireSystem
         {
             BreakOnMove = true,
             BreakOnDamage = true,
-            MovementThreshold = 0.01f,
+            MovementThreshold = 0.5f, // Afterlight
             DistanceThreshold = 1.0f,
             NeedHand = false,
         };
@@ -691,7 +691,7 @@ public sealed partial class VampireSystem
         {
             BreakOnMove = true,
             BreakOnDamage = true,
-            MovementThreshold = 0.01f,
+            MovementThreshold = 0.5f, // Afterlight
             DistanceThreshold = 1.0f,
             NeedHand = false,
             Hidden = true

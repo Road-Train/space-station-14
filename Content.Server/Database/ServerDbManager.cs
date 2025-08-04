@@ -45,7 +45,7 @@ namespace Content.Server.Database
 
         Task SaveAdminOOCColorAsync(NetUserId userId, Color color);
 
-        Task SaveAdminOOCNameColorAsync(NetUserId userId, Color color); // AFTERLIGHT
+        Task SaveAdminOOCNameColorAsync(NetUserId userId, Color color); // Afterlight
 
         Task SaveConstructionFavoritesAsync(NetUserId userId, List<ProtoId<ConstructionPrototype>> constructionFavorites);
 

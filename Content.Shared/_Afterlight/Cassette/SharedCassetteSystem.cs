@@ -178,7 +178,7 @@ public abstract class SharedCassetteSystem : EntitySystem
             var audioParams = player.Comp.AudioParams;
             if (TryComp(actor, out ActorComponent? actorComp))
             {
-                var gain = _netConfig.GetClientCVar(actorComp.PlayerSession.Channel, ALCVars.VolumeGainCassettes);
+                var gain = _netConfig.GetClientCVar(actorComp.PlayerSession.Channel, ALCVars.ALVolumeGainCassettes);
                 audioParams = audioParams.WithVolume(SharedAudioSystem.GainToVolume(gain));
             }
 
