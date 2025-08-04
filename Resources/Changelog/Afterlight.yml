@@ -60,4 +60,19 @@
   id: 8
   time: '2025-08-03T23:25:55.709706+00:00'
   url: null
+- author: DrSmugleaf
+  changes:
+  - message: Updated how mob collision works. Small mobs (mice, cockroaches, Ian,
+      etc) do not block you anymore.
+    type: Tweak
+  - message: Syringes and healing items now allow you to move more while performing
+      their do-after, 0.75 tiles instead of only 0.1 tiles.
+    type: Tweak
+  - message: Forensics, vampire abilities, toggling internals, eating, drinking, and
+      envelopes now allow you to move more while performing their do-after, 0.5 tiles,
+      instead of only 0.01 or 0.1 tiles.
+    type: Tweak
+  id: 9
+  time: '2025-08-04T00:04:52.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/39
 Order: -100
