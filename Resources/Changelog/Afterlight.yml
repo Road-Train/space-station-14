@@ -75,4 +75,11 @@
   id: 9
   time: '2025-08-04T00:04:52.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/39
+- author: DrSmugleaf
+  changes:
+  - message: Fixed vulp tail tip and vulp tail fox tip being unable to wag.
+    type: Fix
+  id: 10
+  time: '2025-08-04T00:48:04.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/40
 Order: -100
