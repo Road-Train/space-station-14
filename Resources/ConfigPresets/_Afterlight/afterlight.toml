@@ -27,6 +27,9 @@ server_name = "Afterlight"
 [loki]
 name = "afterlight"
 
+[movement]
+mob_pushing = true
+
 #[replay]
 #auto_record = true
 #max_compressed_size = 4194304
