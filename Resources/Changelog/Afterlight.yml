@@ -82,4 +82,12 @@
   id: 10
   time: '2025-08-04T00:48:04.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/40
+- author: DrSmugleaf
+  changes:
+  - message: Fixed species not being ordered alphabetically in the character customization
+      UI.
+    type: Fix
+  id: 11
+  time: '2025-08-04T01:01:38.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/41
 Order: -100
