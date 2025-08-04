@@ -16,7 +16,8 @@ jobs:
       DOTNET_INSTALL_DIR: "./.dotnet"
     steps:
       - name: Install libraries
-        run: apt-get update && apt-get install -y libfreetype6
+        run: |
+          apt-get update && apt-get install -y libfreetype6
       - uses: actions/checkout@v4.2.2
       - name: Setup submodule
         run: |
