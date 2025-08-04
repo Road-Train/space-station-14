@@ -13,6 +13,9 @@ jobs:
     name: Validate RSIs
     runs-on: arc-runner-set
     steps:
+      - name: Install libraries
+        run: |
+          sudo apt-get update && sudo apt-get install -y python3.11 python3-pip
       - uses: actions/checkout@v4.2.2
       - name: Setup Submodule
         run: git submodule update --init
