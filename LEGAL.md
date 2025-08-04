@@ -41,8 +41,8 @@ Additional repos that we have ported features from without subdirectories are li
 |------------------|-----------|--------------------------------------------------|----------|
 | Space Station 14 | N/A       |https://github.com/space-wizards/space-station-14 | MIT*     |
 
-- * MIT-licensed code that contains modifications from AFTERLIGHT differing from the parent repositories are licensed as MIT from the Space Wizards Federation (or applicable parent organization/person), unless otherwise stated.
-- ** MIT Modified (STARLIGHT License) code that contains modifications from AFTERLIGHT differing from the parent repositories are licensed as MIT Modified (STARLIGHT License) from the STARLIGHT Network, unless otherwise stated.
+- `*` MIT-licensed code that contains modifications from AFTERLIGHT differing from the parent repositories are licensed as MIT from the Space Wizards Federation (or applicable parent organization/person), unless otherwise stated.
+- `**` MIT Modified (STARLIGHT License) code that contains modifications from AFTERLIGHT differing from the parent repositories are licensed as MIT Modified (STARLIGHT License) from the STARLIGHT Network, unless otherwise stated.
 
 ## Asset Licensing
 
