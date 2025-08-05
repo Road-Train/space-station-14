@@ -38,6 +38,9 @@ mob_pushing = true
 #auto_record_temp_dir = "recording"
 #auto_record_name = "done/{year}_{month}_{day}-{hour}_{minute}-round_{round}.zip"
 
+[ooc]
+enable_during_round = true
+
 [tts]
 enabled = true
 
