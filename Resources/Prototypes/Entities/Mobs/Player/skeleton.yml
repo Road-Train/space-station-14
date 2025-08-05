@@ -17,11 +17,6 @@
   - type: GhostRole
     name: ghost-role-information-skeleton-pirate-name
     description: ghost-role-information-skeleton-pirate-description
-    rules: ghost-role-information-freeagent-rules
-    mindRoles:
-    - MindRoleGhostRoleFreeAgent
-    raffle:
-      settings: default
   - type: GhostTakeoverAvailable
   - type: Loadout
     prototypes: [PirateGear]
@@ -36,11 +31,6 @@
   - type: GhostRole
     name: ghost-role-information-skeleton-biker-name
     description: ghost-role-information-skeleton-biker-description
-    rules: ghost-role-information-freeagent-rules
-    mindRoles:
-    - MindRoleGhostRoleFreeAgent
-    raffle:
-      settings: default
   - type: GhostTakeoverAvailable
   - type: Loadout
     prototypes: [SkeletonBiker]
@@ -54,30 +44,8 @@
   - type: GhostRole
     name: ghost-role-information-closet-skeleton-name
     description: ghost-role-information-closet-skeleton-description
-    rules: ghost-role-information-nonantagonist-rules
-    # mindRoles:
-    # - MindRoleGhostRoleFreeAgent
-    raffle:
-      settings: default
+    rules: ghost-role-information-closet-skeleton-rules #CD change
   - type: GhostTakeoverAvailable
   - type: Loadout
-    prototypes: [LimitedAssistantGear]
-  - type: RandomHumanoidAppearance
-
-- type: entity
-  parent: MobSkeletonPerson
-  id: MobSkeletonClosetFreeAgent
-  name: closet skeleton
-  components:
-  - type: GhostRole
-    name: ghost-role-information-closet-skeleton-name
-    description: ghost-role-information-closet-skeleton-description
-    rules: ghost-role-information-freeagent-rules
-    mindRoles:
-    - MindRoleGhostRoleFreeAgent
-    raffle:
-      settings: default
-  - type: GhostTakeoverAvailable
-  - type: Loadout
-    prototypes: [LimitedAssistantGear]
+    prototypes: [LimitedPassengerGear]
   - type: RandomHumanoidAppearance
