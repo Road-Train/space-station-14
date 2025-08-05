@@ -90,4 +90,11 @@
   id: 11
   time: '2025-08-04T01:01:38.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/41
+- author: DrSmugleaf
+  changes:
+  - message: Renamed golobby to golobbynoreallythiswillbringeveryonetothelobbyareyousure
+    type: Tweak
+  id: 12
+  time: '2025-08-05T01:33:19.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/46
 Order: -100
