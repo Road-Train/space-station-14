@@ -1,6 +1,6 @@
 [admin]
 deadmin_on_join = true
- 
+
  [adminlogs]
 server_name = "afterlight"
 
@@ -9,6 +9,8 @@ desc = ""
 hostname = "[EN][18+] Afterlight [US East]"
 role_timers = false # Testing Server
 soft_max_players = 45
+defaultpreset = "Extended"
+fallbackpreset = "Extended"
 
 [hub]
 tags = "lang:en,region:am_n_e,18+"
