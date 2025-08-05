@@ -129,7 +129,7 @@ public sealed class KinkManager : IPostInjectInit
         }
         catch (Exception e)
         {
-            _sawmill.Error($"Error setting {kinks.Count.ToString() ?? "no"} kinks for player {player}:\n{e}");
+            _sawmill.Error($"Error setting {kinks.Count.ToString()} kinks for player {player}:\n{e}");
         }
     }
 
