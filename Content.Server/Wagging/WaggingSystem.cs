@@ -1,9 +1,13 @@
-﻿using Content.Server.Actions;
+﻿using System.Linq;
+using Content.Server.Actions;
 using Content.Server.Humanoid;
+using Content.Shared.Actions.Components;
+using Content.Shared.GameTicking;
 using Content.Shared._Starlight.Humanoid.Markings;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Mobs;
+using Content.Shared.Roles;
 using Content.Shared.Toggleable;
 using Content.Shared.Wagging;
 using Robust.Shared.Prototypes;
@@ -25,16 +29,32 @@ public sealed class WaggingSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<WaggingComponent, MapInitEvent>(OnWaggingMapInit);
+        SubscribeLocalEvent<WaggingComponent, ComponentInit>(OnComponentInit);
+        SubscribeLocalEvent<WaggingComponent, MarkingsUpdateEvent>(OnMarkingsUpdate);
         SubscribeLocalEvent<WaggingComponent, ComponentShutdown>(OnWaggingShutdown);
         SubscribeLocalEvent<WaggingComponent, ToggleActionEvent>(OnWaggingToggle);
         SubscribeLocalEvent<WaggingComponent, MobStateChangedEvent>(OnMobStateChanged);
     }
 
-    private void OnWaggingMapInit(EntityUid uid, WaggingComponent component, MapInitEvent args)
+    private void OnComponentInit(EntityUid uid, WaggingComponent component, ComponentInit args)
     {
-        _actions.AddAction(uid, ref component.ActionEntity, component.Action, uid);
+         _actions.AddAction(uid, ref component.ActionEntity, component.Action, uid);
     }
+
+    private void OnMarkingsUpdate(EntityUid uid, WaggingComponent component, MarkingsUpdateEvent args)
+    {
+        if (TryComp<HumanoidAppearanceComponent>(uid, out var humanoid))
+        {
+            if (humanoid.MarkingSet.Markings.TryGetValue(MarkingCategories.Tail, out var markings))
+            {
+                if (!_actions.GetAction(component.ActionEntity).HasValue)
+                {
+                    _actions.AddAction(uid, ref component.ActionEntity, component.Action, uid);
+                }
+            }
+        }
+    }
+
 
     private void OnWaggingShutdown(EntityUid uid, WaggingComponent component, ComponentShutdown args)
     {
