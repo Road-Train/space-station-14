@@ -1,5 +1,6 @@
 using System.Collections.Immutable;
 using System.Linq;
+using Content.Shared._Afterlight.Prototypes;
 using Content.Shared.Database._Afterlight;
 using Content.Shared.GameTicking;
 using Content.Shared.Verbs;
@@ -12,7 +13,7 @@ namespace Content.Shared._Afterlight.Kinks;
 
 public abstract class SharedKinkSystem : EntitySystem
 {
-    [Dependency] private readonly IComponentFactory _compFactory = default!;
+    [Dependency] private readonly ALPrototypeSystem _alPrototype = default!;
     [Dependency] private readonly ISharedPlayerManager _player = default!;
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
 
@@ -116,11 +117,8 @@ public abstract class SharedKinkSystem : EntitySystem
     {
         var categoryIds = ImmutableDictionary.CreateBuilder<EntProtoId<KinkCategoryComponent>, ImmutableArray<EntityPrototype>.Builder>();
         var flistImports = ImmutableDictionary.CreateBuilder<string, EntityPrototype>();
-        foreach (var entity in _prototypes.EnumeratePrototypes<EntityPrototype>())
+        foreach (var (entity, kink) in _alPrototype.EnumerateComponents<KinkDefinitionComponent>())
         {
-            if (!entity.TryGetComponent(out KinkDefinitionComponent? kink, _compFactory))
-                continue;
-
             if (kink.Category is not { } category)
                 continue;
 
