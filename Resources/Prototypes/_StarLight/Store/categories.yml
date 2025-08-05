@@ -8,7 +8,7 @@
 
 - type: storeCategory
   id: SLCrew
-  name: Crew
+  name: store-category-crew
 
 - type: storeCategory
   id: SLChemistry
@@ -36,111 +36,111 @@
 
 - type: storeCategory
   id: SLBrigmedic
-  name: Medical
+  name: store-category-medical-medical
 
 - type: storeCategory
-  id: SLFahsionSkirt
-  name: Luxury dresses 
+  id: SLFashionSkirt
+  name: store-category-fashion-skirt
 
 - type: storeCategory
-  id: SLFahsionSuit
-  name: Elegant suits
+  id: SLFashionSuit
+  name: store-category-fashion-suit
 
 - type: storeCategory
-  id: SLFahsionOther
-  name: Other
+  id: SLFashionOther
+  name: store-category-fashion-other
 
 # shuttle build uplink
 - type: storeCategory
   id: ShuttleUplinkEquipment
-  name: Space equipment
+  name: store-category-uplink-equipment
   priority: 0
 
 - type: storeCategory
   id: ShuttleUplinkResources
-  name: Materials
+  name: store-category-uplink-materials
   priority: 3
 
 - type: storeCategory
   id: ShuttleUplinkShipbuilding
-  name: Shuttle utilities
+  name: store-category-uplink-utilities
   priority: 4
 
 - type: storeCategory
   id: ShuttleUplinkMedicine
-  name: Medical utilities
+  name: store-category-uplink-medical
   priority: 6
 
 - type: storeCategory
   id: ShuttleUplinkExtra
-  name: Extra
+  name: store-category-uplink-extra
   priority: 7
 
 # menacing shuttle build uplink
 - type: storeCategory
   id: MenacingShuttleUplinkEquipment
-  name: Syndicate equipment
+  name: store-category-uplink-syndiequipment
   priority: 1
 
 - type: storeCategory
   id: MenacingShuttleUplinkWeapons
-  name: Weaponry
+  name: store-category-uplink-weaponry
   priority: 2
 
 - type: storeCategory
   id: MenacingShuttleUplinkPirate
-  name: Pirate
+  name: store-category-uplink-pirate
   priority: 5
 
 # agent uplink
 - type: storeCategory
   id: UplinkCybernetics
-  name: Cybernetics
+  name: store-category-uplink-cybernetics
   
 # salvage
 
 - type: storeCategory
   id: SalvageEquipment
-  name: Equipment
+  name: store-category-salvage-equipment
   
 - type: storeCategory
   id: SalvageWeapons
-  name: Weapons
+  name: store-category-salvage-weapons
   
 - type: storeCategory
   id: SalvageConsumeables
-  name: Consumeables
+  name: store-category-salvage-consumeables
 
 - type: storeCategory
   id: SalvageMercenaryEquipment
-  name: Mercenary
+  name: store-category-salvage-mercenary
 
 # USSP
 
 - type: storeCategory
   id: RevUplinkWeaponry
-  name: Armaments
+  name: store-category-soviet-weaponry
 
 - type: storeCategory
   id: RevUplinkPassive
-  name: GLOBAL
+  name: store-category-soviet-passive
 
 - type: storeCategory
   id: RevUplinkWearables
-  name: Wearables
+  name: store-category-soviet-wearables
 
 - type: storeCategory
   id: RevUplinkImplants
-  name: Implants
+  name: store-category-soviet-implants
 
 - type: storeCategory
   id: RevUplinkShuttle
-  name: Artillery
+  name: store-category-soviet-shuttles
 
 - type: storeCategory
   id: RevUplinkDeception
-  name: Deception
+  name: store-category-soviet-deception
 
 - type: storeCategory
   id: RevUplinkPointless
-  name: Glory
+  name: store-category-soviet-pointless
