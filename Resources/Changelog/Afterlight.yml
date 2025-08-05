@@ -97,4 +97,17 @@
   id: 12
   time: '2025-08-05T01:33:19.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/46
+- author: Fractalflower
+  changes:
+  - message: FashionVend prices are now 33% of what they were. Go wild!
+    type: Tweak
+  - message: Femboy equipment no longer requires 40 hours of playtime.
+    type: Tweak
+  - message: Fixed some internal typos, and switched to using trans keys.
+    type: Tweak
+  - message: Scurrets are now 80% off!
+    type: Tweak
+  id: 13
+  time: '2025-08-05T06:18:38.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/45
 Order: -100
