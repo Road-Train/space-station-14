@@ -130,4 +130,13 @@
   id: 15
   time: '2025-08-05T08:26:36.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/43
+- author: Aexxie
+  changes:
+  - message: AFTERLIGHT Server Rules
+    type: Add
+  - message: AFTERLIGHT SOP
+    type: Add
+  id: 16
+  time: '2025-08-05T12:09:48.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/48
 Order: -100
