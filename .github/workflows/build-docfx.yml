@@ -7,6 +7,8 @@ on:
 jobs:
   docfx:
    runs-on: arc-runner-set
+   env:
+     DOTNET_INSTALL_DIR: "./.dotnet"
    steps:
     - uses: actions/checkout@v4.2.2
     - name: Setup submodule

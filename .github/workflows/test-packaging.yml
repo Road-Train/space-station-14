@@ -32,6 +32,9 @@ jobs:
     if: github.actor != 'PJBot' && github.event.pull_request.draft == false
     runs-on: arc-runner-set
 
+    env:
+      DOTNET_INSTALL_DIR: "./.dotnet"
+
     steps:
       - name: Checkout Master
         uses: actions/checkout@v4.2.2

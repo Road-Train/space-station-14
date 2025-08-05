@@ -13,6 +13,9 @@ jobs:
   build:
     runs-on: arc-runner-set
 
+    env:
+      DOTNET_INSTALL_DIR: "./.dotnet"
+
     steps:
     - name: Install libraries
       run: |

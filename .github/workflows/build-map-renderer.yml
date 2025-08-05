@@ -17,6 +17,9 @@ jobs:
 
     runs-on: ${{ matrix.os }}
 
+    env:
+      DOTNET_INSTALL_DIR: "./.dotnet"
+
     steps:
       - name: Install libraries
         run: |
