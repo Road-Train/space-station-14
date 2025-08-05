@@ -49,6 +49,12 @@ enable_during_round = true
 [tts]
 enabled = true
 
+[vote]
+enabled = false
+
+[votekick]
+enabled = false
+
 # Testing Server
 [whitelist]
 enabled = true
