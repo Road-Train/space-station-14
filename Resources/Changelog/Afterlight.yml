@@ -119,4 +119,15 @@
   id: 14
   time: '2025-08-05T06:25:46.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/42
+- author: Gwonk
+  changes:
+  - message: Bitrunner Machine Sprites
+    type: Add
+  - message: Dildo Sprites
+    type: Add
+  - message: Semen and Milk Splatters
+    type: Add
+  id: 15
+  time: '2025-08-05T08:26:36.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/43
 Order: -100
