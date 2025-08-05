@@ -110,4 +110,13 @@
   id: 13
   time: '2025-08-05T06:18:38.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/45
+- author: Fractalflower
+  changes:
+  - message: Humans can now have foxlike ears and tails.
+    type: Add
+  - message: Humans can now yip, bark, and whine if they have a foxlike ear or tail.
+    type: Add
+  id: 14
+  time: '2025-08-05T06:25:46.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/42
 Order: -100
