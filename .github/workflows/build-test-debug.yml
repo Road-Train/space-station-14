@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false
+    if: github.actor != 'Dogborg' && github.event.pull_request.draft == false
     strategy:
       matrix:
         os: [arc-runner-set]
@@ -21,6 +21,10 @@ jobs:
       DOTNET_INSTALL_DIR: "./.dotnet"
 
     steps:
+    - name: Install libraries
+      run: |
+        sudo apt-get update && sudo apt-get install -y libfreetype6
+
     - name: Checkout Master
       uses: actions/checkout@v4.2.2
 
