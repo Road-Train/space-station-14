@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from S.P.L.U.R.T-tg at https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/3788c7e4f62b6d94a2314d31606462bc9ba49707/modular_zzplurt/icons/obj/lewd/fleshlight.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "vagina"
+    },
+    {
+      "name": "anus"
+    },
+    {
+      "name": "fleshlight_base"
+    },
+    {
+      "name": "fleshlight_totallynotamimic"
+    },
+    {
+      "name": "unpaired",
+      "delays": [
+        [
+          0.120000005,
+          0.120000005,
+          0.120000005,
+          0.120000005,
+          0.120000005,
+          0.120000005
+        ]
+      ]
+    },
+    {
+      "name": "paired",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "portal_vag"
+    },
+    {
+      "name": "portal_anus"
+    },
+    {
+      "name": "portal_mouth"
+    },
+    {
+      "name": "portal_mouth_lips"
+    },
+    {
+      "name": "portal_sleeve_normal"
+    },
+    {
+      "name": "portal_sleeve_lizard"
+    },
+    {
+      "name": "portal_sleeve_slime"
+    },
+    {
+      "name": "portal_sleeve_avian"
+    },
+    {
+      "name": "portal_panties",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "box"
+    }
+  ]
+}
