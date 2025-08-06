@@ -35,9 +35,6 @@ ghost-role-information-mouse-description = A hungry and mischievous mouse.
 ghost-role-information-mothroach-name = Mothroach
 ghost-role-information-mothroach-description = A cute but mischievous mothroach.
 
-ghost-role-information-moproach-name = Moproach
-ghost-role-information-moproach-description = A cute mothroach with more cute moplike shoes on its feet.
-
 ghost-role-information-snail-name = Snail
 ghost-role-information-snail-description = A little snail who doesn't mind a bit of space. Just stay on grid!
 
@@ -111,7 +108,7 @@ ghost-role-information-jonkbot-name = Jonkbot
 ghost-role-information-jonkbot-description = An artificial being of pure evil.
 
 ghost-role-information-mimebot-name = Mimebot
-ghost-role-information-mimebot-description = A Mimebot, act like a mime but don't act like a assistant.
+ghost-role-information-mimebot-description = A Mimebot, act like a mime but don't act like a greytider.
 
 ghost-role-information-supplybot-name = SupplyBot
 ghost-role-information-supplybot-description = Deliver goods around the station.
@@ -131,10 +128,6 @@ ghost-role-information-holoparasite-description = Listen to your owner. Don't ta
 
 ghost-role-information-holoclown-name = Holoclown
 ghost-role-information-holoclown-description = Listen to your owner. Utilize your pockets and hand to help your owner.
-
-ghost-role-information-cluwnebeast-name = Cluwne Beast
-ghost-role-information-cluwnebeast-description = Hide in the shadows, attack anything that moves and turn the crew into cluwnes.
-ghost-role-information-cluwnebeast-rules = You are an antagonist, stalk your prey and turn the crew into friendly cluwnes!
 
 ghost-role-information-ifrit-name = Ifrit
 ghost-role-information-ifrit-description = Listen to your owner. Don't tank damage. Punch people hard.
@@ -157,7 +150,10 @@ ghost-role-information-skeleton-biker-name = Skeleton Biker
 ghost-role-information-skeleton-biker-description = Ride around on your sweet ride.
 
 ghost-role-information-closet-skeleton-name = Closet Skeleton
-ghost-role-information-closet-skeleton-description = You are arguably one of the oldest members of the station!
+#CD changes below
+ghost-role-information-closet-skeleton-description = You are a primordial force with no allegiance. Follow your skeletal whims.
+ghost-role-information-closet-skeleton-rules = All rules apply. [color=red]THIS MEANS YOU ARE STILL SUBJECT TO SELF ANTAG RULES, AHELP FOR PERMISSION TO DO CRIMES.[/color]
+# end CD
 
 ghost-role-information-remilia-name = Remilia, the Chaplain's Familiar
 ghost-role-information-remilia-description = Follow and obey the chaplain. Eat fruit. Screech loudly into people's ears and write it off as echolocation.
@@ -246,7 +242,6 @@ ghost-role-information-syndicate-kobold-reinforcement-description = Someone need
 
 ghost-role-information-syndicate-cyborg-assault-name = Syndicate Assault Cyborg
 ghost-role-information-syndicate-cyborg-saboteur-name = Syndicate Saboteur Cyborg
-ghost-role-information-syndicate-cyborg-medical-name = Syndicate Medical Cyborg
 ghost-role-information-syndicate-cyborg-description = The Syndicate needs reinforcements. You, a cold silicon killing machine, will help them.
 
 ghost-role-information-derelict-cyborg-name = Derelict Cyborg
@@ -296,7 +291,7 @@ ghost-role-information-disaster-victim-name = Disaster Victim
 ghost-role-information-disaster-victim-description = You were rescued in an escape pod from another station that suffered a terrible fate. Perhaps you will be found and rescued.
 
 ghost-role-information-syndie-disaster-victim-name = Syndicate Disaster Victim
-ghost-role-information-syndie-disaster-victim-description = You're a regular assistant from a syndicate station. Unfortunately, an evacuation pod has thrown you into an enemy sector...
+ghost-role-information-syndie-disaster-victim-description = You're a regular passenger from a syndicate station. Unfortunately, an evacuation pod has thrown you into an enemy sector...
 
 ghost-role-information-syndie-soldier-name = Syndicate Soldier
 ghost-role-information-syndie-soldier-description = You are a soldier from the Syndicate.
