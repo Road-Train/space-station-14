@@ -139,4 +139,11 @@
   id: 16
   time: '2025-08-05T12:09:48.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/48
+- author: Fractalflower
+  changes:
+  - message: Shuttleless gamma alert
+    type: Add
+  id: 17
+  time: '2025-08-07T08:41:39.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/53
 Order: -100
