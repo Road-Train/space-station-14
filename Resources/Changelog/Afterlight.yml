@@ -153,4 +153,11 @@
   id: 18
   time: '2025-08-08T00:38:18.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/57
+- author: Fractalflower
+  changes:
+  - message: Small players can now be given uppies
+    type: Add
+  id: 19
+  time: '2025-08-08T00:41:52.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/58
 Order: -100
