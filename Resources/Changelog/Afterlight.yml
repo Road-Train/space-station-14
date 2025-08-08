@@ -160,4 +160,15 @@
   id: 19
   time: '2025-08-08T00:41:52.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/58
+- author: themageofmicrosoftpaints, Fractalflower
+  changes:
+  - message: Nine new slime tails
+    type: Add
+  - message: Eight new slime ears
+    type: Add
+  - message: Five new glass floors
+    type: Add
+  id: 20
+  time: '2025-08-08T21:34:25.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/62
 Order: -100
