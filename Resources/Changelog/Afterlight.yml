@@ -146,4 +146,11 @@
   id: 17
   time: '2025-08-07T08:41:39.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/53
+- author: neomoth, FractalFlower
+  changes:
+  - message: yes erp poster
+    type: Add
+  id: 18
+  time: '2025-08-08T00:38:18.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/57
 Order: -100
