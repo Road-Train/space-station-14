@@ -1,15 +1,15 @@
 using System.IO;
 using System.Linq;
 using System.Numerics;
-using Content.Shared.CCVar;
-using Content.Shared.Decals;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
+using Content.Shared.Item;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
+using Content.Shared.Starlight.Restrict;
 using Content.Shared.Starlight.TextToSpeech;
 using Robust.Shared;
 using Robust.Shared.Configuration;
@@ -42,6 +42,8 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [Dependency] private readonly MarkingManager _markingManager = default!;
     [Dependency] private readonly GrammarSystem _grammarSystem = default!;
     [Dependency] private readonly SharedIdentitySystem _identity = default!;
+    [Dependency] private readonly SharedItemSystem _item = default!;
+    [Dependency] private readonly ALHumanoidAppearanceSystem _afterlight = default!; // afterlight
 
     public static readonly ProtoId<SpeciesPrototype> DefaultSpecies = "Human";
 
@@ -452,6 +454,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         humanoid.Width = profile.Appearance.Width; //starlight
         humanoid.Height = profile.Appearance.Height; //starlight
+        _afterlight.AddPickupData(uid); // afterlight
 
         SetSkinColor(uid, profile.Appearance.SkinColor, false);
 

@@ -13,4 +13,7 @@ public sealed class ALCVars : CVars
     // Taken from https://github.com/RMC-14/RMC-14
     public static readonly CVarDef<float> ALMovementPenCapSubtract =
         CVarDef.Create("al.movement_pen_cap_subtract", 0.8f, CVar.REPLICATED | CVar.SERVER);
+
+    public static readonly CVarDef<float> ALMaxPickupDifference =
+        CVarDef.Create("al.max_pickup_difference", 0.755f, CVar.REPLICATED | CVar.SERVER);
 }

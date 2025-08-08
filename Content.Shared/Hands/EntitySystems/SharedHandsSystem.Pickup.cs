@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Content.Shared.Database;
 using Content.Shared.Hands.Components;
+using Content.Shared.Humanoid;
 using Content.Shared.Item;
 using Robust.Shared.Containers;
 using Robust.Shared.Physics;
@@ -195,6 +196,16 @@ public abstract partial class SharedHandsSystem
                 !_inventory.CanUnequip(uid, entity, container.ID, out _))
                 return false;
         }
+
+        // afterlight start
+        var ev = new ItemBeingPickedUpEvent(uid, entity);
+        RaiseLocalEvent(uid, ref ev);
+
+        if (ev.Cancelled)
+        {
+            return false;
+        }
+        // afterlight end
 
         // check can insert (including raising attempt events).
         return ContainerSystem.CanInsert(entity, handContainer);
