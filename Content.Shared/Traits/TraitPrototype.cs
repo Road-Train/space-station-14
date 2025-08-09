@@ -1,4 +1,5 @@
 using Content.Shared.Whitelist;
+using Microsoft.Extensions.ObjectPool;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Traits;
@@ -60,4 +61,10 @@ public sealed partial class TraitPrototype : IPrototype
     /// </summary>
     [DataField]
     public ProtoId<TraitCategoryPrototype>? Category;
+
+    /// <summary>
+    /// An array of trait IDs with which this trait cannot be selected. This is kind of messy but its the simplest.
+    /// </summary>
+    [DataField]
+    public string[] IncompatibleWith = Array.Empty<string>();
 }

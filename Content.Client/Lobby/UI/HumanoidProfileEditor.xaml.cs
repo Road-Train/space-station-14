@@ -1,6 +1,3 @@
-using System.IO;
-using System.Linq;
-using System.Numerics;
 using Content.Client._Starlight.TTS;
 using Content.Client.Humanoid;
 using Content.Client.Lobby.UI.Loadouts;
@@ -33,6 +30,10 @@ using Robust.Shared.ContentPack;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using System;
+using System.IO;
+using System.Linq;
+using System.Numerics;
 
 namespace Content.Client.Lobby.UI
 {
@@ -636,20 +637,23 @@ namespace Content.Client.Lobby.UI
         /// </summary>
         public void RefreshTraits()
         {
-            TraitsList.DisposeAllChildren();
+            // Afterlight Start
+            TraitTabContainer.DisposeAllChildren();
 
             var traits = _prototypeManager.EnumeratePrototypes<TraitPrototype>().OrderBy(t => Loc.GetString(t.Name)).ToList();
             TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-traits-tab"));
 
             if (traits.Count < 1)
             {
-                TraitsList.AddChild(new Label
+                TabContainer.AddChild(new Label
                 {
                     Text = Loc.GetString("humanoid-profile-editor-no-traits"),
-                    FontColorOverride = Color.Gray,
+                    Margin = new Thickness(0, 10, 0, 0),
+                    StyleClasses = { StyleBase.StyleClassLabelHeading },
                 });
                 return;
             }
+            // Afterlight Stop
 
             // Setup model
             Dictionary<string, List<string>> traitGroups = new();
@@ -672,21 +676,50 @@ namespace Content.Client.Lobby.UI
             }
 
             // Create UI view from model
+            // Afterlight Start
+            var traitTabs = new Dictionary<string, BoxContainer>();
             foreach (var (categoryId, categoryTraits) in traitGroups)
             {
                 TraitCategoryPrototype? category = null;
 
+                var boxContainer = new BoxContainer
+                {
+                    Orientation = LayoutOrientation.Vertical,
+                    Margin = new Thickness(0, 10, 0, 0),
+                };
+                var scrollContainer = new ScrollContainer
+                {
+                    VerticalExpand = true,
+                };
+                var tabBoxContainer = new BoxContainer
+                {
+                    Orientation = LayoutOrientation.Vertical,
+                    Name = categoryId,
+                };
+
+                scrollContainer.AddChild(tabBoxContainer);
+                boxContainer.AddChild(scrollContainer);
+                TraitTabContainer.AddChild(boxContainer);
+
+                traitTabs.Add(categoryId, tabBoxContainer);
+                var traitTab = traitTabs[categoryId];
+
+                var categoryName = Loc.GetString("trait-category-uncategorized");
                 if (categoryId != TraitCategoryPrototype.Default)
                 {
                     category = _prototypeManager.Index<TraitCategoryPrototype>(categoryId);
+                    categoryName = Loc.GetString(category.Name);
                     // Label
-                    TraitsList.AddChild(new Label
+                    traitTab.AddChild(new Label
                     {
-                        Text = Loc.GetString(category.Name),
+                        Text = categoryName,
                         Margin = new Thickness(0, 10, 0, 0),
                         StyleClasses = { StyleBase.StyleClassLabelHeading },
                     });
                 }
+                // Title
+                TraitTabContainer.SetTabTitle(traitTabs.Count - 1, categoryName);
+                // Afterlight Stop
 
                 List<TraitPreferenceSelector?> selectors = new();
                 var selectionCount = 0;
@@ -720,11 +753,13 @@ namespace Content.Client.Lobby.UI
                 // Selection counter
                 if (category is { MaxTraitPoints: >= 0 })
                 {
-                    TraitsList.AddChild(new Label
+                    // Afterlight Start
+                    traitTab.AddChild(new Label
                     {
                         Text = Loc.GetString("humanoid-profile-editor-trait-count-hint", ("current", selectionCount), ("max", category.MaxTraitPoints)),
                         FontColorOverride = Color.Gray
                     });
+                    // Afterlight Stop
                 }
 
                 foreach (var selector in selectors)
@@ -737,10 +772,27 @@ namespace Content.Client.Lobby.UI
                     {
                         selector.Checkbox.Label.FontColorOverride = Color.Red;
                     }
-
-                    TraitsList.AddChild(selector);
+                    // Afterlight Start
+                    if (Profile != null)
+                    {
+                        if (_prototypeManager.TryIndex<TraitPrototype>(selector.TraitId, out var selectorTrait) &&
+                            selectorTrait.IncompatibleWith.Any(s => Profile.TraitPreferences.Contains(s)))
+                        {
+                            selector.Checkbox.Label.FontColorOverride = Color.Red;
+                        }
+                    }
+                    traitTab.AddChild(selector);
+                    // Afterlight End
                 }
             }
+
+            // Afterlight Start
+            // If we got no uncategorized traits, hide the tab
+            if (traitGroups.GetOrNew("Default").Count() == 0)
+            {
+                TraitTabContainer.SetTabVisible(0, false);
+            }
+            // Afterlight Stop
         }
 
         /// <summary>

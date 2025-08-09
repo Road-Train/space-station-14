@@ -158,9 +158,7 @@
                 </BoxContainer>
                 <BoxContainer Orientation="Vertical" Margin="10">
                     <!-- Traits -->
-                    <ScrollContainer VerticalExpand="True">
-                        <BoxContainer Name="TraitsList" Orientation="Vertical" />
-                    </ScrollContainer>
+                    <TabContainer Name="TraitTabContainer" VerticalExpand="True" />
                 </BoxContainer>
                 <BoxContainer Name="MarkingsTab" Orientation="Vertical" Margin="10">
                     <!-- Markings -->

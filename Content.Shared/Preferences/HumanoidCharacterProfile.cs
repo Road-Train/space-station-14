@@ -439,6 +439,20 @@ namespace Content.Shared.Preferences
                 return new(this);
             }
 
+            // Afterlight Start
+            if (traitProto.IncompatibleWith.Length > 0)
+            {
+                foreach (var incompatible in traitProto.IncompatibleWith)
+                {
+                    if (protoManager.TryIndex<TraitPrototype>(incompatible, out var incompatibleProto) &&
+                        list.Contains(incompatibleProto.ID))
+                    {
+                        return new(this);
+                    }
+                }
+            }
+            // Afterlight End
+
             return new(this)
             {
                 _traitPreferences = list,
