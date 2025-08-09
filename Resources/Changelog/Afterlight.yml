@@ -171,4 +171,14 @@
   id: 20
   time: '2025-08-08T21:34:25.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/62
+- author: CptPuddleboat
+  changes:
+  - message: Traits are now organised into tabs
+    type: Add
+  - message: Trait incompatibility, and make Spanish, French, Italian, and German
+      accents incompatible with each other
+    type: Add
+  id: 21
+  time: '2025-08-09T08:08:38.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/10
 Order: -100
