@@ -3,10 +3,10 @@
 on:
   push:
     branches: [ master, staging, stable, main ]
-  merge_group:
-  pull_request:
-    types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master, staging, stable, Starlight, main ]
+  # merge_group:
+  # pull_request:
+  #   types: [ opened, reopened, synchronize, ready_for_review ]
+  #   branches: [ master, staging, stable, Starlight, main ]
 
 jobs:
   build:
