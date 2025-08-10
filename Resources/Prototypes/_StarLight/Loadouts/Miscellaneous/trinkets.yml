@@ -19,18 +19,6 @@
     - ClothingUnderSocksCoder
 
 - type: loadout
-  id: ClothingShoesHighheelBoots
-  storage:
-    back:
-    - ClothingShoesHighheelBoots
-
-- type: loadout
-  id: ClothingShoesHighheelShoes
-  storage:
-    back:
-    - ClothingShoesHighheelShoesAesthetic
-
-- type: loadout
   id: ClothWrap
   storage:
     back:

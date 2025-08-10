@@ -1,3 +1,7 @@
+using Content.Server._NullLink;
+using Content.Server._NullLink.Core;
+using Content.Server._NullLink.EventBus;
+using Content.Server._NullLink.PlayerData;
 using Content.Server._Afterlight.Kinks;
 using Content.Server._NullLink.Core;
 using Content.Server.Administration;
@@ -28,6 +32,7 @@ using Content.Server.Starlight;
 using Content.Server.Starlight.TextToSpeech;
 using Content.Server.Voting.Managers;
 using Content.Server.Worldgen.Tools;
+using Content.Shared._NullLink;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Chat;
@@ -93,6 +98,11 @@ namespace Content.Server.IoC
             IoCManager.Register<ISharedPlayersRoleManager, PlayerRolesManager>();
             IoCManager.Register<IPlayerRolesManager, PlayerRolesManager>();
             IoCManager.Register<ITTSManager, TTSManager>();
+            // nulllink
+            IoCManager.Register<IActorRouter, ActorRouter>();
+            IoCManager.Register<INullLinkPlayerManager, NullLinkPlayerManager>();
+            IoCManager.Register<INullLinkEventBusManager, NullLinkEventBusManager>();
+            IoCManager.Register<ISharedNullLinkPlayerRolesReqManager, PlayerRolesReqManager>();
             IoCManager.Register<IActorRouter, ActorRouter>(); // nulllink
 
             // Afterlight
