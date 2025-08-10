@@ -16,6 +16,7 @@
   maxAge: 300
   youngAge: 30
   oldAge: 250
+  maxHeight: 2 # afterlight
   customName: true
 
 - type: speciesBaseSprites

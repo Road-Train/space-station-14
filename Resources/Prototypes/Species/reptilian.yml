@@ -12,6 +12,7 @@
   femaleFirstNames: NamesReptilianFemale
   naming: FirstDashFirst
   customName: true # Starlight
+  maxHeight: 2 # afterlight
 
 - type: speciesBaseSprites
   id: MobReptilianSprites

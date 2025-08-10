@@ -15,5 +15,5 @@ public sealed class ALCVars : CVars
         CVarDef.Create("al.movement_pen_cap_subtract", 0.8f, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<float> ALMaxPickupDifference =
-        CVarDef.Create("al.max_pickup_difference", 0.755f, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("al.max_pickup_difference", 1.05f, CVar.REPLICATED | CVar.SERVER);
 }

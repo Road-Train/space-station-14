@@ -12,6 +12,7 @@
   femaleFirstNames: NamesMothFirstFemale
   lastNames: NamesMothLast
   customName: true # Starlight
+  maxHeight: 2 # afterlight
 
 - type: speciesBaseSprites
   id: MobMothSprites

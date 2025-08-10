@@ -13,6 +13,7 @@
   lastNames: NamesDionaLast
   naming: TheFirstofLast
   customName: true # Starlight start
+  maxHeight: 2 # afterlight
   standardSize: 200
   standardWeight: 145
   standardDensity: 130 # Starlight end

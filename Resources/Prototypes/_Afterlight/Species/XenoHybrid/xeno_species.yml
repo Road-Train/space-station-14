@@ -13,7 +13,7 @@
   lastNames: NamesLast
   sexes:
   - Unsexed
-  customName: true # Starlight
+  customName: true
   maxHeight: 2
   maxWidth: 2
   maxAge: 500

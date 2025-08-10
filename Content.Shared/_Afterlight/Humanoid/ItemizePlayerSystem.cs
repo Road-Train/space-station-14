@@ -46,7 +46,8 @@ public sealed class ItemizePlayerSystem : EntitySystem // uppi
         }
 
         var difference = Math.Round(targetHeight / sourceHeight * 0.6 + targetWeight / sourceWeight * 0.4, 3);
-        if (difference >= _config.GetCVar(ALCVars.ALMaxPickupDifference) && !HasComp<SmallSpeciesComponent>(args.Item))
+
+        if (difference >= _config.GetCVar(ALCVars.ALMaxPickupDifference))
         {
             args.Cancelled = true;
             return;
