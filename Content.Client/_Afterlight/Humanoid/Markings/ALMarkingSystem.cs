@@ -2,6 +2,7 @@
 using Content.Shared._Afterlight.Humanoid.Markings;
 using Content.Shared._Afterlight.Inventory;
 using Content.Shared._Afterlight.Movement;
+using Content.Shared.Clothing.EntitySystems;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
@@ -21,8 +22,6 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
     [Dependency] private readonly SpriteSystem _sprite = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
 
-    private readonly ImmutableArray<SlotFlags> _slotFlags = Enum.GetValues<SlotFlags>().ToImmutableArray();
-
     private EntityQuery<EyeComponent> _eyeQuery;
     private EntityQuery<SpriteComponent> _spriteQuery;
     private EntityQuery<TransformComponent> _transformQuery;
@@ -35,6 +34,7 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
 
         SubscribeLocalEvent<ActorComponent, ALRelativeRotationChangedEvent>(OnActorRelativeRotationChanged);
 
+        SubscribeLocalEvent<ALMarkingComponent, ComponentStartup>(OnMarkingMapInit, after: [typeof(ClothingSystem), typeof(InventorySystem)]);
         SubscribeLocalEvent<ALMarkingComponent, MoveEvent>(OnMarkingMove);
         SubscribeLocalEvent<ALMarkingComponent, DidEquipEvent>(OnMarkingDidEquip);
         SubscribeLocalEvent<ALMarkingComponent, DidUnequipEvent>(OnMarkingDidUnequip);
@@ -45,10 +45,7 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
         if (ent.Comp.PlayerSession.UserId != _player.LocalUser)
             return;
 
-        if (!_eyeQuery.TryComp(ent, out var eye))
-            return;
-
-        var eyeRotation = eye.Rotation;
+        var eyeRotation = GetLocalEyeRotation();
         var query = EntityQueryEnumerator<ALMarkingComponent, SpriteComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var comp, out var sprite, out var xform))
         {
@@ -56,19 +53,14 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
         }
     }
 
+    private void OnMarkingMapInit(Entity<ALMarkingComponent> ent, ref ComponentStartup args)
+    {
+        UpdateEntity(ent);
+    }
+
     private void OnMarkingMove(Entity<ALMarkingComponent> ent, ref MoveEvent args)
     {
-        if (!_eyeQuery.TryComp(_player.LocalEntity, out var eye))
-            return;
-
-        if (!_spriteQuery.TryComp(ent, out var sprite) ||
-            !_transformQuery.TryComp(ent, out var transform))
-        {
-            return;
-        }
-
-        var eyeRotation = eye.Rotation;
-        UpdateSprite((ent, ent, sprite, transform), eyeRotation);
+        UpdateEntity(ent);
     }
 
     private void OnMarkingDidEquip(Entity<ALMarkingComponent> ent, ref DidEquipEvent args)
@@ -79,6 +71,18 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
     private void OnMarkingDidUnequip(Entity<ALMarkingComponent> ent, ref DidUnequipEvent args)
     {
         MarkingEquippedChanged(ent, args.SlotFlags);
+    }
+
+    private void UpdateEntity(Entity<ALMarkingComponent> ent)
+    {
+        if (!_spriteQuery.TryComp(ent, out var sprite) ||
+            !_transformQuery.TryComp(ent, out var transform))
+        {
+            return;
+        }
+
+        var eyeRotation = GetLocalEyeRotation();
+        UpdateSprite((ent, ent, sprite, transform), eyeRotation);
     }
 
     private void UpdateSprite(Entity<ALMarkingComponent, SpriteComponent, TransformComponent> ent, Angle eyeRotation)
@@ -114,37 +118,37 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
         ref int targetLayer)
     {
         _sprite.LayerSetOffset(entity, layerId, markingPrototype.Offset);
-        if (markingPrototype.BackSprites.TryGetValue(j, out var backRsi))
+        if (!markingPrototype.BackSprites.TryGetValue(j, out var backRsi))
+            return;
+
+        var markingComp = EnsureComp<ALMarkingComponent>(entity.Owner);
+        var behindLayer = $"al_{layerId}_behind";
+        var marking = markingComp.Layers.GetOrNew(layerId);
+        marking.Back = behindLayer;
+        marking.HiddenBy = markingPrototype.HiddenBy;
+
+        markingComp.Layers[layerId] = marking;
+        if (!_sprite.LayerMapTryGet(entity, behindLayer, out _, false))
         {
-            var markingComp = EnsureComp<ALMarkingComponent>(entity.Owner);
-            var behindLayer = $"al_{layerId}_behind";
-            var marking = markingComp.Layers.GetOrNew(layerId);
-            marking.Back = behindLayer;
-            marking.HiddenBy = markingPrototype.HiddenBy;
-
-            markingComp.Layers[layerId] = marking;
-            if (!_sprite.LayerMapTryGet(entity, behindLayer, out _, false))
-            {
-                var layer = _sprite.AddLayer(entity, backRsi, 0 + j);
-                _sprite.LayerMapSet(entity, behindLayer, layer);
-                _sprite.LayerSetSprite(entity, behindLayer, backRsi);
-            }
-
-            _sprite.LayerSetVisible(entity, behindLayer, visible);
-            _sprite.LayerSetOffset(entity, behindLayer, markingPrototype.Offset);
-
-            if (colors != null && j < colors.Count)
-            {
-                _sprite.LayerSetColor(entity, behindLayer, colors[j]);
-            }
-            else
-            {
-                _sprite.LayerSetColor(entity, behindLayer, Color.White);
-            }
-
-            // we do this so targetLayer doesn't get out of sync
-            _sprite.LayerMapTryGet(entity, markingPrototype.BodyPart, out targetLayer, false);
+            var layer = _sprite.AddLayer(entity, backRsi, 0 + j);
+            _sprite.LayerMapSet(entity, behindLayer, layer);
+            _sprite.LayerSetSprite(entity, behindLayer, backRsi);
         }
+
+        _sprite.LayerSetVisible(entity, behindLayer, visible);
+        _sprite.LayerSetOffset(entity, behindLayer, markingPrototype.Offset);
+
+        if (colors != null && j < colors.Count)
+        {
+            _sprite.LayerSetColor(entity, behindLayer, colors[j]);
+        }
+        else
+        {
+            _sprite.LayerSetColor(entity, behindLayer, Color.White);
+        }
+
+        // we do this so targetLayer doesn't get out of sync
+        _sprite.LayerMapTryGet(entity, markingPrototype.BodyPart, out targetLayer, false);
     }
 
     public override void MarkingsCleared(EntityUid ent)
@@ -200,12 +204,10 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
         if (!_spriteQuery.TryComp(ent, out var sprite))
             return;
 
-        if (!_eyeQuery.TryComp(_player.LocalEntity, out var eye))
-            return;
-
         var entSprite = new Entity<SpriteComponent?>(ent, sprite);
         var worldRotation = _transform.GetWorldRotation(ent);
-        var angle = (worldRotation + eye.Rotation).Reduced().FlipPositive();
+        var eyeRotation = GetLocalEyeRotation();
+        var angle = (worldRotation + eyeRotation).Reduced().FlipPositive();
         Direction? overrideDirection = sprite.EnableDirectionOverride ? sprite.DirectionOverride : null;
         foreach (var (front, marking) in ent.Comp.Layers)
         {
@@ -214,5 +216,12 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
 
             UpdateMarkingVisibility(entSprite, front, angle, overrideDirection, marking);
         }
+    }
+
+    private Angle GetLocalEyeRotation()
+    {
+        return _player.LocalEntity == null
+            ? Angle.Zero
+            : _eyeQuery.CompOrNull(_player.LocalEntity.Value)?.Rotation ?? Angle.Zero;
     }
 }
