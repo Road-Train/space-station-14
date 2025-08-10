@@ -1,4 +1,5 @@
-using System.Numerics;  //starlight
+using System.Numerics; //starlight
+using Content.Client._Afterlight.Humanoid.Markings;
 using Content.Client.DisplacementMap;
 using Content.Shared.CCVar;
 using Content.Shared.Humanoid;
@@ -21,6 +22,8 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly DisplacementMapSystem _displacement = default!;
     [Dependency] private readonly SpriteSystem _sprite = default!;
+
+    [Dependency] private readonly ALMarkingSystem _alMarking = default!;
 
     public override void Initialize()
     {
@@ -403,7 +406,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             _sprite.LayerSetVisible((entity.Owner, sprite), layerId, visible);
 
             // Afterlight
-            _sprite.LayerSetOffset((entity.Owner, sprite), layerId, markingPrototype.Offset);
+            _alMarking.ApplyMarking((entity, sprite), layerId, markingPrototype, j, visible, colors, ref targetLayer);
             // Afterlight
 
             if (!visible || setting == null) // this is kinda implied

@@ -1,7 +1,6 @@
+using Content.Server._Afterlight.Humanoid.Markings;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
-using Content.Shared.Humanoid.Prototypes;
-using Content.Shared.Preferences;
 using Content.Shared.Verbs;
 using Robust.Shared.GameObjects.Components.Localization;
 
@@ -10,6 +9,8 @@ namespace Content.Server.Humanoid;
 public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 {
     [Dependency] private readonly MarkingManager _markingManager = default!;
+
+    [Dependency] private readonly ALMarkingSystem _alMarking = default!; // Afterlight
 
     public override void Initialize()
     {
@@ -56,7 +57,7 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
         if (sourceHumanoid.Voice != null)
             SetTTSVoice(target, sourceHumanoid.Voice, targetHumanoid);
         Dirty(target, targetHumanoid);
-        
+
         var ev = new MarkingsUpdateEvent(); //starlight
         RaiseLocalEvent(target, ref ev); //starlight
     }
@@ -77,10 +78,11 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
         }
 
         humanoid.MarkingSet.Remove(prototype.MarkingCategory, marking);
+        _alMarking.MarkingRemoved(uid, marking);
 
         if (sync)
             Dirty(uid, humanoid);
-        
+
         var ev = new MarkingsUpdateEvent(); //starlight
         RaiseLocalEvent(uid, ref ev); //starlight
     }
@@ -102,8 +104,9 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
             return;
         }
 
+        _alMarking.MarkingsRemoved(uid, markings);
         humanoid.MarkingSet.Remove(category, index);
-        Dirty(uid, humanoid);        
+        Dirty(uid, humanoid);
 
         var ev = new MarkingsUpdateEvent(); //starlight
         RaiseLocalEvent(uid, ref ev); //starlight
@@ -137,7 +140,7 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
         marking.IsGlowing = markings[index].IsGlowing; //starlight
 
         humanoid.MarkingSet.Replace(category, index, marking);
-        Dirty(uid, humanoid);        
+        Dirty(uid, humanoid);
 
         var ev = new MarkingsUpdateEvent(); //starlight
         RaiseLocalEvent(uid, ref ev); //starlight
@@ -167,7 +170,7 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
             markings[index].SetColor(i, colors[i]);
         }
 
-        Dirty(uid, humanoid);        
+        Dirty(uid, humanoid);
 
         var ev = new MarkingsUpdateEvent(); //starlight
         RaiseLocalEvent(uid, ref ev); //starlight
@@ -187,7 +190,7 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
 
         markings[index].IsGlowing = glowing;
         Dirty(uid, humanoid);
-                
+
         var ev = new MarkingsUpdateEvent();
         RaiseLocalEvent(uid, ref ev);
     }

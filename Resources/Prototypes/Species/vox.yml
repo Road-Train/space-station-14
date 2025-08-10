@@ -36,6 +36,9 @@
     LFoot: MobVoxLFoot
     RFoot: MobVoxRFoot
     Tail: MobHumanoidAnyMarking
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobVoxMarkingLimits
@@ -75,6 +78,11 @@
       points: 1
       required: true
       defaultMarkings: [ VoxTail ]
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobVoxEyes

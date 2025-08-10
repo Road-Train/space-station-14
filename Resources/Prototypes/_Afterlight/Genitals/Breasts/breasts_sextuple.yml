@@ -1,0 +1,279 @@
+﻿- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleFlat
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_0_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_0_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_0_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_0_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleA
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_1_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_1_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_1_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_1_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleB
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_2_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_2_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_2_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_2_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleC
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_3_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_3_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_3_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_3_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleD
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_4_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_4_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_4_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_4_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleE
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_5_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_5_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_5_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_5_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleF
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_6_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_6_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_6_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_6_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleG
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_7_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_7_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_7_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_7_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleH
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_8_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_8_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_8_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_8_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleI
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_9_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_9_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_9_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_9_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleJ
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_10_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_10_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_10_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_10_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleK
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_11_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_11_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_11_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_11_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleL
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_12_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_12_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_12_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_12_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleM
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_13_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_13_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_13_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_13_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleN
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_14_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_14_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_14_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_14_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleO
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_15_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_15_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_15_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_15_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleP
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_16_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_16_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_16_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_16_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleQ
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_17_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_17_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_17_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_17_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleR
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_18_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_18_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_18_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_18_behind_secondary
+
+- type: marking
+  parent: ALBreastsBase
+  id: ALBreastsSextupleS
+  sprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_19_front_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_19_front_secondary
+  backSprites:
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_19_behind_primary
+  - sprite: _Afterlight/Genitals/breasts.rsi
+    state: m_breasts_sextuple_19_behind_secondary

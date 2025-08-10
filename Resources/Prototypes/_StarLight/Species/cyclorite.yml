@@ -36,6 +36,9 @@
     RLeg: MobCycloriteRLeg
     LFoot: MobCycloriteLFoot
     RFoot: MobCycloriteRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobCycloriteMarkingLimits
@@ -62,6 +65,11 @@
     Chest:
       points: 2
       required: false
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobCycloriteEyes

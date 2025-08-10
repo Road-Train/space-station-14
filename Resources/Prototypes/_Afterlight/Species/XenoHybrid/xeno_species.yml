@@ -41,6 +41,7 @@
     XenoHybridHead: MobHumanoidAnyMarking
     XenoHybridDorsal: MobHumanoidAnyMarking
     XenoHybridTail: MobHumanoidAnyMarking
+    Breasts: MobHumanoidAnyMarking
 
 - type: markingPoints
   id: MobXenoHybridMarkingLimits
@@ -74,6 +75,9 @@
       points: 1
       required: false
     XenoHybridTail:
+      points: 1
+      required: false
+    Breasts:
       points: 1
       required: false
 

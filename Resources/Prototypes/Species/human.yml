@@ -39,6 +39,9 @@
     RLeg: MobHumanRLeg
     LFoot: MobHumanLFoot
     RFoot: MobHumanRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobHumanMarkingLimits
@@ -76,6 +79,11 @@
     Arms:
       points: 2
       required: false
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobHumanoidEyes

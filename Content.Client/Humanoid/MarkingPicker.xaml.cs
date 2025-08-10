@@ -7,7 +7,6 @@ using Robust.Client.GameObjects;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
-using Robust.Client.Utility;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using static Robust.Client.UserInterface.Controls.BoxContainer;
@@ -203,8 +202,19 @@ public sealed partial class MarkingPicker : Control
     private List<string> GetMarkingStateNames(MarkingPrototype marking)
     {
         List<string> result = new();
+
+        // Afterlight
+        var i = 0;
+        // Afterlight
         foreach (var markingState in marking.Sprites)
         {
+            // Afterlight
+            if (marking.Localization.TryGetValue(i++, out var loc))
+            {
+                result.Add(Loc.GetString(loc));
+                continue;
+            }
+            // Afterlight
             switch (markingState)
             {
                 case SpriteSpecifier.Rsi rsi:

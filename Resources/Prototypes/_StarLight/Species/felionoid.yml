@@ -37,6 +37,9 @@
     LFoot: MobFelionoidLFoot
     RFoot: MobFelionoidRFoot
     Tail: MobHumanoidAnyMarking
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobFelionoidMarkingLimits
@@ -67,6 +70,11 @@
       points: 1
       required: true
       defaultMarkings: [ FelionoidTailAnimated ]
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobFelionoidEyes

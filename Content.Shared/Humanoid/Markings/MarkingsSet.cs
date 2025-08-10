@@ -4,7 +4,6 @@ using System.Linq;
 using Content.Shared.Humanoid.Prototypes;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
-using Robust.Shared.Utility;
 
 namespace Content.Shared.Humanoid.Markings;
 
@@ -164,7 +163,8 @@ public sealed partial class MarkingSet
                     continue;
                 }
 
-                if (onlyWhitelisted && prototype.SpeciesRestrictions == null)
+                // Afterlight
+                if (!prototype.AllSpecies && onlyWhitelisted && prototype.SpeciesRestrictions == null)
                 {
                     toRemove.Add((category, marking.MarkingId));
                 }

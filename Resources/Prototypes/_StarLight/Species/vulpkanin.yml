@@ -38,6 +38,9 @@
     RLeg: MobVulpkaninRLeg
     LFoot: MobVulpkaninLFoot
     RFoot: MobVulpkaninRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobVulpkaninMarkingLimits
@@ -63,6 +66,11 @@
     HeadSide:
       points: 1
       required: false
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobVulpkaninHead

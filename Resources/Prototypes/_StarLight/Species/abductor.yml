@@ -25,6 +25,9 @@
     RLeg: MobAbductorRLeg
     LFoot: MobAbductorLFoot
     RFoot: MobAbductorRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: humanoidBaseSprite
   id: MobAbductorEyes

@@ -36,6 +36,9 @@
     RLeg: MobDionaRLeg
     LFoot: MobDionaLFoot
     RFoot: MobDionaRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobDionaMarkingLimits
@@ -69,6 +72,11 @@
       points: 1
       required: true
       defaultMarkings: [ DionaVineOverlay ]
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobDionaEyes

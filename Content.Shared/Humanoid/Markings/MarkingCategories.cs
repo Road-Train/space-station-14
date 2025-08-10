@@ -25,6 +25,7 @@ namespace Content.Shared.Humanoid.Markings
         XenoHybridHead,
         XenoHybridDorsal,
         XenoHybridTail,
+        Breasts,
         // Afterlight
     }
 
