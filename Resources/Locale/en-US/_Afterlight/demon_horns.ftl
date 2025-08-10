@@ -1,0 +1,12 @@
+marking-DemonHornsCyber = Cyberdemon
+marking-DemonHornsFullpipe = Fullpipe
+marking-DemonHornsHalfpipeLeft = Halfpipe (L)
+marking-DemonHornsHalfpipeRight = Halfpipe (R)
+marking-DemonHornsHellboy = Hellboy
+marking-DemonHornsLastWill = Last Will
+marking-DemonHornsShoulderAngel = Shoulder Angel
+marking-DemonHornsSuccubus = Dickhead
+marking-DemonHornsThorns = Crown of Thorns
+marking-DemonHornsTorus = Torus
+marking-DemonHornsUnicorn = Unicorn
+marking-DemonHornsWings = Wings

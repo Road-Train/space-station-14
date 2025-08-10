@@ -1,0 +1,51 @@
+﻿{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "themageofmicrosoftpaints",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "displacer",
+      "directions": 4
+    },
+    {
+      "name": "friend_inside_me",
+      "directions": 4
+    },
+    {
+      "name": "friend_inside_me_tip",
+      "directions": 4
+    },
+    {
+      "name": "imp",
+      "directions": 4
+    },
+    {
+      "name": "imp_tip",
+      "directions": 4
+    },
+    {
+      "name": "scorpion",
+      "directions": 4
+    },
+    {
+      "name": "scorpion_tip",
+      "directions": 4
+    },
+    {
+      "name": "spike",
+      "directions": 4
+    },
+    {
+      "name": "spines",
+      "directions": 4
+    },
+    {
+      "name": "stub",
+      "directions": 4
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+- type: marking
+  id: DemonTailDisplacer
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/tails.rsi
+    state: displacer
+
+- type: marking
+  id: DemonTailFriend
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/tails.rsi
+    state: friend_inside_me
+  - sprite: _Afterlight/Species/Markings/tails.rsi
+    state: friend_inside_me_tip
+
+- type: marking
+  id: DemonTailImp
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/tails.rsi
+    state: imp
+  - sprite: _Afterlight/Species/Markings/tails.rsi
+    state: imp_tip
+
+- type: marking
+  id: DemonTailScorpion
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/tails.rsi
+    state: scorpion
+  - sprite: _Afterlight/Species/Markings/tails.rsi
+    state: scorpion_tip
+
+- type: marking
+  id: DemonTailSpike
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/tails.rsi
+    state: spike
+
+- type: marking
+  id: DemonTailSpines
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/tails.rsi
+    state: spines
+
+- type: marking
+  id: DemonTailStub
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/tails.rsi
+    state: stub

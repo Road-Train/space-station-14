@@ -1,0 +1,59 @@
+﻿{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "themageofmicrosoftpaints",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "thorns",
+      "directions": 4
+    },
+    {
+      "name": "dickhead",
+      "directions": 4
+    },
+    {
+      "name": "fullpipe",
+      "directions": 4
+    },
+    {
+      "name": "cyberdemon",
+      "directions": 4
+    },
+    {
+      "name": "halfpipe_left",
+      "directions": 4
+    },
+    {
+      "name": "hellboy",
+      "directions": 4
+    },
+    {
+      "name": "last_will",
+      "directions": 4
+    },
+    {
+      "name": "shoulder_angel",
+      "directions": 4
+    },
+    {
+      "name": "torus",
+      "directions": 4
+    },
+    {
+      "name": "unicorn",
+      "directions": 4
+    },
+    {
+      "name": "wings",
+      "directions": 4
+    },
+    {
+      "name": "halfpipe_right",
+      "directions": 4
+    }
+  ]
+}
