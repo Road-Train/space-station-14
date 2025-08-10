@@ -13,18 +13,18 @@ on:
       # why not just do both
       - 'RobustToolbox'
       - 'RobustToolbox/**'
-  merge_group:
-  pull_request:
-    types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master, staging, stable, Starlight, main ]
-    paths:
-      - '**.cs'
-      - '**.csproj'
-      - '**.sln'
-      - '**.git**'
-      - '**.yml'
-      - 'RobustToolbox'
-      - 'RobustToolbox/**'
+  # merge_group:
+  # pull_request:
+  #   types: [ opened, reopened, synchronize, ready_for_review ]
+  #   branches: [ master, staging, stable, Starlight, main ]
+  #   paths:
+  #     - '**.cs'
+  #     - '**.csproj'
+  #     - '**.sln'
+  #     - '**.git**'
+  #     - '**.yml'
+  #     - 'RobustToolbox'
+  #     - 'RobustToolbox/**'
 
 jobs:
   build:
