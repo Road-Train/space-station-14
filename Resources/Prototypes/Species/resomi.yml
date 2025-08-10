@@ -17,7 +17,7 @@
   oldAge: 257
   maxAge: 430
   customName: true # Starlight
-  minWidth: 0.9
+  minWidth: 0.725 # afterlight
   defaultWidth: 1
   maxWidth: 1.2
   minHeight: 0.8

@@ -15,6 +15,7 @@
   - Unsexed
   customName: true # Starlight
   maxHeight: 2 # afterlight
+  minWidth: 0.725 # afterlight
 
 - type: speciesBaseSprites
   id: MobArachnidSprites
