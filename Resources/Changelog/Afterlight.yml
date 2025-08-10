@@ -181,4 +181,22 @@
   id: 21
   time: '2025-08-09T08:08:38.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/10
+- author: DrSmugleaf
+  changes:
+  - message: Added breasts. You can choose between pair, quad, and sextuple, and anywhere
+      from flat-chested to S-Cup (20 sizes). Nipples can be colored separately from
+      the breast. Inner and outer clothing hides them while worn.
+    type: Add
+  id: 22
+  time: '2025-08-10T07:30:17.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/67
+- author: Fractalflower
+  changes:
+  - message: Sorry. Mommy? Sorry. Mommy? Sorry.
+    type: Tweak
+  - message: Max height is now 340cm across the board!
+    type: Tweak
+  id: 23
+  time: '2025-08-10T06:59:54.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/65
 Order: -100
