@@ -208,4 +208,11 @@
   id: 24
   time: '2025-08-10T08:29:28.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/69
+- author: Fractalflower
+  changes:
+  - message: Set minimum width to 0.725
+    type: Tweak
+  id: 25
+  time: '2025-08-10T21:52:28.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/73
 Order: -100
