@@ -15,7 +15,6 @@
   - Unsexed
   customName: true
   maxHeight: 2
-  maxWidth: 2
   maxAge: 500
 
 - type: speciesBaseSprites
