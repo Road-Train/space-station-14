@@ -264,7 +264,7 @@
   cost:
     NTCredit: 200
   categories:
-    - SLFahsionSkirt
+    - SLFashionSkirt
   conditions:
     - !type:ListingLimitedStockCondition
       stock: 1
@@ -274,7 +274,7 @@
   cost:
     NTCredit: 200
   categories:
-    - SLFahsionSkirt
+    - SLFashionSkirt
   conditions:
     - !type:ListingLimitedStockCondition
       stock: 1
@@ -284,7 +284,7 @@
   cost:
     NTCredit: 200
   categories:
-    - SLFahsionSkirt
+    - SLFashionSkirt
   conditions:
     - !type:ListingLimitedStockCondition
       stock: 1

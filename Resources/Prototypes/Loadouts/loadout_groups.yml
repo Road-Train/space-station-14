@@ -83,6 +83,10 @@
   - PaperFolder6 #SL
   - PaperFolder7 #SL
   - PaperClipboard #SL
+  # Afterlight
+  - Heels
+  - HighHeelBoots
+  # Afterlight
 
 - type: loadoutGroup
   id: Glasses

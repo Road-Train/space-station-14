@@ -1,9 +1,7 @@
-using Content.Server._NullLink;
+using Content.Server._Afterlight.Kinks;
 using Content.Server._NullLink.Core;
 using Content.Server._NullLink.EventBus;
 using Content.Server._NullLink.PlayerData;
-using Content.Server._Afterlight.Kinks;
-using Content.Server._NullLink.Core;
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
@@ -103,7 +101,6 @@ namespace Content.Server.IoC
             IoCManager.Register<INullLinkPlayerManager, NullLinkPlayerManager>();
             IoCManager.Register<INullLinkEventBusManager, NullLinkEventBusManager>();
             IoCManager.Register<ISharedNullLinkPlayerRolesReqManager, PlayerRolesReqManager>();
-            IoCManager.Register<IActorRouter, ActorRouter>(); // nulllink
 
             // Afterlight
             IoCManager.Register<KinkManager>();
