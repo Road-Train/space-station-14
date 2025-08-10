@@ -199,4 +199,13 @@
   id: 23
   time: '2025-08-10T06:59:54.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/65
+- author: Fractalflower, themageofmicrosoftpaints
+  changes:
+  - message: Twelve new horn markings
+    type: Add
+  - message: Seven new tail markings
+    type: Add
+  id: 24
+  time: '2025-08-10T08:29:28.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/69
 Order: -100
