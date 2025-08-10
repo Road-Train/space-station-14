@@ -4,6 +4,9 @@ deadmin_on_join = true
 [adminlogs]
 server_name = "afterlight"
 
+[al]
+lobby_start_paused = true
+
 [game]
 desc = ""
 hostname = "[EN][18+] Afterlight [US East]"

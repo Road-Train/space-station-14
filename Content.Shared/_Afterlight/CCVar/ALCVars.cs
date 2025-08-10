@@ -16,4 +16,7 @@ public sealed class ALCVars : CVars
 
     public static readonly CVarDef<float> ALMaxPickupDifference =
         CVarDef.Create("al.max_pickup_difference", 1.05f, CVar.REPLICATED | CVar.SERVER);
+
+    public static readonly CVarDef<bool> ALLobbyStartPaused =
+        CVarDef.Create("al.lobby_start_paused", false, CVar.REPLICATED | CVar.SERVER);
 }

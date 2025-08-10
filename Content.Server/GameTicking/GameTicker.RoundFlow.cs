@@ -26,6 +26,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using System.Text.RegularExpressions;
+using Content.Shared._Afterlight.CCVar;
 
 namespace Content.Server.GameTicking
 {
@@ -676,6 +677,9 @@ namespace Content.Server.GameTicking
                 UpdateInfoText();
 
                 ReqWindowAttentionAll();
+
+                if (_cfg.GetCVar(ALCVars.ALLobbyStartPaused))
+                    PauseStart();
             }
         }
 
