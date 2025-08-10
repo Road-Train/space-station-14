@@ -1,0 +1,54 @@
+﻿- type: emoteSounds
+  id: ALUnisexXeno
+  sounds:
+    Scream:
+      collection: ALXenoHybridScream
+      params:
+        variation: 0.125 # If you are wondering why this is copypasted, if you specify it generally it overrides all per-sound params
+        volume: -4
+    Laugh:
+      path: /Audio/Voice/Arachnid/arachnid_laugh.ogg # TODO AFTERLIGHT
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Honk:
+      collection: BikeHorn
+      params:
+        variation: 0.125
+    Gasp:
+      collection: MaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: DeathGasp
+      params:
+        variation: 0.125
+
+- type: speechSounds
+  id: ALXenoHybrid
+  saySound:
+    path: /Audio/_Afterlight/Voice/XenoHybrid/Xenohiss.ogg
+  askSound:
+    path: /Audio/_Afterlight/Voice/XenoHybrid/Xenohiss.ogg
+  exclaimSound:
+    path: /Audio/_Afterlight/Voice/XenoHybrid/Xenohiss.ogg
+
+- type: speechVerb
+  id: ALXenoHybrid
+  name: species-name-xeno-hybrid
+  speechVerbStrings:
+  - chat-emote-msg-hiss
+
+- type: soundCollection
+  id: ALXenoHybridScream
+  files:
+  - /Audio/_Afterlight/Voice/XenoHybrid/alien_roar1.ogg
+  - /Audio/_Afterlight/Voice/XenoHybrid/alien_roar2.ogg
+  - /Audio/_Afterlight/Voice/XenoHybrid/hiss6.ogg

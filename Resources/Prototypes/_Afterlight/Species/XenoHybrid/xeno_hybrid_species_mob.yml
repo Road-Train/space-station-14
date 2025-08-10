@@ -55,14 +55,14 @@
       Burn:
         sprite: Mobs/Effects/burn_damage.rsi
   - type: Speech
-    speechVerb: Arachnid
-    speechSounds: Arachnid
-    allowedEmotes: [ 'Click', 'Chitter' ]
+    speechVerb: ALXenoHybrid
+    speechSounds: ALXenoHybrid
+    allowedEmotes: [ ]
   - type: Vocal
     sounds:
-      Male: UnisexArachnid
-      Female: UnisexArachnid
-      Unsexed: UnisexArachnid
+      Male: ALUnisexXeno
+      Female: ALUnisexXeno
+      Unsexed: ALUnisexXeno
   - type: TypingIndicator
     proto: spider
   - type: Inventory
