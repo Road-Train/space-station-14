@@ -1,7 +1,7 @@
 [admin]
 deadmin_on_join = true
 
- [adminlogs]
+[adminlogs]
 server_name = "afterlight"
 
 [game]
