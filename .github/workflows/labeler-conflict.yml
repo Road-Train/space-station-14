@@ -10,7 +10,7 @@ on:
 
 jobs:
   Label:
-    if: ( github.event.pull_request.draft == false ) && ( github.actor != 'Dogborg' )
+    if: ( github.event.pull_request.draft == false ) && ( github.actor != 'Dogborg' ) && github.event.head_commit.message != 'Automatic changelog update'
     permissions:
       contents: read
       pull-requests: write

@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     name: YAML Linter
-    if: github.actor != 'Dogborg' && github.event.pull_request.draft == false
+    if: github.actor != 'Dogborg' && github.event.pull_request.draft == false && github.event.head_commit.message != 'Automatic changelog update'
     runs-on: arc-runner-set
     env:
       DOTNET_INSTALL_DIR: "./.dotnet"
