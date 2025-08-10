@@ -215,4 +215,11 @@
   id: 25
   time: '2025-08-10T21:52:28.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/73
+- author: DrSmugleaf
+  changes:
+  - message: Added xeno hybrid speech and scream sounds.
+    type: Add
+  id: 26
+  time: '2025-08-10T22:19:43.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/72
 Order: -100
