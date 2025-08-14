@@ -10,6 +10,6 @@ jobs:
       contents: read
       pull-requests: write
       issues: write
-    runs-on: arc-runner-set
+    runs-on: self-hosted
     steps:
     - uses: actions/labeler@v5

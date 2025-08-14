@@ -9,7 +9,7 @@ concurrency: benchmarks
 jobs:
   benchmark:
     name: Run Benchmarks
-    runs-on: arc-runner-set
+    runs-on: self-hosted
     env:
       DOTNET_INSTALL_DIR: "./.dotnet"
     steps:

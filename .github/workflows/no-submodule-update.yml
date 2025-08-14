@@ -8,7 +8,7 @@ on:
 jobs:
   this_aint_right:
     name: Submodule update in pr found
-    runs-on: arc-runner-set
+    runs-on: self-hosted
     steps:
       - name: Fail
         run: exit 1

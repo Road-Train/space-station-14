@@ -11,7 +11,7 @@ on:
 jobs:
   validate_rsis:
     name: Validate RSIs
-    runs-on: arc-runner-set
+    runs-on: self-hosted
     steps:
       - name: Install libraries
         run: |

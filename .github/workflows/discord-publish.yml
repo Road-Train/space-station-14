@@ -8,7 +8,7 @@ on:
 
 jobs:
   publish:
-    runs-on: arc-runner-set
+    runs-on: self-hosted
     environment:
       name: prod
 

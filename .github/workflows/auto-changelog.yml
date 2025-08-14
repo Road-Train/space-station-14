@@ -15,7 +15,7 @@ env:
 
 jobs:
   update-changelog:
-    runs-on: arc-runner-set
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
