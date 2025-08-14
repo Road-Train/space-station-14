@@ -258,4 +258,11 @@
   id: 28
   time: '2025-08-14T08:17:09.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/77
+- author: Fractalflower
+  changes:
+  - message: Added "Demonic Wings" marking for humans and vulps.
+    type: Add
+  id: 29
+  time: '2025-08-14T08:20:37.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/79
 Order: -100
