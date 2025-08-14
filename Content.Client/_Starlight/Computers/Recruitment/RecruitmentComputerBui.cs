@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
-using Content.Client._Starlight.UI;
+using Content.Client._Starlight.UI.Controls;
 using Content.Client.GameTicking.Managers;
 using Content.Client.UserInterface.Controls;
 using Content.Shared._Starlight.Computers.Recruitment;

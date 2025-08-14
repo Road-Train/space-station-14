@@ -20,6 +20,8 @@ tags = "lang:en,region:am_n_e,18+"
 
 [ic]
 flavor_text = true
+secrets_text = true
+secrets_exploitable = true
 
 [infolinks]
 #appeal = "https://appeal.afterlight-14.space"
@@ -48,6 +50,7 @@ mob_pushing = true
 
 [ooc]
 enable_during_round = true
+rp_notes = true
 
 [tts]
 enabled = true

@@ -27,7 +27,8 @@ using Content.Shared.DetailExaminable;
 using Content.Shared.Store.Components;
 using Robust.Shared.Collections;
 using Robust.Shared.Map.Components;
-using Content.Server.Polymorph.Systems; // Starlight
+using Content.Server.Polymorph.Systems;
+using Content.Shared._Starlight.Character.Info.Components; // Starlight
 using Content.Shared.Zombies; // Starlight
 using Robust.Shared.Player; // Starlight
 
@@ -226,7 +227,7 @@ public sealed class SubdermalImplantSystem : SharedSubdermalImplantSystem
             _forensicsSystem.RandomizeDNA(ent);
             _forensicsSystem.RandomizeFingerprint(ent);
 
-            RemComp<DetailExaminableComponent>(ent); // remove MRP+ custom description if one exists
+            RemComp<DetailExaminableComponent>(ent);
             _identity.QueueIdentityUpdate(ent); // manually queue identity update since we don't raise the event
             _popup.PopupEntity(Loc.GetString("scramble-implant-activated-popup"), ent, ent);
         }

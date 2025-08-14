@@ -13,6 +13,7 @@ using Content.Server.Preferences.Managers;
 using Content.Server.Spawners.Components;
 using Content.Server.Speech.Components;
 using Content.Server.Station.Components;
+using Content.Shared._Starlight.Character.Info.Components;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Content.Shared.GameTicking;
@@ -26,6 +27,8 @@ using Content.Shared.Random;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Jobs;
+using Content.Shared.Starlight.CCVar;
+using Robust.Shared.Configuration;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
@@ -309,7 +312,6 @@ namespace Content.Server.GameTicking
                 return;
             }
 
-            
             _newLifeSystem.SaveCharacterToUsed(player.UserId, playerPreferences.IndexOfCharacter(character));     //🌟Starlight🌟
             PlayerJoinGame(player, silent);
 
@@ -327,11 +329,6 @@ namespace Content.Server.GameTicking
             var mobMaybe = _stationSpawning.SpawnPlayerCharacterOnStation(station, jobId, character);
             DebugTools.AssertNotNull(mobMaybe);
             var mob = mobMaybe!.Value;
-
-			//Attach voices to mind 🌟Starlight🌟
-            newMind.Comp.Voice = character.Voice;
-            newMind.Comp.SiliconVoice = character.SiliconVoice;
-            
 			_mind.TransferTo(newMind, mob);
 
             _roles.MindAddJobRole(newMind, silent: silent, jobPrototype: jobId);

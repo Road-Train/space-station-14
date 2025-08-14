@@ -11,7 +11,7 @@ using static Robust.Client.UserInterface.Control;
 using static Robust.Client.UserInterface.Controls.BaseButton;
 using static Robust.Client.UserInterface.Controls.BoxContainer;
 
-namespace Content.Client._Starlight.UI;
+namespace Content.Client._Starlight.UI.Controls;
 internal sealed class SLWindow : DefaultWindow
 {
     private readonly IStylesheetManager _stylesheetManager = default!;

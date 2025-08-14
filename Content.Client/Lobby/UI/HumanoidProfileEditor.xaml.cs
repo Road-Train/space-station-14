@@ -55,9 +55,6 @@ namespace Content.Client.Lobby.UI
         private int _maxNameLength;
         private bool _allowFlavorText;
 
-        private FlavorText.FlavorText? _flavorText;
-        private TextEdit? _flavorTextEdit;
-
         // One at a time.
         private LoadoutWindow? _loadoutWindow;
 
@@ -191,8 +188,6 @@ namespace Content.Client.Lobby.UI
             // Starlight - End
 
             #region Appearance
-
-            TabContainer.SetTabTitle(0, Loc.GetString("humanoid-profile-editor-appearance-tab"));
 
             #region Sex
 
@@ -462,7 +457,7 @@ namespace Content.Client.Lobby.UI
 
             #region Jobs
 
-            TabContainer.SetTabTitle(1, Loc.GetString("humanoid-profile-editor-jobs-tab"));
+
 
             _jobCategories = new Dictionary<string, BoxContainer>();
 
@@ -471,13 +466,13 @@ namespace Content.Client.Lobby.UI
 
             #endregion Jobs
 
-            TabContainer.SetTabTitle(2, Loc.GetString("humanoid-profile-editor-antags-tab"));
+
 
             RefreshTraits();
 
             #region Markings
 
-            TabContainer.SetTabTitle(4, Loc.GetString("humanoid-profile-editor-markings-tab"));
+
 
             Markings.OnMarkingAdded += OnMarkingChange;
             Markings.OnMarkingRemoved += OnMarkingChange;
@@ -488,11 +483,10 @@ namespace Content.Client.Lobby.UI
 
             // Starlight
             #region Cybernetics
-            TabContainer.SetTabTitle(5, Loc.GetString("humanoid-profile-editor-cybernetics-tab"));
             Cybernetics.OnCyberneticsUpdated += OnCyberneticsUpdated;
             #endregion Cybernetics
 
-            RefreshFlavorText();
+            RefreshCharacterInfo();
 
             #region Dummy
 
@@ -541,6 +535,10 @@ namespace Content.Client.Lobby.UI
             };
             SiliconVoicePreviewButton.OnPressed +=
                 _ => _entManager.System<TextToSpeechSystem>().RequestPreviewTts(Profile?.SiliconVoice ?? "");
+
+            SetupTabs();
+            SetupInfoEditors();
+            RefreshCharacterInfo();
             // 🌟Starlight🌟 end
         }
         private void UpdateVoicesControls()
@@ -571,6 +569,18 @@ namespace Content.Client.Lobby.UI
                 VoiceButton.TrySelectId(voiceChoiceId);
         }
         // 🌟Starlight🌟 Start
+
+        private void SetupTabs()
+        {
+            TabContainer.SetTabTitle(0, Loc.GetString("humanoid-profile-editor-appearance-tab"));
+            TabContainer.SetTabTitle(1, Loc.GetString("humanoid-profile-editor-jobs-tab"));
+            TabContainer.SetTabTitle(2, Loc.GetString("humanoid-profile-editor-antags-tab"));
+            TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-traits-tab"));
+            TabContainer.SetTabTitle(4, Loc.GetString("humanoid-profile-editor-markings-tab"));
+            TabContainer.SetTabTitle(5, Loc.GetString("humanoid-profile-editor-cybernetics-tab"));
+            TabContainer.SetTabTitle(6, Loc.GetString("humanoid-profile-editor-ic-info-tab"));
+            TabContainer.SetTabTitle(7, Loc.GetString("humanoid-profile-editor-ooc-info-tab"));
+        }
         private void UpdateSiliconVoicesControls()
         {
             if (Profile is null)
@@ -601,34 +611,48 @@ namespace Content.Client.Lobby.UI
         }
         // 🌟Starlight🌟 end
 
+        private void SetupInfoEditors()
+        {
+            ICInfoEditor.PhysicalDescInput.OnTextChanged += OnPhysicalDescChanged;
+            ICInfoEditor.PersonalityDescInput.OnTextChanged += OnPersonalityDescChanged;
+            ICInfoEditor.ExploitableInput.OnTextChanged += OnExploitablesChanged;
+            ICInfoEditor.SecretsInput.OnTextChanged += OnSecretsChanged;
+
+
+            OOCInfoEditor.PersonalNotesInput.OnTextChanged += OnPersonalNotesChanged;
+            OOCInfoEditor.OOCNotesInput.OnTextChanged += OnOOCNotesChanged;
+        }
+
+        private void ShutdownInfoEditors()
+        {
+            ICInfoEditor.PhysicalDescInput.OnTextChanged -= OnPhysicalDescChanged;
+            ICInfoEditor.PersonalityDescInput.OnTextChanged -= OnPersonalityDescChanged;
+            ICInfoEditor.ExploitableInput.OnTextChanged -= OnExploitablesChanged;
+            ICInfoEditor.SecretsInput.OnTextChanged -= OnSecretsChanged;
+
+            OOCInfoEditor.Visible = false;
+            OOCInfoEditor.PersonalNotesInput.OnTextChanged -= OnPersonalNotesChanged;
+            OOCInfoEditor.OOCNotesInput.OnTextChanged -= OnOOCNotesChanged;
+        }
+
         /// <summary>
         /// Refreshes the flavor text editor status.
         /// </summary>
-        public void RefreshFlavorText()
+        public void RefreshCharacterInfo()
         {
             if (_allowFlavorText)
             {
-                if (_flavorText != null)
+                if (ICInfoEditor.Visible)
                     return;
-
-                _flavorText = new FlavorText.FlavorText();
-                TabContainer.AddChild(_flavorText);
-                TabContainer.SetTabTitle(TabContainer.ChildCount - 1, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
-                _flavorTextEdit = _flavorText.CFlavorTextInput;
-
-                _flavorText.OnFlavorTextChanged += OnFlavorTextChange;
+                ICInfoEditor.Visible = true;
+                OOCInfoEditor.Visible = true;
             }
             else
             {
-                if (_flavorText == null)
+                if (!ICInfoEditor.Visible)
                     return;
-
-                TabContainer.RemoveChild(_flavorText);
-                _flavorText.OnFlavorTextChanged -= OnFlavorTextChange;
-                _flavorText.Dispose();
-                _flavorTextEdit?.Dispose();
-                _flavorTextEdit = null;
-                _flavorText = null;
+                ICInfoEditor.Visible = false;
+                OOCInfoEditor.Visible = false;
             }
         }
 
@@ -641,7 +665,6 @@ namespace Content.Client.Lobby.UI
             TraitTabContainer.DisposeAllChildren();
 
             var traits = _prototypeManager.EnumeratePrototypes<TraitPrototype>().OrderBy(t => Loc.GetString(t.Name)).ToList();
-            TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-traits-tab"));
 
             if (traits.Count < 1)
             {
@@ -945,7 +968,7 @@ namespace Content.Client.Lobby.UI
 
             UpdateNameEdit();
             UpdateCustomSpecieNameEdit(); // Starlight
-            UpdateFlavorTextEdit();
+            UpdateCharacterInfoEditorText();
             UpdateSexControls();
             UpdateGenderControls();
             UpdateSizeControls(); //starlight
@@ -967,7 +990,7 @@ namespace Content.Client.Lobby.UI
             RefreshLoadouts();
             RefreshSpecies();
             RefreshTraits();
-            RefreshFlavorText();
+            RefreshCharacterInfo();
             Preview.Initialize(this, _entManager, _preferencesManager, _prototypeManager, _playerManager);
             ReloadPreview();
         }
@@ -1245,13 +1268,58 @@ namespace Content.Client.Lobby.UI
             UpdateJobPreferences();
         }
 
-        private void OnFlavorTextChange(string content)
+        private void OnPhysicalDescChanged(TextEdit.TextEditEventArgs args)
         {
             if (Profile is null)
                 return;
 
-            Profile = Profile.WithFlavorText(content);
-            SetDirty();
+            Profile = Profile.WithPhysicalDesc(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
+        }
+
+
+        private void OnPersonalityDescChanged(TextEdit.TextEditEventArgs args)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithPersonalityDesc(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
+        }
+
+        private void OnExploitablesChanged(TextEdit.TextEditEventArgs args)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithExploitable(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
+        }
+
+        private void OnSecretsChanged(TextEdit.TextEditEventArgs args)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithSecrets(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
+        }
+
+        private void OnPersonalNotesChanged(TextEdit.TextEditEventArgs args)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithPersonalNotes(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
+        }
+        private void OnOOCNotesChanged(TextEdit.TextEditEventArgs args)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithOOCNotes(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
         }
 
         private void OnMarkingChange(MarkingSet markings)
@@ -1477,12 +1545,17 @@ namespace Content.Client.Lobby.UI
         }
         // Starlight - End
 
-        private void UpdateFlavorTextEdit()
+        private void UpdateCharacterInfoEditorText()
         {
-            if (_flavorTextEdit != null)
-            {
-                _flavorTextEdit.TextRope = new Rope.Leaf(Profile?.FlavorText ?? "");
-            }
+            if (!_allowFlavorText)
+                return;
+            ICInfoEditor.PhysicalDescInput.TextRope = new Rope.Leaf(Profile?.PhysicalDescription ?? "");
+            ICInfoEditor.PersonalityDescInput.TextRope = new Rope.Leaf(Profile?.PersonalityDescription ?? "");
+            ICInfoEditor.ExploitableInput.TextRope = new Rope.Leaf(Profile?.ExploitableInfo ?? "");
+            ICInfoEditor.SecretsInput.TextRope = new Rope.Leaf(Profile?.Secrets ?? "");
+
+            OOCInfoEditor.PersonalNotesInput.TextRope = new Rope.Leaf(Profile?.PersonalNotes ?? "");
+            OOCInfoEditor.OOCNotesInput.TextRope = new Rope.Leaf(Profile?.OOCNotes ?? "");
         }
 
         private void UpdateAgeEdit()

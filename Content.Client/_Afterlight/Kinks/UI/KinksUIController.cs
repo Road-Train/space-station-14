@@ -1,5 +1,5 @@
 ﻿using Content.Client._Afterlight.UserInterface;
-using Content.Client._Starlight.UI;
+using Content.Client._Starlight.UI.Controls;
 using Content.Client.Lobby;
 using Content.Shared._Afterlight.Collections;
 using Content.Shared._Afterlight.Kinks;

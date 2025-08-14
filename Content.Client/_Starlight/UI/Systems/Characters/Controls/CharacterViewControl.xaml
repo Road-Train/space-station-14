@@ -1,0 +1,11 @@
+﻿<controls:CharacterViewControl
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client._Starlight.UI.Systems.Characters.Controls">
+    <BoxContainer Orientation="Horizontal">
+        <SpriteView OverrideDirection="South" Scale="2 2" Name="CharacterSpriteView" Access="Public" SetSize="64 64"/>
+        <BoxContainer Orientation="Vertical" VerticalAlignment="Top">
+            <Label Name="CharacterNameLabel" Access="Public"/>
+            <Label Name="CharacterSubText" VerticalAlignment="Top" StyleClasses="LabelSubText" Access="Public"/>
+        </BoxContainer>
+    </BoxContainer>
+</controls:CharacterViewControl>

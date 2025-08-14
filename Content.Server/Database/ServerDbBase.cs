@@ -53,6 +53,7 @@ namespace Content.Server.Database
                 .Include(p => p.Profiles).ThenInclude(h => h.Traits)
                 .Include(p => p.Profiles) // Starlight
                     .ThenInclude(h => h.StarLightProfile) // Starlight
+                .Include(p => p.Profiles).ThenInclude(h => h.CharacterInfo)// Starlight
                 .Include(p => p.Profiles)
                     .ThenInclude(h => h.Loadouts)
                     .ThenInclude(l => l.Groups)
@@ -107,6 +108,7 @@ namespace Content.Server.Database
                 .Include(p => p.Loadouts)
                     .ThenInclude(l => l.Groups)
                     .ThenInclude(group => group.Loadouts)
+                .Include(p => p.CharacterInfo)
                 .AsSplitQuery()
                 .SingleOrDefault(h => h.Slot == slot);
 
@@ -291,11 +293,36 @@ namespace Content.Server.Database
                 loadouts[role.RoleName] = loadout;
             }
 
+            string physicalDesc = string.Empty;
+            string personalityDesc = string.Empty;
+            string personalNotes = string.Empty;
+            string oocNotes = string.Empty;
+            string characterSecrets = string.Empty;
+            string exploitableInfo = string.Empty;
+
+            if (profile.CharacterInfo != null)
+            {
+                physicalDesc = profile.CharacterInfo.PhysicalDesc;
+                if (physicalDesc == string.Empty)
+                {
+                    physicalDesc = profile.FlavorText;
+                }
+                personalityDesc = profile.CharacterInfo.PersonalityDesc;
+                personalNotes = profile.CharacterInfo.PersonalNotes;
+                oocNotes = profile.CharacterInfo.OOCNotes;
+                characterSecrets = profile.CharacterInfo.CharacterSecrets;
+                exploitableInfo = profile.CharacterInfo.ExploitableInfo;
+            }
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.Voice,
                 profile.SiliconVoice, // 🌟Starlight🌟
-                profile.FlavorText,
+                physicalDesc, // Starlight
+                personalityDesc, // Starlight
+                personalNotes, // Starlight
+                oocNotes, // Starlight
+                characterSecrets,// Starlight
+                exploitableInfo,// Starlight
                 profile.Species,
                 profile.StarLightProfile?.CustomSpecieName ?? "", // Starlight
                 profile.Age,
@@ -340,7 +367,14 @@ namespace Content.Server.Database
             profile.CharacterName = humanoid.Name;
             profile.Voice = humanoid.Voice;
             profile.SiliconVoice = humanoid.SiliconVoice; // 🌟Starlight🌟
-            profile.FlavorText = humanoid.FlavorText;
+            profile.FlavorText = string.Empty;
+            profile.CharacterInfo ??= new StarLightModel.CharacterInfo();//Starlight
+            profile.CharacterInfo.PhysicalDesc = humanoid.PhysicalDescription;//Starlight
+            profile.CharacterInfo.PersonalityDesc = humanoid.PersonalityDescription;//Starlight
+            profile.CharacterInfo.PersonalNotes = humanoid.PersonalNotes;//Starlight
+            profile.CharacterInfo.OOCNotes = humanoid.OOCNotes;//Starlight
+            profile.CharacterInfo.CharacterSecrets = humanoid.Secrets;//Starlight
+            profile.CharacterInfo.ExploitableInfo = humanoid.ExploitableInfo;//Starlight
             profile.Species = humanoid.Species;
             profile.StarLightProfile ??= new StarLightModel.StarLightProfile(); // Starlight
             profile.StarLightProfile.CustomSpecieName = humanoid.CustomSpecieName; // Starlight

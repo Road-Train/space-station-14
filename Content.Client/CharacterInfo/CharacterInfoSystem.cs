@@ -1,12 +1,12 @@
 ﻿using Content.Shared.CharacterInfo;
+using Content.Shared.CollectiveMind;
 using Content.Shared.Objectives;
 using Robust.Client.Player;
 using Robust.Client.UserInterface;
-using Content.Shared.CollectiveMind;
 
 namespace Content.Client.CharacterInfo;
 
-public sealed class CharacterInfoSystem : EntitySystem
+public sealed partial class CharacterInfoSystem : EntitySystem
 {
     [Dependency] private readonly IPlayerManager _players = default!;
 
@@ -17,6 +17,7 @@ public sealed class CharacterInfoSystem : EntitySystem
         base.Initialize();
 
         SubscribeNetworkEvent<CharacterInfoEvent>(OnCharacterInfoEvent);
+        SL_Initialize();
     }
 
     public void RequestCharacterInfo()

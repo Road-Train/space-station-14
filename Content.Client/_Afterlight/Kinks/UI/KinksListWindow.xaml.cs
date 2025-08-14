@@ -1,4 +1,4 @@
-﻿using Content.Client._Starlight.UI;
+﻿using Content.Client._Starlight.UI.Controls;
 using Content.Shared._Afterlight.Collections;
 using Content.Shared._Afterlight.Kinks;
 using Content.Shared.Database._Afterlight;
