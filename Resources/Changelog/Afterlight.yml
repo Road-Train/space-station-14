@@ -245,4 +245,17 @@
   id: 27
   time: '2025-08-14T00:28:13.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/47
+- author: Fractalflower
+  changes:
+  - message: Kitsune mask trinket, selectable at roundstart. For all One (1) people
+      who use it.
+    type: Add
+  - message: Satanic bibles no longer hurt unholy creatures. (Can be VVed onto any
+      bible too)
+    type: Tweak
+  - message: The kitsune mask does not have 95% blunt resistance anymore. Tiders rejoice.
+    type: Remove
+  id: 28
+  time: '2025-08-14T08:17:09.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/77
 Order: -100
