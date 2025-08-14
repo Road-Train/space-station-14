@@ -222,4 +222,27 @@
   id: 26
   time: '2025-08-10T22:19:43.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/72
+- author: Jezithyr
+  changes:
+  - message: Added the ability to inspect other players and open up a character window
+      of their character.
+    type: Add
+  - message: Added OOC notes (visible to other players), and personal notes (only
+      visible to you).
+    type: Add
+  - message: Added character secrets (visible only to the player controlling the character
+      or clone)
+    type: Add
+  - message: Added exploitable info for characters (visible to ghosts and traitors
+      on examine).
+    type: Add
+  - message: Added tabs to character window and character editor for the new flavour
+      text sections.
+    type: Tweak
+  - message: Split flavortext into physical (attached to the character) and personality
+      descriptions (attached to the mind).
+    type: Tweak
+  id: 27
+  time: '2025-08-14T00:28:13.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/47
 Order: -100
