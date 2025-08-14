@@ -11,11 +11,8 @@ on:
 jobs:
   build:
     if: github.actor != 'Dogborg' && github.event.pull_request.draft == false && github.event.head_commit.message != 'Automatic changelog update'
-    strategy:
-      matrix:
-        os: [self-hosted, type-cx42]
 
-    runs-on: ${{ matrix.os }}
+    runs-on: [self-hosted, type-cx42]
 
     env:
       DOTNET_INSTALL_DIR: "./.dotnet"
