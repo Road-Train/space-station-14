@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Icons by themageofmicrosoftpaints (discord), modified by lunarcomets (discord, github)",
+  "size": {
+    "x": 16,
+    "y": 16
+  },
+  "states": [
+    {
+      "name": "erp-no"
+    },
+    {
+      "name": "erp-yes"
+    },
+    {
+      "name": "erp-ask"
+    },
+    {
+      "name": "cnc-yes"
+    },
+    {
+      "name": "cnc-ask"
+    }
+  ]
+}
