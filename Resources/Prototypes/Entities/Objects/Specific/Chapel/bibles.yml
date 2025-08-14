@@ -146,6 +146,7 @@
   description: "What could possibly go wrong?"
   id: BibleSatanic
   components:
+  - type: UnholyBible # afterlight
   - type: Sprite
     sprite: Objects/Specific/Chapel/satanicbible.rsi
   - type: Item

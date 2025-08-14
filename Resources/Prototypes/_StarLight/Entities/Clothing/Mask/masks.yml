@@ -60,9 +60,10 @@
     sprite: _Starlight/Clothing/Mask/kitsune_mask.rsi
   - type: Clothing
     sprite: _Starlight/Clothing/Mask/kitsune_mask.rsi
-  - type: Pierceable
-    level: Metal
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.05
+  # Afterlight change. Why in Velzie's name?
+  # - type: Pierceable
+  #   level: Metal
+  # - type: Armor
+  #   modifiers:
+  #     coefficients:
+  #       Blunt: 0.05

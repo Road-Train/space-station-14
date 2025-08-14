@@ -4,6 +4,7 @@ using Content.Server.Popups;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
 using Content.Shared.Bible;
+using Content.Shared.Bible.Components;
 using Content.Shared.Damage;
 using Content.Shared.Ghost.Roles.Components;
 using Content.Shared.IdentityManagement;
@@ -57,6 +58,7 @@ namespace Content.Server.Bible
             //If an unholy creature picks up the bible, knock them down
             if (HasComp<UnholyComponent>(args.Container.Owner))
             {
+                if (HasComp<UnholyBibleComponent>(uid)) return; // afterlight
                 Timer.Spawn(500, () =>
                 {
                     _stun.TryParalyze(args.Container.Owner, TimeSpan.FromSeconds(10), true);
