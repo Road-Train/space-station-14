@@ -71,6 +71,7 @@
     damage: #per second, scales with number of fire 'stacks'
       types:
         Heat: 3.75 # 2.5x base
+  - type: Wagging
 
 - type: entity
   parent: [ XenoHybridPlayerSprite, BaseSpeciesDummy ]

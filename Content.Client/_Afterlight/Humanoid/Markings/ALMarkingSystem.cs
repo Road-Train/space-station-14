@@ -1,11 +1,8 @@
-﻿using System.Collections.Immutable;
-using Content.Client._Afterlight.Sprite;
+﻿using Content.Client._Afterlight.Sprite;
 using Content.Shared._Afterlight.Humanoid.Markings;
 using Content.Shared._Afterlight.Inventory;
 using Content.Shared._Afterlight.Movement;
-using Content.Shared._Afterlight.Sprite;
 using Content.Shared.Clothing.EntitySystems;
-using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
@@ -25,14 +22,12 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
     [Dependency] private readonly SpriteSystem _sprite = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
 
-    private EntityQuery<ALMarkingComponent> _alMarkingQuery;
     private EntityQuery<EyeComponent> _eyeQuery;
     private EntityQuery<SpriteComponent> _spriteQuery;
     private EntityQuery<TransformComponent> _transformQuery;
 
     public override void Initialize()
     {
-        _alMarkingQuery = GetEntityQuery<ALMarkingComponent>();
         _eyeQuery = GetEntityQuery<EyeComponent>();
         _spriteQuery = GetEntityQuery<SpriteComponent>();
         _transformQuery = GetEntityQuery<TransformComponent>();
@@ -43,6 +38,7 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
         SubscribeLocalEvent<ALMarkingComponent, MoveEvent>(OnMarkingMove);
         SubscribeLocalEvent<ALMarkingComponent, DidEquipEvent>(OnMarkingDidEquip);
         SubscribeLocalEvent<ALMarkingComponent, DidUnequipEvent>(OnMarkingDidUnequip);
+        SubscribeLocalEvent<ALMarkingComponent, ALMarkingsSpriteUpdatedEvent>(OnMarkingsSpriteUpdated);
     }
 
     private void OnActorRelativeRotationChanged(Entity<ActorComponent> ent, ref ALRelativeRotationChangedEvent args)
@@ -60,7 +56,7 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
 
     private void OnMarkingMapInit(Entity<ALMarkingComponent> ent, ref ComponentStartup args)
     {
-        UpdateEntity(ent);
+        UpdateEntity(ent, false);
     }
 
     private void OnMarkingMove(Entity<ALMarkingComponent> ent, ref MoveEvent args)
@@ -78,7 +74,12 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
         MarkingEquippedChanged(ent, args.SlotFlags);
     }
 
-    private void UpdateEntity(Entity<ALMarkingComponent> ent)
+    private void OnMarkingsSpriteUpdated(Entity<ALMarkingComponent> ent, ref ALMarkingsSpriteUpdatedEvent args)
+    {
+        UpdateEntity(ent, false);
+    }
+
+    private void UpdateEntity(Entity<ALMarkingComponent> ent, bool cached = true)
     {
         if (!_spriteQuery.TryComp(ent, out var sprite) ||
             !_transformQuery.TryComp(ent, out var transform))
@@ -87,16 +88,17 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
         }
 
         var eyeRotation = GetLocalEyeRotation();
-        UpdateSprite((ent, ent, sprite, transform), eyeRotation);
+        UpdateSprite((ent, ent, sprite, transform), eyeRotation, cached);
     }
 
-    private void UpdateSprite(Entity<ALMarkingComponent, SpriteComponent, TransformComponent> ent, Angle eyeRotation)
+    private void UpdateSprite(Entity<ALMarkingComponent, SpriteComponent, TransformComponent> ent, Angle eyeRotation, bool cached = true)
     {
         if (IsClientSide(ent))
             return;
 
         var worldRotation = _transform.GetWorldRotation(ent.Comp3);
-        if (ent.Comp1.LastEyeRotation == eyeRotation &&
+        if (cached &&
+            ent.Comp1.LastEyeRotation == eyeRotation &&
             ent.Comp1.LastWorldRotation == worldRotation)
         {
             return;
@@ -227,9 +229,9 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
     {
         if (IsHiddenByEquipment(ent.Owner, marking))
         {
-            _sprite.LayerSetVisible(ent, frontLayerId, false);
-            _sprite.LayerSetVisibleNullable(ent, marking.Side, false);
-            _sprite.LayerSetVisibleNullable(ent, marking.Back, false);
+            _sprite.TryLayerSetVisible(ent, frontLayerId, false);
+            _sprite.TryLayerSetVisible(ent, marking.Side, false);
+            _sprite.TryLayerSetVisible(ent, marking.Back, false);
             return;
         }
 
@@ -238,21 +240,21 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
         var frontFacing = facingDirection != RsiDirection.North || marking.Back == null;
         if (sideFacing)
         {
-            _sprite.LayerSetVisible(ent, frontLayerId, false);
-            _sprite.LayerSetVisibleNullable(ent, marking.Side, true);
-            _sprite.LayerSetVisibleNullable(ent, marking.Back, false);
+            _sprite.TryLayerSetVisible(ent, frontLayerId, false);
+            _sprite.TryLayerSetVisible(ent, marking.Side, true);
+            _sprite.TryLayerSetVisible(ent, marking.Back, false);
         }
         else if (frontFacing)
         {
-            _sprite.LayerSetVisible(ent, frontLayerId, true);
-            _sprite.LayerSetVisibleNullable(ent, marking.Side, false);
-            _sprite.LayerSetVisibleNullable(ent, marking.Back, false);
+            _sprite.TryLayerSetVisible(ent, frontLayerId, true);
+            _sprite.TryLayerSetVisible(ent, marking.Side, false);
+            _sprite.TryLayerSetVisible(ent, marking.Back, false);
         }
         else
         {
-            _sprite.LayerSetVisible(ent, frontLayerId, false);
-            _sprite.LayerSetVisibleNullable(ent, marking.Side, false);
-            _sprite.LayerSetVisibleNullable(ent, marking.Back, true);
+            _sprite.TryLayerSetVisible(ent, frontLayerId, false);
+            _sprite.TryLayerSetVisible(ent, marking.Side, false);
+            _sprite.TryLayerSetVisible(ent, marking.Back, true);
         }
     }
 
@@ -291,26 +293,5 @@ public sealed class ALMarkingSystem : SharedALMarkingSystem
     {
         return marking.HiddenBy != SlotFlags.NONE &&
                _alInventory.HasItemEquipped(inventory, marking.HiddenBy);
-    }
-
-    public bool IsForcedHidden(Entity<HumanoidAppearanceComponent, SpriteComponent> ent, HumanoidVisualLayers layer)
-    {
-        if (!_alMarkingQuery.TryComp(ent, out var markingComp))
-            return false;
-
-        var worldRotation = _transform.GetWorldRotation(ent);
-        var eyeRotation = GetLocalEyeRotation();
-        var angle = GetTotalAngle(worldRotation, eyeRotation);
-        Direction? overrideDirection = ent.Comp2.EnableDirectionOverride ? ent.Comp2.DirectionOverride : null;
-        foreach (var (markingLayer, marking) in markingComp.Layers)
-        {
-            if (marking.Layer != layer)
-                continue;
-
-            return IsHiddenByEquipment(ent.Owner, marking) ||
-                   GetFacingDirection((ent, ent), markingLayer, angle, overrideDirection) == RsiDirection.North;
-        }
-
-        return false;
     }
 }

@@ -1,6 +1,7 @@
 using System.Numerics; //starlight
 using Content.Client._Afterlight.Humanoid.Markings;
 using Content.Client.DisplacementMap;
+using Content.Shared._Afterlight.Humanoid.Markings;
 using Content.Shared.CCVar;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -66,10 +67,13 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         sprite.Scale = new Vector2(humanoidAppearance.Width * humanoidAppearance.Height, humanoidAppearance.Height);
         //starlight end
+
+        var ev = new ALMarkingsSpriteUpdatedEvent();
+        RaiseLocalEvent(entity, ref ev);
     }
 
-    private bool IsHidden(HumanoidAppearanceComponent humanoid, HumanoidVisualLayers layer, Entity<HumanoidAppearanceComponent, SpriteComponent> entity)
-        => humanoid.HiddenLayers.ContainsKey(layer) || humanoid.PermanentlyHidden.Contains(layer) || _alMarking.IsForcedHidden(entity, layer); // Afterlight
+    private static bool IsHidden(HumanoidAppearanceComponent humanoid, HumanoidVisualLayers layer)
+        => humanoid.HiddenLayers.ContainsKey(layer) || humanoid.PermanentlyHidden.Contains(layer);
 
     private void UpdateLayers(Entity<HumanoidAppearanceComponent, SpriteComponent> entity)
     {
@@ -117,7 +121,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         var layerIndex = _sprite.LayerMapReserve((entity.Owner, sprite), key);
         var layer = sprite[layerIndex];
-        layer.Visible = !IsHidden(component, key, entity); // Afterlight
+        layer.Visible = !IsHidden(component, key);
 
         if (color != null)
             layer.Color = color.Value;
@@ -381,7 +385,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             return;
         }
 
-        visible &= !IsHidden(humanoid, markingPrototype.BodyPart, entity); // Afterlight
+        visible &= !IsHidden(humanoid, markingPrototype.BodyPart);
         visible &= humanoid.BaseLayers.TryGetValue(markingPrototype.BodyPart, out var setting)
            && setting.AllowsMarkings;
 
