@@ -27,6 +27,7 @@
     RFoot: MobAbductorRFoot
     # Afterlight Start
     Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
     # Afterlight End
 
 - type: humanoidBaseSprite

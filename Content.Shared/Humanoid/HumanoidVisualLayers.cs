@@ -37,6 +37,7 @@ namespace Content.Shared.Humanoid
         XenoHybridDorsal,
         XenoHybridTail,
         Breasts,
+        Butts,
         // Afterlight
     }
 }

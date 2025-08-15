@@ -7,10 +7,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_0_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_0_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_0_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_0_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_0_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -21,10 +23,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_1_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_1_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_1_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_1_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_1_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -35,10 +39,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_2_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_2_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_2_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_2_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_2_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -49,10 +55,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_3_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_3_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_3_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_3_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_3_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -63,10 +71,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_4_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_4_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_4_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_4_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_4_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -77,10 +87,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_5_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_5_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_5_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_5_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_5_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -91,10 +103,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_6_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_6_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_6_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_6_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_6_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -105,10 +119,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_7_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_7_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_7_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_7_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_7_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -119,10 +135,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_8_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_8_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_8_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_8_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_8_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -133,10 +151,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_9_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_9_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_9_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_9_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_9_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -147,10 +167,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_10_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_10_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_10_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_10_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_10_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -161,10 +183,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_11_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_11_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_11_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_11_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_11_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -175,10 +199,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_12_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_12_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_12_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_12_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_12_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -189,10 +215,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_13_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_13_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_13_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_13_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_13_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -203,10 +231,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_14_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_14_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_14_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_14_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_14_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -217,10 +247,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_15_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_15_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_15_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_15_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_15_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -231,10 +263,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_16_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_16_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_16_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_16_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_16_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -245,10 +279,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_17_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_17_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_17_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_17_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_17_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -259,10 +295,12 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_18_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_18_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_18_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_18_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_18_behind_secondary
 
 - type: marking
   parent: ALBreastsBase
@@ -273,7 +311,9 @@
   - sprite: _Afterlight/Genitals/breasts.rsi
     state: m_breasts_quad_19_front_secondary
   backSprites:
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_19_behind_primary
-  - sprite: _Afterlight/Genitals/breasts.rsi
-    state: m_breasts_quad_19_behind_secondary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_19_behind_primary
+  - rsi:
+      sprite: _Afterlight/Genitals/breasts.rsi
+      state: m_breasts_quad_19_behind_secondary

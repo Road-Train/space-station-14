@@ -14,10 +14,6 @@
     {
       "name": "m_tail_xeno_front_primary",
       "directions": 4
-    },
-    {
-      "name": "m_tail_xeno_primary",
-      "directions": 4
     }
   ]
 }

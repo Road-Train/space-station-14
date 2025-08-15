@@ -406,7 +406,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             _sprite.LayerSetVisible((entity.Owner, sprite), layerId, visible);
 
             // Afterlight
-            _alMarking.ApplyMarking((entity, sprite), layerId, markingPrototype, j, visible, colors, ref targetLayer);
+            _alMarking.ApplyMarking((entity, sprite), layerId, markingPrototype, j, visible, colors, ref targetLayer, markingSprite);
             // Afterlight
 
             if (!visible || setting == null) // this is kinda implied

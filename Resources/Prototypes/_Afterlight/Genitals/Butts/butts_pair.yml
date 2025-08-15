@@ -1,0 +1,55 @@
+﻿- type: marking
+  parent: ALButtsBase
+  id: ALButtsPair1
+  sprites:
+  - sprite: _Afterlight/Genitals/butts.rsi
+    state: m_butt_pair_1_adj_primary
+
+- type: marking
+  parent: ALButtsBase
+  id: ALButtsPair2
+  sprites:
+  - sprite: _Afterlight/Genitals/butts.rsi
+    state: m_butt_pair_2_adj_primary
+
+- type: marking
+  parent: ALButtsBase
+  id: ALButtsPair3
+  sprites:
+  - sprite: _Afterlight/Genitals/butts.rsi
+    state: m_butt_pair_3_adj_primary
+
+- type: marking
+  parent: ALButtsBase
+  id: ALButtsPair4
+  sprites:
+  - sprite: _Afterlight/Genitals/butts.rsi
+    state: m_butt_pair_4_adj_primary
+
+- type: marking
+  parent: ALButtsBase
+  id: ALButtsPair5
+  sprites:
+  - sprite: _Afterlight/Genitals/butts.rsi
+    state: m_butt_pair_5_adj_primary
+
+- type: marking
+  parent: ALButtsBase
+  id: ALButtsPair6
+  sprites:
+  - sprite: _Afterlight/Genitals/butts.rsi
+    state: m_butt_pair_6_adj_primary
+
+- type: marking
+  parent: ALButtsBase
+  id: ALButtsPair7
+  sprites:
+  - sprite: _Afterlight/Genitals/butts.rsi
+    state: m_butt_pair_7_adj_primary
+
+- type: marking
+  parent: ALButtsBase
+  id: ALButtsPair8
+  sprites:
+  - sprite: _Afterlight/Genitals/butts.rsi
+    state: m_butt_pair_8_adj_primary

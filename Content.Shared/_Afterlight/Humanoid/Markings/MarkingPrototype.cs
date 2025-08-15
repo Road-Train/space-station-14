@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using Content.Shared._Afterlight.Humanoid.Markings;
 using Content.Shared.Inventory;
 using Robust.Shared.Utility;
 
@@ -12,9 +13,11 @@ public sealed partial class MarkingPrototype
 
     [DataField] public LocId[] Localization = Array.Empty<LocId>();
 
-    [DataField] public SpriteSpecifier.Rsi[] BackSprites = Array.Empty<SpriteSpecifier.Rsi>();
-
     [DataField] public bool AllSpecies;
 
     [DataField] public SlotFlags HiddenBy;
+
+    [DataField] public ALMarkingLayer[] BackSprites = Array.Empty<ALMarkingLayer>();
+
+    [DataField] public ALMarkingLayer[] SideSprites = Array.Empty<ALMarkingLayer>();
 }

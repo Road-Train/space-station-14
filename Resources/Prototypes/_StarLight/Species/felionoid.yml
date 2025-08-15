@@ -40,6 +40,7 @@
     Tail: MobHumanoidAnyMarking
     # Afterlight Start
     Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
     # Afterlight End
 
 - type: markingPoints
@@ -73,6 +74,9 @@
       defaultMarkings: [ FelionoidTailAnimated ]
     # Afterlight
     Breasts:
+      points: 1
+      required: false
+    Butts:
       points: 1
       required: false
     # Afterlight

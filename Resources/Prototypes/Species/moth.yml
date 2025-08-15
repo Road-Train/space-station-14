@@ -37,6 +37,7 @@
     RFoot: MobMothRFoot
     # Afterlight Start
     Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
     # Afterlight End
 
 - type: humanoidBaseSprite
@@ -89,6 +90,9 @@
       required: false
     # Afterlight
     Breasts:
+      points: 1
+      required: false
+    Butts:
       points: 1
       required: false
     # Afterlight

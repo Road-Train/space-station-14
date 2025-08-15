@@ -41,6 +41,7 @@
     XenoHybridDorsal: MobHumanoidAnyMarking
     XenoHybridTail: MobHumanoidAnyMarking
     Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
 
 - type: markingPoints
   id: MobXenoHybridMarkingLimits
@@ -77,6 +78,9 @@
       points: 1
       required: false
     Breasts:
+      points: 1
+      required: false
+    Butts:
       points: 1
       required: false
 
@@ -163,21 +167,3 @@
   baseSprite:
     sprite: _Afterlight/Species/XenoHybrid/parts.rsi
     state: r_foot
-
-- type: humanoidBaseSprite
-  id: MobXenoHybridXenoHead
-  baseSprite:
-    sprite: _Afterlight/Species/XenoHybrid/Markings/Head/xeno_head_standard.rsi
-    state: m_xenohead_standard_adj
-
-- type: humanoidBaseSprite
-  id: MobXenoHybridXenoDorsal
-  baseSprite:
-    sprite: _Afterlight/Species/XenoHybrid/Markings/Dorsal/xeno_dorsal_standard.rsi
-    state: m_xenodorsal_standard
-
-- type: humanoidBaseSprite
-  id: MobXenoHybridXenoTail
-  baseSprite:
-    sprite: _Afterlight/Species/XenoHybrid/Markings//Tail/xeno_tail.rsi
-    state: m_tail_xeno_primary

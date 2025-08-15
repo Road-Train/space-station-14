@@ -1,0 +1,20 @@
+﻿- type: marking
+  abstract: true
+  id: ALButtsBase
+  bodyPart: Butts
+  markingCategory: Butts
+  allSpecies: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackTypes:
+      - !type:SkinColoring
+  localization:
+  - al-markings-butts
+  hiddenBy:
+  - OuterClothing
+  - InnerClothing
+  sideSprites:
+  - map: LHand
+    offset: -1
