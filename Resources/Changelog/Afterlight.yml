@@ -295,4 +295,11 @@
   id: 33
   time: '2025-08-15T08:58:50.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/86
+- author: DrSmugleaf
+  changes:
+  - message: Added xeno hybrid tail wagging.
+    type: Add
+  id: 34
+  time: '2025-08-15T10:51:25.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/89
 Order: -100
