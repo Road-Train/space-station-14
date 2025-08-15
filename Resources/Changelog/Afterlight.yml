@@ -265,4 +265,19 @@
   id: 29
   time: '2025-08-14T08:20:37.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/79
+- author: Fractalflower
+  changes:
+  - message: Added "Yes ERP" poster to random spawns.
+    type: Add
+  id: 30
+  time: '2025-08-15T02:35:24.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/80
+- author: DrSmugleaf
+  changes:
+  - message: Fixed flashing your breasts when you start wagging your tail, and sometimes
+      briefly on your screen after spawning.
+    type: Fix
+  id: 31
+  time: '2025-08-15T02:34:52.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/83
 Order: -100
