@@ -280,4 +280,11 @@
   id: 31
   time: '2025-08-15T02:34:52.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/83
+- author: Veritable-Calamity
+  changes:
+  - message: Added Rene Weingartener plushie.
+    type: Add
+  id: 32
+  time: '2025-08-15T08:40:01.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/87
 Order: -100
