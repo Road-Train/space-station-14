@@ -68,8 +68,8 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         //starlight end
     }
 
-    private static bool IsHidden(HumanoidAppearanceComponent humanoid, HumanoidVisualLayers layer)
-        => humanoid.HiddenLayers.ContainsKey(layer) || humanoid.PermanentlyHidden.Contains(layer);
+    private bool IsHidden(HumanoidAppearanceComponent humanoid, HumanoidVisualLayers layer, Entity<HumanoidAppearanceComponent, SpriteComponent> entity)
+        => humanoid.HiddenLayers.ContainsKey(layer) || humanoid.PermanentlyHidden.Contains(layer) || _alMarking.IsForcedHidden(entity, layer); // Afterlight
 
     private void UpdateLayers(Entity<HumanoidAppearanceComponent, SpriteComponent> entity)
     {
@@ -117,7 +117,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         var layerIndex = _sprite.LayerMapReserve((entity.Owner, sprite), key);
         var layer = sprite[layerIndex];
-        layer.Visible = !IsHidden(component, key);
+        layer.Visible = !IsHidden(component, key, entity); // Afterlight
 
         if (color != null)
             layer.Color = color.Value;
@@ -381,7 +381,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             return;
         }
 
-        visible &= !IsHidden(humanoid, markingPrototype.BodyPart);
+        visible &= !IsHidden(humanoid, markingPrototype.BodyPart, entity); // Afterlight
         visible &= humanoid.BaseLayers.TryGetValue(markingPrototype.BodyPart, out var setting)
            && setting.AllowsMarkings;
 
