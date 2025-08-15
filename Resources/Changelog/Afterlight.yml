@@ -302,4 +302,11 @@
   id: 34
   time: '2025-08-15T10:51:25.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/89
+- author: DrSmugleaf
+  changes:
+  - message: Removed the lobby playtime reminders.
+    type: Remove
+  id: 35
+  time: '2025-08-15T10:56:48.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/90
 Order: -100
