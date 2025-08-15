@@ -287,4 +287,12 @@
   id: 32
   time: '2025-08-15T08:40:01.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/87
+- author: DrSmugleaf
+  changes:
+  - message: Added butts with 8 sizes, from small to dumptruck, selectable in the
+      markings menu.
+    type: Add
+  id: 33
+  time: '2025-08-15T08:58:50.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/86
 Order: -100
