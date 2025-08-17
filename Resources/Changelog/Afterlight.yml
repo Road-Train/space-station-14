@@ -309,4 +309,11 @@
   id: 35
   time: '2025-08-15T10:56:48.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/90
+- author: JustAni
+  changes:
+  - message: AFTERLIGHT Branding got a makeover by JustAni.
+    type: Tweak
+  id: 36
+  time: '2025-08-17T17:30:04.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/84
 Order: -100
