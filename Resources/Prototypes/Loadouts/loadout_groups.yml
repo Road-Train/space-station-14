@@ -3,7 +3,7 @@
   id: Trinkets
   name: loadout-group-trinkets
   minLimit: 0
-  maxLimit: 4
+  maxLimit: 5
   loadouts:
   - FlowerWreath
   - Hairflower
@@ -66,7 +66,6 @@
   - HonkImplant #SL
   - TromboneImplant #SL
   - NewtonsCradle #SL
-  - POrb #SL
   - BBall #SL
   - RubberQuack #SL
   - GatchaBox #SL
@@ -84,6 +83,12 @@
   - PaperFolder6 #SL
   - PaperFolder7 #SL
   - PaperClipboard #SL
+  - HonoredClownMask #SL
+  - MedRollies #SL
+  - RollerSkates #SL
+  - DaBling #SL
+  - CrapPlushie #SL ##not a typo
+  - LighterGatcha #SL
   # Afterlight
   - Heels
   - HighHeelBoots
@@ -176,6 +181,7 @@
   - CaptainBackpack
   - CaptainSatchel
   - CaptainDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: CaptainOuterClothing
@@ -221,6 +227,7 @@
   - CommonSatchel
   - CommonDuffel
   - HoPBackpackIan
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: HoPOuterClothing
@@ -305,6 +312,7 @@
   - CommonBackpack
   - CommonSatchel
   - CommonDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: AssistantNeck
@@ -535,6 +543,7 @@
   - BotanistBackpack
   - BotanistSatchel
   - BotanistDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: BotanistOuterClothing
@@ -568,6 +577,7 @@
   - ClownBackpack
   - ClownSatchel
   - ClownDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: ClownOuterClothing
@@ -626,6 +636,7 @@
   - MimeBackpack
   - MimeSatchel
   - MimeDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: MimeOuterClothing
@@ -768,6 +779,7 @@
   - CargoTechnicianBackpack
   - CargoTechnicianSatchel
   - CargoTechnicianDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: CargoTechnicianOuterClothing
@@ -794,6 +806,7 @@
   - SalvageSpecialistBackpack
   - SalvageSpecialistSatchel
   - SalvageSpecialistDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: SalvageSpecialistOuterClothing
@@ -887,6 +900,7 @@
   - StationEngineerBackpack
   - StationEngineerSatchel
   - StationEngineerDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: StationEngineerOuterClothing
@@ -933,6 +947,7 @@
   - AtmosphericTechnicianBackpack
   - AtmosphericTechnicianSatchel
   - AtmosphericTechnicianDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: AtmosphericTechnicianShoes
@@ -1031,6 +1046,7 @@
   - ScientistBackpack
   - ScientistSatchel
   - ScientistDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: ScientistOuterClothing
@@ -1141,6 +1157,7 @@
   loadouts:
   - SecurityGlasses
   - SecurityHud
+  - DetectiveNoirGlasses
 
 - type: loadoutGroup
   id: BrigmedicHead
@@ -1167,6 +1184,7 @@
   - BrigmedicBackpack
   - BrigmedicSatchel
   - BrigmedicDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: BrigmedicOuterClothing
@@ -1232,6 +1250,7 @@
   - SecurityBackpack
   - SecuritySatchel
   - SecurityDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: SecurityBelt
@@ -1409,6 +1428,7 @@
   - MedicalDoctorBackpack
   - MedicalDoctorSatchel
   - MedicalDoctorDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: MedicalShoes
@@ -1472,6 +1492,7 @@
   - ChemistBackpack
   - ChemistSatchel
   - ChemistDuffel
+  - LeatherSatchel # starlight
 
 - type: loadoutGroup
   id: ParamedicHead
