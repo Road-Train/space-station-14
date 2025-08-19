@@ -30,11 +30,12 @@ Use of third-party code is subject to the following conditions:
 - Derivative works created from MIT-licensed content that incorporate AFTERLIGHT changes remain under the MIT license **unless explicitly re-licensed under ASL 1.1** or another compatible license, in which case this will be documented.
 
 Content under these subdirectories originate from their respective forks and may contain modifications.
-| Subdirectory | Fork Name       | Fork Repository                                     | License                            |
-|--------------|-----------------|-----------------------------------------------------|------------------------------------|
-| `_Afterlight`| AFTERLIGHT      | https://github.com/Afterlight-RnD/Afterlight-14     | ASL 1.1                            |
-| `_Starlight` | STARLIGHT       | https://github.com/ss14Starlight/space-station-14   | MIT Modified (STARLIGHT License)** |
-| `_TP`        | Trieste Port 14 | https://github.com/Pixeltheaertist/Trieste-Port-14/ | MIT*                               |
+| Subdirectory | Fork Name         | Fork Repository                                     | License                            |
+|--------------|-------------------|-----------------------------------------------------|------------------------------------|
+| `_Afterlight`| AFTERLIGHT        | https://github.com/Afterlight-RnD/Afterlight-14     | ASL 1.1                            |
+| `_Starlight` | STARLIGHT         | https://github.com/ss14Starlight/space-station-14   | MIT Modified (STARLIGHT License)** |
+| `_TP`        | Trieste Port 14   | https://github.com/Pixeltheaertist/Trieste-Port-14  | MIT*                               |
+| `_CD`        | Cosmatic Drift 14 | https://github.com/cosmatic-drift-14/cosmatic-drift | MIT*                               |
 
 Additional repos that we have ported features from without subdirectories are listed below.
 | Subdirectory     | Fork Name | Fork Repository                                  | License  |
