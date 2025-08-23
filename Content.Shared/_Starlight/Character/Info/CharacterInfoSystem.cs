@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Starlight-MIT
 
 using Content.Shared._Starlight.Character.Info.Components;
+using Content.Shared.Actions;
 using Content.Shared.CCVar;
 using Content.Shared.Examine;
 using Content.Shared.GameTicking;
@@ -14,6 +15,7 @@ using Content.Shared.Mind.Components;
 using Content.Shared.Players;
 using Content.Shared.Roles;
 using Content.Shared.Starlight.CCVar;
+using Content.Shared.Trigger.Components.Effects;
 using Content.Shared.Verbs;
 using Robust.Shared;
 using Robust.Shared.Configuration;
@@ -47,12 +49,12 @@ public sealed class CharacterInfoSystem : EntitySystem
             true);
         _configManager.OnValueChanged(StarlightCCVars.OOCNotes, b => { _oocNotesEnabled = b; }, true);
 
+        SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawned);
+        SubscribeLocalEvent<ActivateImplantEvent>(OnActivateImplant);
+
         SubscribeLocalEvent<ExploitableInfoComponent, GetVerbsEvent<ExamineVerb>>(OnExamineExploitableInfo);
         SubscribeLocalEvent<HumanoidAppearanceComponent, GetVerbsEvent<ExamineVerb>>(OnExamineCharacter);
         SubscribeLocalEvent<MindSecretsComponent, ComponentGetStateAttemptEvent>(AttemptSyncMindSecrets);
-        SubscribeLocalEvent<CharacterDescriptionComponent, UseDnaScramblerImplantEvent>(OnDNAScrambledCharacter);
-        SubscribeLocalEvent<ExploitableInfoComponent, UseDnaScramblerImplantEvent>(OnDNAScrambledExploitable);
-        SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawned);
     }
 
     private void OnPlayerSpawned(PlayerSpawnCompleteEvent ev)
@@ -103,17 +105,22 @@ public sealed class CharacterInfoSystem : EntitySystem
         }
     }
 
-    private void OnDNAScrambledExploitable(Entity<ExploitableInfoComponent> ent, ref UseDnaScramblerImplantEvent args)
+    private void OnActivateImplant(ActivateImplantEvent ev)
     {
-        ent.Comp.Info = string.Empty;
-        Dirty(ent);
-    }
+        if (!HasComp<DnaScrambleOnTriggerComponent>(ev.Action.Comp.Container))
+            return;
 
-    private void OnDNAScrambledCharacter(Entity<CharacterDescriptionComponent> ent,
-        ref UseDnaScramblerImplantEvent args)
-    {
-        ent.Comp.Description = string.Empty;
-        Dirty(ent);
+        if (TryComp(ev.Performer, out ExploitableInfoComponent? exploitable))
+        {
+            exploitable.Info = string.Empty;
+            Dirty(ev.Performer, exploitable);
+        }
+
+        if (TryComp(ev.Performer, out CharacterDescriptionComponent? characterDescription))
+        {
+            characterDescription.Description = string.Empty;
+            Dirty(ev.Performer, characterDescription);
+        }
     }
 
     private void AttemptSyncMindSecrets(EntityUid uid, MindSecretsComponent component,

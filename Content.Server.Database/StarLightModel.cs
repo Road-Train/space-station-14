@@ -65,17 +65,12 @@ public sealed class StarLightModel : DataModelBase
         public float Height { get; set; } = 1f;
     }
 
-    [Index(nameof(DiscordId))]
     public class PlayerDataDTO
     {
         [Key] public Guid UserId { get; set; }
         public string? Title { get; set; }
         public string? GhostTheme { get; set; }
-        [Obsolete("The field will be removed soon, role tracking is now handled by NullLink.")]
-        public string? DiscordId { get; set; } = default!;
         public int Balance { get; set; }
-        [Obsolete("The field will be removed soon, role tracking is now handled by NullLink.")]
-        public int Flags { get; set; }
     }
 
     [Table("sl_character_info")]
