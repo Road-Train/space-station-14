@@ -52,4 +52,8 @@ rp_notes = true
 # Afterlight
 [lobby]
 server_name = "Afterlight"
+
+[server]
+rules_file = "ALRuleset"
+default_guide = "ALNewPlayer"
 # Afterlight

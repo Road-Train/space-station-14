@@ -52,6 +52,10 @@ mob_pushing = true
 enable_during_round = true
 rp_notes = true
 
+[server]
+rules_file = "ALRuleset"
+default_guide = "ALNewPlayer"
+
 [tts]
 enabled = true
 

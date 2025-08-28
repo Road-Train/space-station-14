@@ -1,0 +1,209 @@
+﻿- type: guideEntry
+  id: ALRuleset
+  name: Server Rules
+  ruleEntry: true
+  priority: -9999
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/Rules.xml"
+
+- type: guideEntry
+  id: ZeroTolerancePolicies
+  name: guide-entry-rules-1-0
+  ruleEntry: true
+  priority: 30
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/ZeroTolerancePolicies/Rule1-0.xml"
+  children:
+  - Rule1_1
+  - Rule1_2
+  - Rule1_3
+  - Rule1_4
+  - Rule1_5
+  - Rule1_6
+
+- type: guideEntry
+  id: Rule1_1
+  name: guide-entry-rules-1-1
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/ZeroTolerancePolicies/Rule1-1.xml"
+
+- type: guideEntry
+  id: Rule1_2
+  name: guide-entry-rules-1-2
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/ZeroTolerancePolicies/Rule1-2.xml"
+
+- type: guideEntry
+  id: Rule1_3
+  name: guide-entry-rules-1-3
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/ZeroTolerancePolicies/Rule1-3.xml"
+
+- type: guideEntry
+  id: Rule1_4
+  name: guide-entry-rules-1-4
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/ZeroTolerancePolicies/Rule1-4.xml"
+
+- type: guideEntry
+  id: Rule1_5
+  name: guide-entry-rules-1-5
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/ZeroTolerancePolicies/Rule1-5.xml"
+
+- type: guideEntry
+  id: Rule1_6
+  name: guide-entry-rules-1-6
+  ruleEntry: true
+  priority: 6
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/ZeroTolerancePolicies/Rule1-6.xml"
+
+- type: guideEntry
+  id: GeneralEtiquette
+  name: guide-entry-rules-2-0
+  ruleEntry: true
+  priority: 40
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/GeneralEtiquette/Rule2-0.xml"
+  children:
+  - Rule2_1
+  - Rule2_2
+  - Rule2_3
+  - Rule2_4
+  - Rule2_5
+
+- type: guideEntry
+  id: Rule2_1
+  name: guide-entry-rules-2-1
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/GeneralEtiquette/Rule2-1.xml"
+
+- type: guideEntry
+  id: Rule2_2
+  name: guide-entry-rules-2-2
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/GeneralEtiquette/Rule2-2.xml"
+
+- type: guideEntry
+  id: Rule2_3
+  name: guide-entry-rules-2-3
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/GeneralEtiquette/Rule2-3.xml"
+
+- type: guideEntry
+  id: Rule2_4
+  name: guide-entry-rules-2-4
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/GeneralEtiquette/Rule2-4.xml"
+
+- type: guideEntry
+  id: Rule2_5
+  name: guide-entry-rules-2-5
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/GeneralEtiquette/Rule2-5.xml"
+
+- type: guideEntry
+  id: RoleplayExpectations
+  name: guide-entry-rules-3-0
+  ruleEntry: true
+  priority: 50
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/RoleplayExpectations/Rule3-0.xml"
+  children:
+  - Rule3_1
+  - Rule3_2
+  - Rule3_3
+  - Rule3_4
+  - Rule3_5
+  - Rule3_6
+  - Rule3_7
+  - Rule3_8
+
+- type: guideEntry
+  id: Rule3_1
+  name: guide-entry-rules-3-1
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/RoleplayExpectations/Rule3-1.xml"
+
+- type: guideEntry
+  id: Rule3_2
+  name: guide-entry-rules-3-2
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/RoleplayExpectations/Rule3-2.xml"
+
+- type: guideEntry
+  id: Rule3_3
+  name: guide-entry-rules-3-3
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/RoleplayExpectations/Rule3-3.xml"
+
+- type: guideEntry
+  id: Rule3_4
+  name: guide-entry-rules-3-4
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/RoleplayExpectations/Rule3-4.xml"
+
+- type: guideEntry
+  id: Rule3_5
+  name: guide-entry-rules-3-5
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/RoleplayExpectations/Rule3-5.xml"
+
+- type: guideEntry
+  id: Rule3_6
+  name: guide-entry-rules-3-6
+  ruleEntry: true
+  priority: 6
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/RoleplayExpectations/Rule3-6.xml"
+
+- type: guideEntry
+  id: Rule3_7
+  name: guide-entry-rules-3-7
+  ruleEntry: true
+  priority: 7
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/RoleplayExpectations/Rule3-7.xml"
+
+- type: guideEntry
+  id: Rule3_8
+  name: guide-entry-rules-3-8
+  ruleEntry: true
+  priority: 8
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/RoleplayExpectations/Rule3-8.xml"
+
+- type: guideEntry
+  id: ALSpaceLaw
+  name: guide-entry-rules-space-law
+  priority: 1
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/SpaceLaw/SpaceLaw.xml"
+
+# AL: Removed, pending rework
+- type: guideEntry
+  id: ALSpaceLawCrimeList
+  name: guide-entry-rules-sl-crime-list
+  priority: 5
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/SpaceLaw/CrimeList.xml"
+
+- type: guideEntry
+  id: ALBanTypes
+  name: guide-entry-rules-ban-types
+  ruleEntry: true
+  priority: 90
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/BanTypes.xml"
+
+- type: guideEntry
+  id: ALBanDurations
+  name: guide-entry-rules-ban-durations
+  ruleEntry: true
+  priority: 100
+  text: "/ServerInfo/Guidebook/_Afterlight/ServerRules/BanDurations.xml"
