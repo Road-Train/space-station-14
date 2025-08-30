@@ -25,6 +25,7 @@ public sealed partial class RolesRequirement : JobRequirement
     {
         var requirement = protoManager.Index(Proto);
         reason = new FormattedMessage();
+
         if (player is not null && IoCManager.Resolve<ISharedNullLinkPlayerRolesReqManager>().IsAnyRole(player, requirement.Roles))
             return true;
 

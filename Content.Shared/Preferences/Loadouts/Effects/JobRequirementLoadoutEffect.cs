@@ -1,6 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
+using Content.Shared._Afterlight.CCVar;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Roles;
+using Robust.Shared.Configuration;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -12,6 +14,9 @@ namespace Content.Shared.Preferences.Loadouts.Effects;
 /// </summary>
 public sealed partial class JobRequirementLoadoutEffect : LoadoutEffect
 {
+    private static IConfigurationManager ConfigurationManager => IoCManager.Resolve<IConfigurationManager>(); // afterlight
+
+    
     [DataField(required: true)]
     public JobRequirement Requirement = default!;
 
@@ -25,6 +30,13 @@ public sealed partial class JobRequirementLoadoutEffect : LoadoutEffect
 
         var manager = collection.Resolve<ISharedPlaytimeManager>();
         var playtimes = manager.GetPlayTimes(session);
+
+        if (!ConfigurationManager.GetCVar(ALCVars.ALUseLoadoutRequirements)) // afterlight
+        {
+            reason = FormattedMessage.Empty;
+            return true;
+        }
+        
         return Requirement.Check(collection.Resolve<IEntityManager>(),
             session,
             collection.Resolve<IPrototypeManager>(),

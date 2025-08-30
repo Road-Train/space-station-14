@@ -19,4 +19,7 @@ public sealed class ALCVars : CVars
 
     public static readonly CVarDef<bool> ALLobbyStartPaused =
         CVarDef.Create("al.lobby_start_paused", false, CVar.REPLICATED | CVar.SERVER);
+
+    public static readonly CVarDef<bool> ALUseLoadoutRequirements =
+        CVarDef.Create("al.use_loadout_requirements", true, CVar.REPLICATED | CVar.SERVER);
 }
