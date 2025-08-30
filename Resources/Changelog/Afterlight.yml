@@ -316,4 +316,20 @@
   id: 36
   time: '2025-08-17T17:30:04.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/84
+- author: Fractalflower
+  changes:
+  - message: CVar for disabling loadout playtime requirements.
+    type: Add
+  id: 37
+  time: '2025-08-30T02:27:38.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/78
+- author: Gneiss, InanimateIJK
+  changes:
+  - message: Gneiss's tracks ported from Imperial Space.
+    type: Add
+  - message: Lobby SoundCollection curated.
+    type: Tweak
+  id: 38
+  time: '2025-08-28T23:29:46.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/101
 Order: -100
