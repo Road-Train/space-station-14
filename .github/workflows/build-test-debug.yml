@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    if: github.actor != 'Dogborg' && github.event.pull_request.draft == false && github.event.head_commit.message != 'Automatic changelog update'
+    if: github.actor != 'Dogborg' && github.event.pull_request.draft == false
 
     runs-on: [self-hosted]
 
