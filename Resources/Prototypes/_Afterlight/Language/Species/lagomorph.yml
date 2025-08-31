@@ -1,0 +1,9 @@
+- type: language
+  id: Lagomorphian
+  icon: LanguageIconLagomorph
+  speech:
+    color: "#b3a18f"
+    fontId: Lagomorphian
+    obfuscationFont: true
+  obfuscation:
+    !type:RandomObfuscation

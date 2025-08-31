@@ -1,0 +1,13 @@
+chat-emote-msg-bunnysqueak = squeaks
+chat-emote-msg-sniff = sniffs
+chat-emote-msg-squeek = squeeks
+chat-emote-name-sniff = Sniff
+chat-emote-name-squeek = Squeek
+species-name-lagomorph = Lagomorph
+marking-LagomorphEarsFloppy = Floppy
+marking-LagomorphEarsLoppy = Floppy (alt)
+marking-LagomorphEarsLoppyLarge = Floppy (large)
+marking-LagomorphEarsMedium = Medium
+marking-LagomorphEarsRotund = Rotund
+marking-LagomorphEarsSharp = Sharp
+marking-LagomorphEarsShort = Short
