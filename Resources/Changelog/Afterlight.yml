@@ -339,4 +339,11 @@
   id: 39
   time: '2025-08-30T09:00:22.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/91
+- author: DrSmugleaf
+  changes:
+  - message: Improved performance specially during high player counts and long rounds.
+    type: Tweak
+  id: 40
+  time: '2025-08-31T10:19:30.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/94
 Order: -100
