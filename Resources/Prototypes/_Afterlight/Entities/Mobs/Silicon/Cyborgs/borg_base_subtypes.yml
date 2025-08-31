@@ -80,19 +80,6 @@
       # Entity prototype for preview in selection menu
       dummyPrototype: BorgChassisJanitor
 
-# janitor
-- type: entity
-  parent: BorgSubtypeBase
-  abstract: true
-  id: BorgJanitorSubtypeBase
-  name: borg janitor subtype
-  components:
-    - type: BorgSubtypeDefinition
-      parentType: janitor
-
-      # Entity prototype for preview in selection menu
-      dummyPrototype: BorgChassisJanitor
-
 # medical
 - type: entity
   parent: BorgSubtypeBase
