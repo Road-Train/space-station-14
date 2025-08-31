@@ -227,6 +227,7 @@
     - AnomalyHost
   - type: MobCollision # AFTERLIGHT
   - type: ALMobCollision # AFTERLIGHT
+  - type: ActiveInputMover # Afterlight
 
 - type: entity
   save: false

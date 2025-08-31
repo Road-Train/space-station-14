@@ -22,4 +22,8 @@ public sealed class ALCVars : CVars
 
     public static readonly CVarDef<bool> ALUseLoadoutRequirements =
         CVarDef.Create("al.use_loadout_requirements", true, CVar.REPLICATED | CVar.SERVER);
+
+    // Taken from https://github.com/RMC-14/RMC-14
+    public static readonly CVarDef<bool> ALActiveInputMoverEnabled =
+        CVarDef.Create("al.active_input_mover_enabled", true, CVar.REPLICATED | CVar.SERVER);
 }
