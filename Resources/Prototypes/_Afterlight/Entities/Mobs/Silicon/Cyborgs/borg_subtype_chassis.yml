@@ -18,3 +18,85 @@
     selectedBorgType: medical
   - type: BorgSwitchableSubtype
     borgSubtype: MedicalQualifiedDoctorSubtype
+
+# Raptor Borgs
+- type: entity
+  id: BorgChassisRaptorMedical
+  parent: BorgChassisSelectable
+  name: medical raptor cyborg
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: medical
+    - type: BorgSwitchableSubtype
+      borgSubtype: RaptorBorgMedicalSubtype
+
+- type: entity
+  id: BorgChassisRaptorTrauma
+  parent: BorgChassisSelectable
+  name: trauma raptor cyborg
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: medical
+    - type: BorgSwitchableSubtype
+      borgSubtype: RaptorBorgTraumaSubtype
+      
+- type: entity
+  id: BorgChassisRaptorService
+  parent: BorgChassisSelectable
+  name: service raptor cyborg
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: service
+    - type: BorgSwitchableSubtype
+      borgSubtype: RaptorBorgServiceSubtype
+
+- type: entity
+  id: BorgChassisRaptorFancy
+  parent: BorgChassisSelectable
+  name: fancy raptor cyborg
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: service
+    - type: BorgSwitchableSubtype
+      borgSubtype: RaptorBorgFancySubtype
+      
+- type: entity
+  id: BorgChassisRaptorJanitor
+  parent: BorgChassisSelectable
+  name: janitor raptor cyborg
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: janitor
+    - type: BorgSwitchableSubtype
+      borgSubtype: RaptorBorgJanitorSubtype
+
+- type: entity
+  id: BorgChassisRaptorEngineering
+  parent: BorgChassisSelectable
+  name: engineer raptor cyborg
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: engineering
+    - type: BorgSwitchableSubtype
+      borgSubtype: RaptorBorgEngineerSubtype
+
+
+#- type: entity
+#  id: BorgChassisRaptorSecurity
+#  parent: BorgChassisSelectable
+#  name: security raptor cyborg
+#  components:
+#    - type: BorgSwitchableType
+#      selectedBorgType: security
+#    - type: BorgSwitchableSubtype
+#      borgSubtype: RaptorBorgSecuritySubtype
+
+- type: entity
+  id: BorgChassisRaptorScience
+  parent: BorgChassisSelectable
+  name: science raptor cyborg
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: generic #science
+    - type: BorgSwitchableSubtype
+      borgSubtype: RaptorBorgScienceSubtype

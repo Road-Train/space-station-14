@@ -26,8 +26,7 @@
   # Pet
   petSuccessString: petting-success-generic-cyborg
   petFailureString: petting-failure-generic-cyborg
-
-
+  
 # Engineering borg
 - type: borgType
   id: engineering

@@ -24,7 +24,6 @@
       spriteHasMindState: borg_e
       # if rsi has a specific no mind state sprite, use that instead (i.e. borg_e_r)
       spriteNoMindState: borg_e
-      
       footstepCollection:
         collection: FootstepBorg
         
@@ -37,7 +36,7 @@
   components:
     - type: BorgSubtypeDefinition
       parentType: generic
-
+      # Entity prototype for preview in selection menu
       dummyPrototype: BorgChassisGeneric
 
 
@@ -50,7 +49,6 @@
   components:
     - type: BorgSubtypeDefinition
       parentType: mining
-
       # Entity prototype for preview in selection menu
       dummyPrototype: BorgChassisMining
 
@@ -63,7 +61,6 @@
   components:
     - type: BorgSubtypeDefinition
       parentType: engineering
-
       # Entity prototype for preview in selection menu
       dummyPrototype: BorgChassisEngineer
 
@@ -76,7 +73,6 @@
   components:
     - type: BorgSubtypeDefinition
       parentType: janitor
-
       # Entity prototype for preview in selection menu
       dummyPrototype: BorgChassisJanitor
 
@@ -89,11 +85,34 @@
   components:
     - type: BorgSubtypeDefinition
       parentType: medical
-
-      # Description
+      # Entity prototype for preview in selection menu
       dummyPrototype: BorgChassisMedical
       
-# service
+# security
+- type: entity
+  parent: BorgSubtypeBase
+  abstract: true
+  id: BorgSecuritySubtypeBase
+  name: borg security subtype
+  components:
+    - type: BorgSubtypeDefinition
+      parentType: security
+      # Entity prototype for preview in selection menu
+      dummyPrototype: BorgChassisSecurity
+
+# science
+- type: entity
+  parent: BorgSubtypeBase
+  abstract: true
+  id: BorgScienceSubtypeBase
+  name: borg science subtype
+  components:
+    - type: BorgSubtypeDefinition
+      parentType: science
+      # Entity prototype for preview in selection menu
+      dummyPrototype: BorgChassisScience
+
+# civillian
 - type: entity
   parent: BorgSubtypeBase
   abstract: true
@@ -102,9 +121,8 @@
   components:
     - type: BorgSubtypeDefinition
       parentType: medical
-
-      # Description
-      dummyPrototype: BorgChassisMedical 
+      # Entity prototype for preview in selection menu
+      dummyPrototype: BorgChassisService
         
 - type: entityCategory
   id: BorgSubtype

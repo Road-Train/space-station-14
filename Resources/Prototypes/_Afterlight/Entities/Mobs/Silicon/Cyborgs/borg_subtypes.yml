@@ -1,18 +1,42 @@
-# mining
+# civillian
 - type: entity
-  parent: BorgMiningSubtypeBase
-  id: MiningSpiderSubtype
-  name: spider miner
-  description: "Spider frame for a mining chassis."
+  parent: BorgServiceSubtypeBase
+  id: RaptorBorgServiceSubtype
+  name: service raptor
+  description: "Customer service in a compact, raptor-like chassis!"
   components:
     - type: BorgSubtypeDefinition
-      dummyPrototype: BorgChassisSpidermin
+      dummyPrototype: BorgChassisRaptorService
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/raptorborg.rsi
 
-      inventoryTemplateId: borgDutch
-      spritePath: _Afterlight/Mobs/Silicon/Borg/Mining/spidermin.rsi
+- type: entity
+  parent: BorgServiceSubtypeBase
+  id: RaptorBorgFancySubtype
+  description: "Fancy vibes in a compact, raptor-like chassis!"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisRaptorFancy
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/raptorborg_fancy.rsi
 
-      footstepCollection:
-        collection: FootstepThud
+# engineering
+- type: entity
+  parent: BorgEngineerSubtypeBase
+  id: RaptorBorgEngineerSubtype
+  description: "Damage control in a compact, raptor-like chassis!"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisRaptorEngineering
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Engineering/raptorborg_engineer.rsi
+      
+# janitor (broken out to mirror other patterns)
+- type: entity
+  parent: BorgJanitorSubtypeBase
+  id: RaptorBorgJanitorSubtype
+  description: "Cleaning up in a compact, raptor-like chassis!"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisRaptorJanitor
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/raptorborg_janitor.rsi
 
 # medical
 - type: entity
@@ -23,5 +47,70 @@
   components:
     - type: BorgSubtypeDefinition
       dummyPrototype: BorgChassisQualifiedDoctor
-
       spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/qualified_doctor.rsi
+
+- type: entity
+  parent: BorgMedicalSubtypeBase
+  id: RaptorBorgMedicalSubtype
+  name: medical raptor
+  description: "Medical treatment in a compact, raptor-like chassis!"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisRaptorMedical
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/raptorborg_medical.rsi
+
+- type: entity
+  parent: BorgMedicalSubtypeBase
+  id: RaptorBorgTraumaSubtype
+  name: trauma raptor
+  description: "Critical care in a compact, raptor-like chassis!"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisRaptorTrauma
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/raptorborg_trauma.rsi
+
+# mining
+- type: entity
+  parent: BorgMiningSubtypeBase
+  id: MiningSpiderSubtype
+  name: spider miner
+  description: "Spider frame for a mining chassis."
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisSpidermin
+      inventoryTemplateId: borgDutch
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Mining/spidermin.rsi
+      footstepCollection:
+        collection: FootstepThud
+        
+- type: entity
+  parent: BorgMiningSubtypeBase
+  id: RaptorBorgMiningSubtype
+  name: mining raptor
+  description: "Resource extraction in a compact, raptor-like chassis!"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisRaptorMining
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/raptorborg_mining.rsi
+
+# security
+#- type: entity
+#  parent: BorgSecuritySubtypeBase
+#  id: RaptorBorgSecuritySubtype
+#  name: security raptor
+#  description: "Suspect apprehension in a compact, raptor-like chassis!"
+#  components:
+#    - type: BorgSubtypeDefinition
+#      dummyPrototype: BorgChassisRaptorSecurity
+#      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/raptorborg_security.rsi
+
+# science
+- type: entity
+  parent: BorgScienceSubtypeBase
+  id: RaptorBorgScienceSubtype
+  name: science raptor
+  description: "Groundbreaking discoveries in a compact, raptor-like chassis!"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisRaptorScience
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Science/raptorborg_science.rsi
