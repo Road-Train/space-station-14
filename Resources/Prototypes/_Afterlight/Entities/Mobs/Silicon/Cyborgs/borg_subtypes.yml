@@ -18,6 +18,79 @@
       dummyPrototype: BorgChassisRaptorFancy
       spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/raptorborg_fancy.rsi
 
+- type: entity
+  parent: BorgServiceSubtypeBase
+  id: TallBorgServiceFmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSrvFmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/fmeka_service.rsi
+
+# Service tallborgs
+- type: entity
+  parent: BorgServiceSubtypeBase
+  id: TallBorgServiceK4tAlt2Subtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSrvK4tAlt2
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/k4t_alt2_service.rsi
+
+- type: entity
+  parent: BorgServiceSubtypeBase
+  id: TallBorgServiceK4tAltSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSrvK4tAlt
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/k4t_alt_service.rsi
+
+- type: entity
+  parent: BorgServiceSubtypeBase
+  id: TallBorgServiceK4tSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSrvK4t
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/k4t_service.rsi
+
+- type: entity
+  parent: BorgServiceSubtypeBase
+  id: TallBorgServiceMekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSrvMeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/meka_service.rsi
+
+- type: entity
+  parent: BorgServiceSubtypeBase
+  id: TallBorgServiceMekaAltSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSrvMekaAlt
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/meka_alt_service.rsi
+
+- type: entity
+  parent: BorgServiceSubtypeBase
+  id: TallBorgServiceMmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSrvMmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/mmeka_service.rsi
+
+- type: entity
+  parent: BorgServiceSubtypeBase
+  id: TallBorgServiceSfmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSrvSfmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/sfmeka_service.rsi
+
 # engineering
 - type: entity
   parent: BorgEngineerSubtypeBase
@@ -27,6 +100,61 @@
     - type: BorgSubtypeDefinition
       dummyPrototype: BorgChassisRaptorEngineering
       spritePath: _Afterlight/Mobs/Silicon/Borg/Engineering/raptorborg_engineer.rsi
+
+# Engineering tallborgs
+- type: entity
+  parent: BorgEngineerSubtypeBase
+  id: TallBorgEngineerFmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallEngiFmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Engineering/fmeka_engi.rsi
+
+- type: entity
+  parent: BorgEngineerSubtypeBase
+  id: TallBorgEngineerK4tAltSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallEngiK4tAlt
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Engineering/k4t_alt_engi.rsi
+
+- type: entity
+  parent: BorgEngineerSubtypeBase
+  id: TallBorgEngineerK4tSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallEngiK4t
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Engineering/k4t_engi.rsi
+
+- type: entity
+  parent: BorgEngineerSubtypeBase
+  id: TallBorgEngineerMekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallEngiMeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Engineering/meka_engi.rsi
+
+- type: entity
+  parent: BorgEngineerSubtypeBase
+  id: TallBorgEngineerMmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallEngiMmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Engineering/mmeka_engi.rsi
+
+- type: entity
+  parent: BorgEngineerSubtypeBase
+  id: TallBorgEngineerSfmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallEngiSfmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Engineering/sfmeka_engi.rsi
       
 # janitor (broken out to mirror other patterns)
 - type: entity
@@ -37,6 +165,53 @@
     - type: BorgSubtypeDefinition
       dummyPrototype: BorgChassisRaptorJanitor
       spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/raptorborg_janitor.rsi
+
+# Janitor tallborgs
+- type: entity
+  parent: BorgJanitorSubtypeBase
+  id: TallBorgJanitorFmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallJaniFmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/fmeka_jani.rsi
+
+- type: entity
+  parent: BorgJanitorSubtypeBase
+  id: TallBorgJanitorK4tAltSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallJaniK4tAlt
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/k4t_alt_jani.rsi
+
+- type: entity
+  parent: BorgJanitorSubtypeBase
+  id: TallBorgJanitorK4tSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallJaniK4t
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/k4t_jani.rsi
+
+- type: entity
+  parent: BorgJanitorSubtypeBase
+  id: TallBorgJanitorMekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallJaniMeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/meka_jani.rsi
+
+- type: entity
+  parent: BorgJanitorSubtypeBase
+  id: TallBorgJanitorMmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallJaniMmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Civillian/mmeka_jani.rsi
+
 
 # medical
 - type: entity
@@ -69,6 +244,60 @@
       dummyPrototype: BorgChassisRaptorTrauma
       spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/raptorborg_trauma.rsi
 
+# Medical tallborgs
+- type: entity
+  parent: BorgMedicalSubtypeBase
+  id: TallBorgMedicalFmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallMedFmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/fmeka_med.rsi
+
+- type: entity
+  parent: BorgMedicalSubtypeBase
+  id: TallBorgMedicalK4tAltSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallMedK4tAlt
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/k4t_alt_med.rsi
+
+- type: entity
+  parent: BorgMedicalSubtypeBase
+  id: TallBorgMedicalK4tSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallMedK4t
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/k4t_med.rsi
+- type: entity
+  parent: BorgMedicalSubtypeBase
+  id: TallBorgMedicalMekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallMedMeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/meka_med.rsi
+
+- type: entity
+  parent: BorgMedicalSubtypeBase
+  id: TallBorgMedicalMmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallMedMmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/mmeka_med.rsi
+
+- type: entity
+  parent: BorgMedicalSubtypeBase
+  id: TallBorgMedicalSfmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallMedSfmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/sfmeka_med.rsi
+
 # mining
 - type: entity
   parent: BorgMiningSubtypeBase
@@ -83,15 +312,70 @@
       footstepCollection:
         collection: FootstepThud
         
+# - type: entity
+#   parent: BorgMiningSubtypeBase
+#   id: RaptorBorgMiningSubtype
+#   name: mining raptor
+#   description: "Resource extraction in a compact, raptor-like chassis!"
+#   components:
+#     - type: BorgSubtypeDefinition
+#       dummyPrototype: BorgChassisRaptorMining
+#       spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/raptorborg_mining.rsi
+
+# Salvage tallborgs
 - type: entity
   parent: BorgMiningSubtypeBase
-  id: RaptorBorgMiningSubtype
-  name: mining raptor
-  description: "Resource extraction in a compact, raptor-like chassis!"
+  id: TallBorgMiningFmekaSubtype
+  description: "temp"
   components:
     - type: BorgSubtypeDefinition
-      dummyPrototype: BorgChassisRaptorMining
-      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/raptorborg_mining.rsi
+      dummyPrototype: BorgChassisTallSalvFmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Mining/fmeka_salv.rsi
+
+- type: entity
+  parent: BorgMiningSubtypeBase
+  id: TallBorgMiningK4tAltSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSalvK4tAlt
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Mining/k4t_alt_salv.rsi
+
+- type: entity
+  parent: BorgMiningSubtypeBase
+  id: TallBorgMiningK4tSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSalvK4t
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Mining/k4t_salv.rsi
+- type: entity
+  parent: BorgMiningSubtypeBase
+  id: TallBorgMiningMekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSalvMeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Mining/meka_salv.rsi
+
+- type: entity
+  parent: BorgMiningSubtypeBase
+  id: TallBorgMiningMmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSalvMmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Mining/mmeka_salv.rsi
+
+- type: entity
+  parent: BorgMiningSubtypeBase
+  id: TallBorgMiningSfmekaSubtype
+  description: "temp"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisTallSalvSfmeka
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Mining/sfmeka_salv.rsi
+
 
 # security
 #- type: entity
@@ -103,6 +387,8 @@
 #    - type: BorgSubtypeDefinition
 #      dummyPrototype: BorgChassisRaptorSecurity
 #      spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/raptorborg_security.rsi
+
+# Just @/DM taco_llama on discord if you want sec tallborgs put in (or like the ninjas or syndies), I have templates for them
 
 # science
 - type: entity

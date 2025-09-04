@@ -100,3 +100,367 @@
       selectedBorgType: generic #science
     - type: BorgSwitchableSubtype
       borgSubtype: RaptorBorgScienceSubtype
+
+
+## Tallborgs
+
+# Engineering
+- type: entity
+  id: BorgChassisTallEngiFmeka
+  parent: BorgChassisSelectable
+  name: engineering cyborg model NiKA
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: engineering
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgEngineerFmekaSubtype
+
+- type: entity
+  id: BorgChassisTallEngiK4tAlt
+  parent: BorgChassisSelectable
+  name: engineering cyborg model K4T hazard
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: engineering
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgEngineerK4tAltSubtype
+
+- type: entity
+  id: BorgChassisTallEngiK4t
+  parent: BorgChassisSelectable
+  name: engineering cyborg model K4T technician
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: engineering
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgEngineerK4tSubtype
+
+- type: entity
+  id: BorgChassisTallEngiMeka
+  parent: BorgChassisSelectable
+  name: engineering cyborg model meka
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: engineering
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgEngineerMekaSubtype
+
+- type: entity
+  id: BorgChassisTallEngiMmeka
+  parent: BorgChassisSelectable
+  name: engineering cyborg model NiKO
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: engineering
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgEngineerMmekaSubtype
+
+- type: entity
+  id: BorgChassisTallEngiSfmeka
+  parent: BorgChassisSelectable
+  name: engineering cyborg model NiKO - Alternate
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: engineering
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgEngineerSfmekaSubtype
+
+
+# Janitor
+- type: entity
+  id: BorgChassisTallJaniFmeka
+  parent: BorgChassisSelectable
+  name: janitor cyborg model NiKA
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: janitor
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgJanitorFmekaSubtype
+
+- type: entity
+  id: BorgChassisTallJaniK4tAlt
+  parent: BorgChassisSelectable
+  name: janitor cyborg model K4T domestic
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: janitor
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgJanitorK4tAltSubtype
+
+- type: entity
+  id: BorgChassisTallJaniK4t
+  parent: BorgChassisSelectable
+  name: janitor cyborg model K4T viscera #Idk that's just the original name
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: janitor
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgJanitorK4tSubtype
+
+- type: entity
+  id: BorgChassisTallJaniMeka
+  parent: BorgChassisSelectable
+  name: janitor cyborg model meka
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: janitor
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgJanitorMekaSubtype
+
+- type: entity
+  id: BorgChassisTallJaniMmeka
+  parent: BorgChassisSelectable
+  name: janitor cyborg model NiKO
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: janitor
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgJanitorMmekaSubtype
+
+
+# Medical
+- type: entity
+  id: BorgChassisTallMedFmeka
+  parent: BorgChassisSelectable
+  name: medical cyborg model NiKA
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: medical
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMedicalFmekaSubtype
+
+- type: entity
+  id: BorgChassisTallMedK4tAlt
+  parent: BorgChassisSelectable
+  name: medical cyborg model K4T field medic
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: medical
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMedicalK4tAltSubtype
+
+- type: entity
+  id: BorgChassisTallMedK4t
+  parent: BorgChassisSelectable
+  name: medical cyborg model K4T doctor
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: medical
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMedicalK4tSubtype
+
+- type: entity
+  id: BorgChassisTallMedMeka
+  parent: BorgChassisSelectable
+  name: medical cyborg model meka
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: medical
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMedicalMekaSubtype
+
+- type: entity
+  id: BorgChassisTallMedMmeka
+  parent: BorgChassisSelectable
+  name: medical cyborg model NiKO
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: medical
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMedicalMmekaSubtype
+
+- type: entity
+  id: BorgChassisTallMedSfmeka
+  parent: BorgChassisSelectable
+  name: medical cyborg model NiKO - Alternate
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: medical
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMedicalSfmekaSubtype
+
+
+# Salvage
+- type: entity
+  id: BorgChassisTallSalvFmeka
+  parent: BorgChassisSelectable
+  name: mining cyborg model NiKA
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: mining
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMiningFmekaSubtype
+
+- type: entity
+  id: BorgChassisTallSalvK4tAlt
+  parent: BorgChassisSelectable
+  name: mining cyborg model K4T veteran
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: mining
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMiningK4tAltSubtype
+
+- type: entity
+  id: BorgChassisTallSalvK4t
+  parent: BorgChassisSelectable
+  name: mining cyborg model K4T rookie
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: mining
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMiningK4tSubtype
+
+- type: entity
+  id: BorgChassisTallSalvMeka
+  parent: BorgChassisSelectable
+  name: mining cyborg model meka
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: mining
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMiningMekaSubtype
+
+- type: entity
+  id: BorgChassisTallSalvMmeka
+  parent: BorgChassisSelectable
+  name: mining cyborg model NiKO
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: mining
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMiningMmekaSubtype
+
+- type: entity
+  id: BorgChassisTallSalvSfmeka
+  parent: BorgChassisSelectable
+  name: mining cyborg model NiKO - Alternate
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: mining
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgMiningSfmekaSubtype
+
+
+#Security
+- type: entity
+  id: BorgChassisTallSecFmeka
+  parent: BorgChassisSelectable
+  name: security cyborg model NiKA
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: security
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgSecurityFmekaSubtype
+
+- type: entity
+  id: BorgChassisTallSecK4t
+  parent: BorgChassisSelectable
+  name: security cyborg model K4T
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: security
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgSecurityK4tSubtype
+
+- type: entity
+  id: BorgChassisTallSecMeka
+  parent: BorgChassisSelectable
+  name: security cyborg model meka
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: security
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgSecurityMekaSubtype
+
+- type: entity
+  id: BorgChassisTallSecMmeka
+  parent: BorgChassisSelectable
+  name: security cyborg model NiKO
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: security
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgSecurityMmekaSubtype
+
+
+#Service
+- type: entity
+  id: BorgChassisTallSrvFmeka
+  parent: BorgChassisSelectable
+  name: service cyborg model NiKA
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: service
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgServiceFmekaSubtype
+
+- type: entity
+  id: BorgChassisTallSrvK4tAlt2
+  parent: BorgChassisSelectable
+  name: service cyborg model K4T dispenser
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: service
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgServiceK4tAlt2Subtype
+
+- type: entity
+  id: BorgChassisTallSrvK4tAlt
+  parent: BorgChassisSelectable
+  name: service cyborg model K4T 80s
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: service
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgServiceK4tAltSubtype
+
+- type: entity
+  id: BorgChassisTallSrvK4t
+  parent: BorgChassisSelectable
+  name: service cyborg model K4T barista
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: service
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgServiceK4tSubtype
+
+- type: entity
+  id: BorgChassisTallSrvMeka
+  parent: BorgChassisSelectable
+  name: service cyborg model meka
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: service
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgServiceMekaSubtype
+
+- type: entity
+  id: BorgChassisTallSrvMekaAlt
+  parent: BorgChassisSelectable
+  name: service cyborg model meka - alternate
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: service
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgServiceMekaAltSubtype
+
+- type: entity
+  id: BorgChassisTallSrvMmeka
+  parent: BorgChassisSelectable
+  name: service cyborg model NiKO
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: service
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgServiceMmekaSubtype
+
+- type: entity
+  id: BorgChassisTallSrvSfmeka
+  parent: BorgChassisSelectable
+  name: service cyborg model NiKO - Alternate
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: service
+    - type: BorgSwitchableSubtype
+      borgSubtype: TallBorgServiceSfmekaSubtype
