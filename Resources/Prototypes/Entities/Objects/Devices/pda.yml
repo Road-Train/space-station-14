@@ -10,6 +10,12 @@
      enum.PdaVisuals.PdaType:
        !type:String
        pda
+  # -Afterlight- start
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorCords
+  - type: StationLimitedNetwork
+  # -Afterlight- end
   - type: Sprite
     sprite: Objects/Devices/pda.rsi
     layers:
@@ -71,11 +77,12 @@
   - type: RingerUplink
   - type: DeviceNetwork
     deviceNetId: Wireless
+    transmitFrequencyId: SuitSensor # -Afterlight-
     receiveFrequencyId: PDA
     prefix: device-address-prefix-console
     savableAddress: false
   - type: WirelessNetworkConnection
-    range: 500
+    range: 1200 # -Afterlight- changed from 500 to 1200 to match suit sensor range
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     preinstalled:
