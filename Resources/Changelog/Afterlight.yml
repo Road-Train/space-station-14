@@ -360,4 +360,13 @@
   id: 42
   time: '2025-09-01T00:10:38.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/104
+- author: Citrea
+  changes:
+  - message: Coordinate sensors are now attached to your PDA.
+    type: Tweak
+  - message: PDA and ID readout now works from your belt slot.
+    type: Tweak
+  id: 43
+  time: '2025-09-04T23:05:30.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/98
 Order: -100
