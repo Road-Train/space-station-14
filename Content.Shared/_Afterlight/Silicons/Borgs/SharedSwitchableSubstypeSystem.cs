@@ -17,14 +17,9 @@ public abstract class SharedBorgSwitchableSubtypeSystem : EntitySystem
     [Dependency] private readonly InteractionPopupSystem _interactionPopup = default!;
     [Dependency] protected readonly IPrototypeManager Prototypes = default!;
     [Dependency] protected readonly IComponentFactory ComponentFactory = default!;
-    [Dependency] private readonly ALPrototypeSystem _alPrototype = default!;
-
-    public List<EntityPrototype> BorgSubtypes { get; private set; } =  new();
     
     public override void Initialize()
     {
-        SubscribeLocalEvent<PrototypesReloadedEventArgs>(OnPrototypesReloaded);
-        
         SubscribeLocalEvent<BorgSwitchableSubtypeComponent, MapInitEvent>(OnMapInit); // make sure that our subtype is selected first
         SubscribeLocalEvent<BorgSwitchableSubtypeComponent, AfterBorgTypeSelectEvent>(OnBorgTypeSelect);
 
@@ -36,17 +31,6 @@ public abstract class SharedBorgSwitchableSubtypeSystem : EntitySystem
 
         base.Initialize();
     }
-    
-    private void OnPrototypesReloaded(PrototypesReloadedEventArgs ev) => ReloadPrototypes();
-
-    private void ReloadPrototypes()
-    {
-        foreach (var (ent, _) in _alPrototype.EnumerateComponents<BorgSubtypeDefinitionComponent>())
-        {
-            BorgSubtypes.Add(ent);
-        }
-    }
-
     private void OnMapInit(Entity<BorgSwitchableSubtypeComponent> ent, ref MapInitEvent args)
     {
         if (ent.Comp.BorgSubtype != null)
@@ -60,6 +44,7 @@ public abstract class SharedBorgSwitchableSubtypeSystem : EntitySystem
         if (!ent.Comp.BorgSubtype.HasValue)
             return;
 
+        Dirty(ent);
         SelectBorgSubtype(ent);
     }
 

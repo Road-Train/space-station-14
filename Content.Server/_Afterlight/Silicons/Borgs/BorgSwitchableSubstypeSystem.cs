@@ -12,7 +12,6 @@ public sealed class BorgSwitchableSubstypeSystem : SharedBorgSwitchableSubtypeSy
 
     protected override void SelectBorgSubtype(Entity<BorgSwitchableSubtypeComponent> ent)
     {
-        
         if (ent.Comp.BorgSubtype == null)
             return;
 
@@ -38,5 +37,7 @@ public sealed class BorgSwitchableSubstypeSystem : SharedBorgSwitchableSubtypeSy
         {
             _inventorySystem.SetTemplateId((ent.Owner, inventory), borgSubtype.InventoryTemplateId);
         }
+
+        base.SelectBorgSubtype(ent);
     }
 }
