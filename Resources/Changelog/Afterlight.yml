@@ -369,4 +369,19 @@
   id: 43
   time: '2025-09-04T23:05:30.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/98
+- author: TacoLlama
+  changes:
+  - message: Added Tallborgs!
+    type: Add
+  id: 44
+  time: '2025-09-04T23:07:27.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/107
+- author: lunarcomets
+  changes:
+  - message: borg subtypes should now show properly for other players without needing
+      to reconnect to the server
+    type: Fix
+  id: 45
+  time: '2025-09-04T23:08:08.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/105
 Order: -100
