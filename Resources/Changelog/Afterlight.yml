@@ -391,4 +391,25 @@
   id: 46
   time: '2025-09-07T12:01:46.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/110
+- author: TacoLlama
+  changes:
+  - message: Mining raptor fixed
+    type: Fix
+  id: 47
+  time: '2025-09-07T12:13:49.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/108
+- author: DrSmugleaf
+  changes:
+  - message: Added subtle and subtler anti-ghost emoting, accessible through the RP
+      button at the bottom right of the chat box. Subtle emotes are sent to everyone
+      within a 1.5 tile range, giving confirmation of receival with a popup. Ghosts
+      can enable a setting to see all subtle emotes that are not marked as anti-ghost,
+      defaulting to off. Marking your subtle emote as anti-ghost overrides this setting,
+      and prevents it from ever being seen by any ghosts. All subtle emotes are logged
+      to admins via admin logs. Receiving subtle emotes plays a sound for the receiver,
+      disableable in the settings, defaulting to on.
+    type: Add
+  id: 48
+  time: '2025-09-07T12:14:32.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/111
 Order: -100
