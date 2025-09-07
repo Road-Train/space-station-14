@@ -312,15 +312,15 @@
       footstepCollection:
         collection: FootstepThud
         
-# - type: entity
-#   parent: BorgMiningSubtypeBase
-#   id: RaptorBorgMiningSubtype
-#   name: mining raptor
-#   description: "Resource extraction in a compact, raptor-like chassis!"
-#   components:
-#     - type: BorgSubtypeDefinition
-#       dummyPrototype: BorgChassisRaptorMining
-#       spritePath: _Afterlight/Mobs/Silicon/Borg/Medical/raptorborg_mining.rsi
+- type: entity
+  parent: BorgMiningSubtypeBase
+  id: RaptorBorgMiningSubtype
+  name: mining raptor
+  description: "Resource extraction in a compact, raptor-like chassis!"
+  components:
+    - type: BorgSubtypeDefinition
+      dummyPrototype: BorgChassisRaptorMining
+      spritePath: _Afterlight/Mobs/Silicon/Borg/Mining/raptorborg_mining.rsi
 
 # Salvage tallborgs
 - type: entity
@@ -375,7 +375,6 @@
     - type: BorgSubtypeDefinition
       dummyPrototype: BorgChassisTallSalvSfmeka
       spritePath: _Afterlight/Mobs/Silicon/Borg/Mining/sfmeka_salv.rsi
-
 
 # security
 #- type: entity

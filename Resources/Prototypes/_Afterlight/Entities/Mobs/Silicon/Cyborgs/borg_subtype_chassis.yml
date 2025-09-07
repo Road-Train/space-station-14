@@ -80,6 +80,15 @@
     - type: BorgSwitchableSubtype
       borgSubtype: RaptorBorgEngineerSubtype
 
+- type: entity
+  id: BorgChassisRaptorMining
+  parent: BorgChassisSelectable
+  name: salvage raptor cyborg
+  components:
+    - type: BorgSwitchableType
+      selectedBorgType: mining
+    - type: BorgSwitchableSubtype
+      borgSubtype: RaptorBorgMiningSubtype
 
 #- type: entity
 #  id: BorgChassisRaptorSecurity
