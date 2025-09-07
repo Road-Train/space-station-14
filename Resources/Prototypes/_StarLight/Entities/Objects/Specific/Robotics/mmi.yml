@@ -51,6 +51,19 @@
       speaks:
       - GalacticCommon
       - Machine
+      - Canilunzt # AL 
+      - Bubblish # AL
+      #- Chittin # AL
+      - Draconic # AL
+      - Marish # AL
+      - Moffic # AL
+      - Nekomimetic # AL
+      - Sylvan # AL
+      - Terrum # AL
+      - VoxPidgin # AL
+      - Scratch # AL
+      - SolCommon # AL
+      - Lagomorphian # AL
       understands:
       - GalacticCommon
       - Machine
@@ -67,3 +80,4 @@
       - VoxPidgin
       - Scratch
       - SolCommon
+      - Lagomorphian # AL
