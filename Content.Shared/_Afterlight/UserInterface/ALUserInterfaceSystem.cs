@@ -1,4 +1,6 @@
-﻿namespace Content.Shared._Afterlight.UserInterface;
+﻿using JetBrains.Annotations;
+
+namespace Content.Shared._Afterlight.UserInterface;
 
 public sealed class ALUserInterfaceSystem : EntitySystem
 {
@@ -11,5 +13,24 @@ public sealed class ALUserInterfaceSystem : EntitySystem
 
         var data = new InterfaceData(bui);
         _ui.SetUi(ent.AsNullable(), key, data);
+    }
+
+    public void TryBui<T>(Entity<UserInterfaceComponent?> ent, [RequireStaticDelegate] Action<T> action) where T : BoundUserInterface
+    {
+        try
+        {
+            if (!Resolve(ent, ref ent.Comp, false))
+                return;
+
+            foreach (var bui in ent.Comp.ClientOpenInterfaces.Values)
+            {
+                if (bui is T dialogUi)
+                    action(dialogUi);
+            }
+        }
+        catch (Exception e)
+        {
+            Log.Error($"Error getting {nameof(T)}:\n{e}");
+        }
     }
 }
