@@ -384,4 +384,11 @@
   id: 45
   time: '2025-09-04T23:08:08.0000000+00:00'
   url: https://github.com/Afterlight-RnD/Afterlight-14/pull/105
+- author: Fractalflower, InanimateIJK, conflee
+  changes:
+  - message: Major lagomorph update :3
+    type: Add
+  id: 46
+  time: '2025-09-07T12:01:46.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/110
 Order: -100
