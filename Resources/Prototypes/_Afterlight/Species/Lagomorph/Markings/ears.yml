@@ -10,6 +10,28 @@
       state: tall_ears_inner
 
 - type: marking
+  id: LagomorphEarsTallCutLeft
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Lagomorph]
+  sprites:
+    - sprite: _Afterlight/Species/Lagomorph/markings.rsi
+      state: tall_ears_cut_L_outer
+    - sprite: _Afterlight/Species/Lagomorph/markings.rsi
+      state: tall_ears_cut_R_inner
+
+- type: marking
+  id: LagomorphEarsTallCutRight
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Lagomorph]
+  sprites:
+    - sprite: _Afterlight/Species/Lagomorph/markings.rsi
+      state: tall_ears_cut_R_outer
+    - sprite: _Afterlight/Species/Lagomorph/markings.rsi
+      state: tall_ears_cut_R_inner
+
+- type: marking
   id: LagomorphEarsFloppy
   bodyPart: HeadTop
   markingCategory: HeadTop
@@ -17,6 +39,24 @@
   sprites:
     - sprite: _Afterlight/Species/Lagomorph/markings.rsi
       state: floppy_ears
+
+- type: marking
+  id: LagomorphEarsFloppyCutLeft
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Lagomorph]
+  sprites:
+    - sprite: _Afterlight/Species/Lagomorph/markings.rsi
+      state: floppy_ears_cut_L
+
+- type: marking
+  id: LagomorphEarsFloppyCutRight
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Lagomorph]
+  sprites:
+    - sprite: _Afterlight/Species/Lagomorph/markings.rsi
+      state: floppy_ears_cut_R
 
 - type: marking
   id: LagomorphEarsMedium

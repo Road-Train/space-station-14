@@ -45,7 +45,7 @@
   - type: Speech
     speechSounds: ALLagomorph
     speechVerb: Lagomorph
-    allowedEmotes: ['Squeek', 'Sniff']
+    allowedEmotes: ['Squeek', 'Snort', 'LagomorphSneeze', 'LagomorphSnore']
   - type: Vocal
     sounds:
       Male: MaleLagomorph
