@@ -20,6 +20,7 @@
   components:
   - type: LimitedCharges
 
+#afterlight
 - type: entity
   parent: AccessOverider
   id: AccessOveriderRecharging
