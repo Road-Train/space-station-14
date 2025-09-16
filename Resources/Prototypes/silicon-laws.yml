@@ -598,6 +598,7 @@
   - MothershipCore5
   obeysTo: laws-owner-xenoborgs
 
+#afterlight NTNC
 - type: siliconLaw
   id: NTNC0
   order: 0
