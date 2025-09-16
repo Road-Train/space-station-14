@@ -5,7 +5,7 @@ on:
 
 jobs:
   assign:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       contents: read
       pull-requests: write
@@ -13,16 +13,15 @@ jobs:
     steps:
       - name: Assign reviewers based on labels
         uses: actions/github-script@v7
-        with:
+        with: # TODO AFTERLIGHT assign different maints here
           script: |
             const labelToAssign = {
-              "Changes: Sprites": ["BORTBORTBORTBORTBORT"],
-              "Changes: Map": ["PubliclyExecutedPig"],
-              "Changes: UI": ["ss14-Starlight"],
-              "Changes: Shaders": ["ss14-Starlight, Happyrobot33, FoxxoTrystan"],
-              "Changes: Audio": ["ss14-Starlight, Happyrobot33, FoxxoTrystan"],
-              "Changes: No C#": ["ss14-Starlight, Happyrobot33, FoxxoTrystan"],
-              "Changes: C#": ["ss14-Starlight, Happyrobot33, FoxxoTrystan"],
+              "Changes: Sprites": ["DrSmugleaf"],
+              "Changes: Map": ["DrSmugleaf"],
+              "Changes: UI": ["DrSmugleaf"],
+              "Changes: Shaders": ["DrSmugleaf"],
+              "Changes: Audio": ["DrSmugleaf"],
+              "Changes: No C#": ["DrSmugleaf"],
             };
 
             const labels = context.payload.pull_request.labels.map(label => label.name);

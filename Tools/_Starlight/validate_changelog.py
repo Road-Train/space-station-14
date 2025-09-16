@@ -1,6 +1,6 @@
 import os
-import sys
 import re
+import sys
 from github import Github
 
 GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
@@ -50,11 +50,11 @@ for line in changelog_without_comments.splitlines():
         cl_line = line
         break
 
-if cl_line is None or not cl_line.strip()[4:].strip():
-    print("::error::After ':cl:' you must specify your nickname e.g. ':cl: Rinary'")
-    sys.exit(1)
+# if cl_line is None or not cl_line.strip()[4:].strip():
+#     print("::error::After ':cl:' you must specify your nickname e.g. ':cl: Rinary'")
+#     sys.exit(1)
 
-# Check for valid tags 
+# Check for valid tags
 valid_tags = ["add", "remove", "tweak", "fix"]
 entry_pattern = re.compile(r'^[ \t]*[^a-zA-Z0-9]?[ \t]*(add|remove|tweak|fix):', re.MULTILINE)
 entries = entry_pattern.findall(changelog_without_comments)

@@ -1,0 +1,88 @@
+﻿- type: entity
+  parent: [ XenoHybridPlayerSprite, BaseMobSpeciesOrganic ]
+  id: MobXenoHybridPlayer
+  name: Urist McXeno
+  save: false
+  components:
+  - type: Absorbable
+  - type: Body
+    prototype: XenoHybrid
+    requiredLegs: 2
+  - type: HumanoidAppearance
+    species: XenoHybrid
+  - type: Hunger
+  - type: Thirst
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - AnomalyHost
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatXeno
+      amount: 5
+  - type: Reactive
+    reactions:
+    - reagents: [ Water ]
+      methods: [ Touch ]
+      effects:
+      - !type:WearableReaction
+        slot: head
+        prototypeID: WaterDropletHat
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+      # Damage (Self)
+  - type: Bloodstream
+    bloodReagent: SulfuricAcid
+  # Damage (Others)
+  - type: MeleeWeapon
+    animation: WeaponArcBite
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    damage:
+      types:
+        Piercing: 5
+  # Visual & Audio
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#162581"
+      Burn:
+        sprite: Mobs/Effects/burn_damage.rsi
+  - type: Speech
+    speechVerb: ALXenoHybrid
+    speechSounds: ALXenoHybrid
+    allowedEmotes: [ ]
+  - type: Vocal
+    sounds:
+      Male: ALUnisexXeno
+      Female: ALUnisexXeno
+      Unsexed: ALUnisexXeno
+  - type: TypingIndicator
+    proto: spider
+  - type: Inventory
+    speciesId: xeno
+  - type: Flammable
+    damage: #per second, scales with number of fire 'stacks'
+      types:
+        Heat: 3.75 # 2.5x base
+  - type: Wagging
+
+- type: entity
+  parent: [ XenoHybridPlayerSprite, BaseSpeciesDummy ]
+  id: MobXenoHybridDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidAppearance
+    species: XenoHybrid
+  - type: Inventory
+    speciesId: xeno
+
+- type: entity
+  abstract: true
+  id: XenoHybridPlayerSprite

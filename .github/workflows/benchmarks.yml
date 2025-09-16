@@ -9,7 +9,9 @@ concurrency: benchmarks
 jobs:
   benchmark:
     name: Run Benchmarks
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    env:
+      DOTNET_INSTALL_DIR: "./.dotnet"
     steps:
     - uses: actions/checkout@v4.2.2
       with:

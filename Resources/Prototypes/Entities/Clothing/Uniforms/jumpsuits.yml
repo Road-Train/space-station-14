@@ -559,6 +559,15 @@
       - state: equipped-INNERCLOTHING
         color: "#ff8300"
       - state: prisoner-equipped-INNERCLOTHING
+  # -Afterlight- start
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    transmitFrequencyId: SuitSensor
+    savableAddress: false
+  - type: WirelessNetworkConnection
+    range: 1200
+  - type: StationLimitedNetwork
+  # -Afterlight- end
   - type: SuitSensor
     controlsLocked: true
     randomMode: false

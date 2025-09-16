@@ -1,18 +1,19 @@
 using System.IO;
 using System.Linq;
 using System.Numerics;
-using Content.Shared.CCVar;
-using Content.Shared.Decals;
+using Content.Shared._Afterlight.Humanoid.Markings;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
+using Content.Shared.Item;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
 using Content.Shared.Starlight.TextToSpeech;
 using Robust.Shared;
 using Robust.Shared.Configuration;
+using Robust.Shared.Enums;
 using Robust.Shared.GameObjects.Components.Localization;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -42,6 +43,12 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [Dependency] private readonly MarkingManager _markingManager = default!;
     [Dependency] private readonly GrammarSystem _grammarSystem = default!;
     [Dependency] private readonly SharedIdentitySystem _identity = default!;
+    [Dependency] private readonly SharedItemSystem _item = default!;
+
+    // afterlight
+    [Dependency] private readonly ALHumanoidAppearanceSystem _afterlight = default!;
+    [Dependency] private readonly SharedALMarkingSystem _alMarking = default!;
+    // afterlight
 
     public static readonly ProtoId<SpeciesPrototype> DefaultSpecies = "Human";
 
@@ -184,16 +191,12 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         targetHumanoid.Age = sourceHumanoid.Age;
         targetHumanoid.Width = sourceHumanoid.Width; //starlight
         targetHumanoid.Height = sourceHumanoid.Height; //starlight
-        SetSex(target, sourceHumanoid.Sex, false, targetHumanoid);
         targetHumanoid.CustomBaseLayers = new(sourceHumanoid.CustomBaseLayers);
         targetHumanoid.MarkingSet = new(sourceHumanoid.MarkingSet);
 
-        targetHumanoid.Gender = sourceHumanoid.Gender;
+        SetSex(target, sourceHumanoid.Sex, false, targetHumanoid);
+        SetGender((target, targetHumanoid), sourceHumanoid.Gender);
 
-        if (TryComp<GrammarComponent>(target, out var grammar))
-            _grammarSystem.SetGender((target, grammar), sourceHumanoid.Gender);
-
-        _identity.QueueIdentityUpdate(target);
         Dirty(target, targetHumanoid);
     }
 
@@ -294,6 +297,23 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         if (sync)
             Dirty(uid, humanoid);
+    }
+
+    /// <summary>
+    /// Sets the gender in the entity's HumanoidAppearanceComponent and GrammarComponent.
+    /// </summary>
+    public void SetGender(Entity<HumanoidAppearanceComponent?> ent, Gender gender)
+    {
+        if (!Resolve(ent, ref ent.Comp))
+            return;
+
+        ent.Comp.Gender = gender;
+        Dirty(ent);
+
+        if (TryComp<GrammarComponent>(ent, out var grammar))
+            _grammarSystem.SetGender((ent, grammar), gender);
+
+        _identity.QueueIdentityUpdate(ent);
     }
 
     /// <summary>
@@ -452,10 +472,12 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         humanoid.Width = profile.Appearance.Width; //starlight
         humanoid.Height = profile.Appearance.Height; //starlight
+        _afterlight.AddPickupData(uid); // afterlight
 
         SetSkinColor(uid, profile.Appearance.SkinColor, false);
 
         humanoid.MarkingSet.Clear();
+        _alMarking.MarkingsCleared(uid); // Afterlight
 
         // Add markings that doesn't need coloring. We store them until we add all other markings that doesn't need it.
         var markingFColored = new Dictionary<Marking, MarkingPrototype>();
@@ -521,6 +543,8 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         humanoid.CustomSpecieName = profile.CustomSpecieName; // Starlight
 
         Dirty(uid, humanoid);
+        var update = new MarkingsUpdateEvent(); //starlight
+        RaiseLocalEvent(uid, ref update); //starlight
     }
 
     /// <summary>
@@ -580,6 +604,9 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         if (sync)
             Dirty(uid, humanoid);
+
+        var ev = new MarkingsUpdateEvent(); //starlight
+        RaiseLocalEvent(uid, ref ev); //starlight
     }
 
     private void EnsureDefaultMarkings(EntityUid uid, HumanoidAppearanceComponent? humanoid)
@@ -617,6 +644,9 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         if (sync)
             Dirty(uid, humanoid);
+
+        var ev = new MarkingsUpdateEvent(); //starlight
+        RaiseLocalEvent(uid, ref ev); //starlight
     }
     //Starlight
     public void SetTTSVoice(EntityUid uid, string voiceId, HumanoidAppearanceComponent humanoid)
@@ -665,3 +695,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         return Loc.GetString("identity-age-old");
     }
 }
+
+
+[ByRefEvent]
+public record struct MarkingsUpdateEvent();

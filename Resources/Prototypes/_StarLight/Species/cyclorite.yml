@@ -14,7 +14,8 @@
   customName: true
   minHeight: 0.9
   defaultHeight: 1
-  maxHeight: 1.2
+  minWidth: 0.725 # afterlight
+  maxHeight: 2 # afterlight
   standardSize: 170
   standardWeight: 100
   standardDensity: 110
@@ -36,6 +37,10 @@
     RLeg: MobCycloriteRLeg
     LFoot: MobCycloriteLFoot
     RFoot: MobCycloriteRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobCycloriteMarkingLimits
@@ -62,6 +67,14 @@
     Chest:
       points: 2
       required: false
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    Butts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobCycloriteEyes

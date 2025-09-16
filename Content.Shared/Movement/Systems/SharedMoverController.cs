@@ -1,9 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
-using System.Net;
 using System.Numerics;
+using Content.Shared._Afterlight.Movement;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
-using Content.Shared.Bed.Sleep;
 using Content.Shared.CCVar;
 using Content.Shared.Charges.Systems;
 using Content.Shared.Friction;
@@ -23,9 +22,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Controllers;
-using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.Manager.Exceptions;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using PullableComponent = Content.Shared.Movement.Pulling.Components.PullableComponent;
@@ -79,6 +76,8 @@ public abstract partial class SharedMoverController : VirtualController
     /// Cache the mob movement calculation to re-use elsewhere.
     /// </summary>
     public Dictionary<EntityUid, bool> UsedMobMovement = new();
+
+    private readonly HashSet<EntityUid> _aroundColliderSet = [];
 
     public override void Initialize()
     {
@@ -397,11 +396,21 @@ public abstract partial class SharedMoverController : VirtualController
 
             mover.RelativeRotation = (mover.RelativeRotation + adjustment).FlipPositive();
             Dirty(uid, mover);
+
+            // Afterlight
+            var rotationEv = new ALRelativeRotationChangedEvent();
+            RaiseLocalEvent(uid, ref rotationEv);
+            // Afterlight
         }
         else if (!angleDiff.Equals(Angle.Zero))
         {
             mover.RelativeRotation = mover.TargetRelativeRotation.FlipPositive();
             Dirty(uid, mover);
+
+            // Afterlight
+            var rotationEv = new ALRelativeRotationChangedEvent();
+            RaiseLocalEvent(uid, ref rotationEv);
+            // Afterlight
         }
     }
 
@@ -462,7 +471,9 @@ public abstract partial class SharedMoverController : VirtualController
         var (uid, collider, mover, transform) = entity;
         var enlargedAABB = _lookup.GetWorldAABB(entity.Owner, transform).Enlarged(mover.GrabRange);
 
-        foreach (var otherEntity in lookupSystem.GetEntitiesIntersecting(transform.MapID, enlargedAABB))
+        _aroundColliderSet.Clear();
+        lookupSystem.GetEntitiesIntersecting(transform.MapID, enlargedAABB, _aroundColliderSet);
+        foreach (var otherEntity in _aroundColliderSet)
         {
             if (otherEntity == uid)
                 continue; // Don't try to push off of yourself!

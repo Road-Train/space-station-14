@@ -1,0 +1,5 @@
+- type: loadout
+  id: AliceMask # Yes, this is a reference >:3
+  storage:
+    back:
+      - ClothingKitsuneMask

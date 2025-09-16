@@ -24,6 +24,10 @@
     RLeg: MobSkeletonRLeg
     LFoot: MobSkeletonLFoot
     RFoot: MobSkeletonRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: humanoidBaseSprite
   id: MobSkeletonHead

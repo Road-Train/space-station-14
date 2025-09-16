@@ -1,0 +1,18 @@
+﻿- type: marking
+  abstract: true
+  id: ALBreastsBase
+  bodyPart: Breasts
+  markingCategory: Breasts
+  allSpecies: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+      fallbackTypes:
+      - !type:SkinColoring
+  localization:
+  - al-markings-breasts
+  - al-markings-nipples
+  hiddenBy:
+  - OuterClothing
+  - InnerClothing

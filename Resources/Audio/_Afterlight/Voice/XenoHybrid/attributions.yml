@@ -1,0 +1,19 @@
+- files: ["alien_roar1.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from S.P.L.U.R.T-tg"
+  source: "http://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/f563697234f2cfa1da1c45987913a4030a687f01/modular_skyrat/modules/xenos_skyrat_redo/sound/alien_roar1.ogg"
+
+- files: ["alien_roar2.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from S.P.L.U.R.T-tg"
+  source: "http://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/f563697234f2cfa1da1c45987913a4030a687f01/modular_skyrat/modules/xenos_skyrat_redo/sound/alien_roar2.ogg"
+
+- files: ["hiss6.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from S.P.L.U.R.T-tg"
+  source: "https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/436ba869ebcd0b60b63973fb7562f447ee655205/sound/mobs/non-humanoids/hiss/hiss6.ogg"
+
+- files: ["Xenohiss.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from S.P.L.U.R.T-tg"
+  source: "https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/8aab6e5417e681e896e2d38cf52b26791f11230c/modular_zubbers/code/modules/blooper/voice/bloopers/Xenohiss.ogg"

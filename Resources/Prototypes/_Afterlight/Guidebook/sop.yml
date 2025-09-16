@@ -1,0 +1,62 @@
+﻿- type: guideEntry
+  id: ALICPolicy
+  name: In Character Policy
+  text: "/ServerInfo/Guidebook/_Afterlight/ic-policy.xml"
+  children:
+  - ALSop
+  - ALSpaceLaw
+
+- type: guideEntry
+  id: ALSop
+  name: Standard Operating Procedure
+  text: "/ServerInfo/Guidebook/_Afterlight/SOP/Core.xml"
+  children:
+  - ALRestricted
+  - ALSopCommand
+  - ALSopSecurity
+  - ALSopEngineering
+  - ALSopMedical
+  - ALSopScience
+  - ALSopCargo
+  - ALSopService
+
+- type: guideEntry
+  id: ALSopCommand
+  name: Command
+  text: "/ServerInfo/Guidebook/_Afterlight/SOP/Command.xml"
+
+- type: guideEntry
+  id: ALSopSecurity
+  name: Security
+  text: "/ServerInfo/Guidebook/_Afterlight/SOP/Security.xml"
+
+- type: guideEntry
+  id: ALSopEngineering
+  name: Engineering
+  text: "/ServerInfo/Guidebook/_Afterlight/SOP/Engi.xml"
+
+- type: guideEntry
+  id: ALSopMedical
+  name: Medical
+  text: "/ServerInfo/Guidebook/_Afterlight/SOP/Med.xml"
+
+- type: guideEntry
+  id: ALSopScience
+  name: Science
+  text: "/ServerInfo/Guidebook/_Afterlight/SOP/Sci.xml"
+
+- type: guideEntry
+  id: ALSopCargo
+  name: Cargo
+  text: "/ServerInfo/Guidebook/_Afterlight/SOP/Cargo.xml"
+
+- type: guideEntry
+  id: ALSopService
+  name: Service
+  text: "/ServerInfo/Guidebook/_Afterlight/SOP/Service.xml"
+
+- type: guideEntry
+  id: ALRestricted
+  name: List of Restricted Items
+  priority: 99
+  text: "/ServerInfo/Guidebook/_Afterlight/SOP/Restricted.xml"

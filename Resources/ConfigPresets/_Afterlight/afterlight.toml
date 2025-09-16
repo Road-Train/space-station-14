@@ -1,0 +1,70 @@
+[admin]
+deadmin_on_join = true
+
+[adminlogs]
+server_name = "afterlight"
+
+[al]
+lobby_start_paused = true
+
+[game]
+desc = ""
+hostname = "[EN][18+] Afterlight [US East]"
+role_timers = false # Testing Server
+soft_max_players = 45
+defaultpreset = "Extended"
+fallbackpreset = "Extended"
+
+[hub]
+tags = "lang:en,region:am_n_e,18+"
+
+[ic]
+flavor_text = true
+secrets_text = true
+secrets_exploitable = true
+
+[infolinks]
+#appeal = "https://appeal.afterlight-14.space"
+bug_report = "https://github.com/Afterlight-RnD/Afterlight-14/issues/new?template=issue_report.md"
+discord = "https://discord.gg/JnnPYHvJ3s"
+#forum = "https://forum.afterlight-14.space"
+github = "https://github.com/Afterlight-RnD/Afterlight-14"
+#website = ""
+wiki = "https://wiki.afterlight-14.space"
+
+[lobby]
+server_name = "Afterlight"
+
+[loki]
+name = "afterlight"
+
+[movement]
+mob_pushing = true
+
+#[replay]
+#auto_record = true
+#max_compressed_size = 4194304
+#max_uncompressed_size = 8388608
+#auto_record_temp_dir = "recording"
+#auto_record_name = "done/{year}_{month}_{day}-{hour}_{minute}-round_{round}.zip"
+
+[ooc]
+enable_during_round = true
+rp_notes = true
+
+[server]
+rules_file = "ALRuleset"
+default_guide = "ALNewPlayer"
+
+[tts]
+enabled = true
+
+[vote]
+enabled = false
+
+[votekick]
+enabled = false
+
+# Testing Server
+[whitelist]
+enabled = true

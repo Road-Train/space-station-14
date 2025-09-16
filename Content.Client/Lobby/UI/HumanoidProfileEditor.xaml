@@ -3,6 +3,7 @@
          xmlns:humanoid="clr-namespace:Content.Client.Humanoid"
          xmlns:ui="clr-namespace:Content.Client.Lobby.UI"
          xmlns:profileEditorControls="clr-namespace:Content.Client.Lobby.UI.ProfileEditorControls"
+         xmlns:ui1="clr-namespace:Content.Client._Starlight.Lobby.UI"
          HorizontalExpand="True">
         <!-- Left side -->
         <BoxContainer Orientation="Vertical" Margin="10 10 10 10" HorizontalExpand="True">
@@ -158,9 +159,7 @@
                 </BoxContainer>
                 <BoxContainer Orientation="Vertical" Margin="10">
                     <!-- Traits -->
-                    <ScrollContainer VerticalExpand="True">
-                        <BoxContainer Name="TraitsList" Orientation="Vertical" />
-                    </ScrollContainer>
+                    <TabContainer Name="TraitTabContainer" VerticalExpand="True" />
                 </BoxContainer>
                 <BoxContainer Name="MarkingsTab" Orientation="Vertical" Margin="10">
                     <!-- Markings -->
@@ -173,6 +172,16 @@
                     <!-- Cybernetics -->
                     <ScrollContainer VerticalExpand="True">
                         <humanoid:CyberneticsPicker Name="Cybernetics" />
+                    </ScrollContainer>
+                </BoxContainer>
+                <BoxContainer Name="ICInfoTab" Orientation="Vertical" Margin="10" Visible="False">
+                    <ScrollContainer VerticalExpand="True">
+                        <ui1:CharacterInfoEditor Name="ICInfoEditor"/>
+                    </ScrollContainer>
+                </BoxContainer>
+                <BoxContainer Name="OOCInfoTab" Orientation="Vertical" Margin="10" Visible="False">
+                    <ScrollContainer VerticalExpand="True">
+                        <ui1:OOCInfoEditor Name="OOCInfoEditor"/>
                     </ScrollContainer>
                 </BoxContainer>
             </TabContainer>

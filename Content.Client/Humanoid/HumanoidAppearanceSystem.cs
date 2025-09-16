@@ -1,5 +1,7 @@
 using System.Numerics; //starlight
+using Content.Client._Afterlight.Humanoid.Markings;
 using Content.Client.DisplacementMap;
+using Content.Shared._Afterlight.Humanoid.Markings;
 using Content.Shared.CCVar;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -21,6 +23,8 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly DisplacementMapSystem _displacement = default!;
     [Dependency] private readonly SpriteSystem _sprite = default!;
+
+    [Dependency] private readonly ALMarkingSystem _alMarking = default!;
 
     public override void Initialize()
     {
@@ -63,6 +67,9 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         sprite.Scale = new Vector2(humanoidAppearance.Width * humanoidAppearance.Height, humanoidAppearance.Height);
         //starlight end
+
+        var ev = new ALMarkingsSpriteUpdatedEvent();
+        RaiseLocalEvent(entity, ref ev);
     }
 
     private static bool IsHidden(HumanoidAppearanceComponent humanoid, HumanoidVisualLayers layer)
@@ -401,6 +408,10 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             }
 
             _sprite.LayerSetVisible((entity.Owner, sprite), layerId, visible);
+
+            // Afterlight
+            _alMarking.ApplyMarking((entity, sprite), layerId, markingPrototype, j, visible, colors, ref targetLayer, markingSprite);
+            // Afterlight
 
             if (!visible || setting == null) // this is kinda implied
             {

@@ -12,6 +12,8 @@
   femaleFirstNames: NamesMothFirstFemale
   lastNames: NamesMothLast
   customName: true # Starlight
+  maxHeight: 2 # afterlight
+  minWidth: 0.725 # afterlight
 
 - type: speciesBaseSprites
   id: MobMothSprites
@@ -33,6 +35,10 @@
     RLeg: MobMothRLeg
     LFoot: MobMothLFoot
     RFoot: MobMothRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: humanoidBaseSprite
   id: MobMothEyes
@@ -82,6 +88,14 @@
     Arms:
       points: 2
       required: false
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    Butts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobMothHead

@@ -10,14 +10,9 @@
     back:
     - SuperSynthesizerInstrument
 
-# Meow mrrp ## shut up
+# Meow mrrp
 - type: loadout
   id: ClothingUnderSocksCoder
-  effects:
-    - !type:JobRequirementLoadoutEffect
-      requirement:
-        !type:OverallPlaytimeRequirement
-        time: 144000 # 40hr
   storage:
     back:
     - ClothingUnderSocksCoder
@@ -55,11 +50,6 @@
 
 - type: loadout
   id: ClothingUniformJumpskirtElegantMaid
-  effects:
-    - !type:JobRequirementLoadoutEffect
-      requirement:
-        !type:OverallPlaytimeRequirement
-        time: 144000 # 40hr
   storage:
     back:
     - ClothingUniformJumpskirtElegantMaid
@@ -67,11 +57,6 @@
 
 - type: loadout
   id: ClothingHeadHatCatEars
-  effects:
-    - !type:JobRequirementLoadoutEffect
-      requirement:
-        !type:OverallPlaytimeRequirement
-        time: 144000 # 40hr
   storage:
     back:
     - ClothingHeadHatCatEars

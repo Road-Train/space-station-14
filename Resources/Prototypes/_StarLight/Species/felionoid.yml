@@ -14,7 +14,8 @@
   customName: true
   minHeight: 0.8
   defaultHeight: 0.8
-  maxHeight: 0.9
+  minWidth: 0.725 # afterlight
+  maxHeight: 2 # afterlight
   standardSize: 170
   standardWeight: 48
   standardDensity: 45
@@ -37,6 +38,10 @@
     LFoot: MobFelionoidLFoot
     RFoot: MobFelionoidRFoot
     Tail: MobHumanoidAnyMarking
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobFelionoidMarkingLimits
@@ -67,6 +72,14 @@
       points: 1
       required: true
       defaultMarkings: [ FelionoidTailAnimated ]
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    Butts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobFelionoidEyes

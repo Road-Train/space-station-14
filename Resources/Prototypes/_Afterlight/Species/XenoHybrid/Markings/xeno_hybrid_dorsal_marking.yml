@@ -1,0 +1,15 @@
+﻿- type: marking
+  parent: XenoHybridBase
+  id: XenoHybridDorsalStandard
+  bodyPart: Chest
+  markingCategory: XenoHybridDorsal
+  sprites:
+  - sprite: _Afterlight/Species/XenoHybrid/Markings/Dorsal/xeno_dorsal_standard.rsi
+    state: m_xenodorsal_standard
+
+- type: marking
+  parent: XenoHybridDorsalStandard
+  id: XenoHybridDorsalRoyal
+  sprites:
+  - sprite: _Afterlight/Species/XenoHybrid/Markings/Dorsal/xeno_dorsal_royal.rsi
+    state: m_xenodorsal_royal

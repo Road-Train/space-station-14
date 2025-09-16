@@ -1,4 +1,4 @@
-using Content.Server._NullLink;
+using Content.Server._Afterlight.Kinks;
 using Content.Server._NullLink.Core;
 using Content.Server._NullLink.EventBus;
 using Content.Server._NullLink.PlayerData;
@@ -38,6 +38,7 @@ using Content.Shared.Kitchen;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Players.RateLimiting;
 using Content.Shared.Starlight;
+using Content.Server.Economy; // Starlight-edit
 
 namespace Content.Server.IoC
 {
@@ -60,9 +61,9 @@ namespace Content.Server.IoC
             IoCManager.Register<IVoteManager, VoteManager>();
             IoCManager.Register<IPlayerLocator, PlayerLocator>();
             IoCManager.Register<IAfkManager, AfkManager>();
-            
+
             IoCManager.Register<HolidaySystem>();
-            
+
             IoCManager.Register<IGameMapManager, GameMapManager>();
             IoCManager.Register<RulesManager, RulesManager>();
             IoCManager.Register<IBanManager, BanManager>();
@@ -93,14 +94,19 @@ namespace Content.Server.IoC
             IoCManager.Register<DiscordChatLink>();
 
             // 🌟Starlight🌟
-            IoCManager.Register<ISharedPlayersRoleManager, PlayerRolesManager>(); 
-            IoCManager.Register<IPlayerRolesManager, PlayerRolesManager>();     
+            IoCManager.Register<ISharedPlayersRoleManager, PlayerRolesManager>();
+            IoCManager.Register<IPlayerRolesManager, PlayerRolesManager>();
             IoCManager.Register<ITTSManager, TTSManager>();
+            IoCManager.Register<ItemPriceManager, ItemPriceManager>();
             // nulllink
-            IoCManager.Register<IActorRouter, ActorRouter>(); 
+            IoCManager.Register<IActorRouter, ActorRouter>();
             IoCManager.Register<INullLinkPlayerManager, NullLinkPlayerManager>();
             IoCManager.Register<INullLinkEventBusManager, NullLinkEventBusManager>();
             IoCManager.Register<ISharedNullLinkPlayerRolesReqManager, PlayerRolesReqManager>();
+
+            // Afterlight
+            IoCManager.Register<KinkManager>();
+            // Afterlight
         }
     }
 }

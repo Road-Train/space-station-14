@@ -1,0 +1,415 @@
+﻿Entries:
+- author: Conflee, Salem, InanimateIJK
+  changes:
+  - message: Resprited Most Common Windows, Solid Walls, Reinforced Walls, Rusted
+      Walls.
+    type: Tweak
+  id: 1
+  time: '2025-07-16T11:49:54.428717+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/4
+- author: InanimateIJK
+  changes:
+  - message: Commented out Skubstep, no more earblast.
+    type: Tweak
+  id: 2
+  time: '2025-07-19T05:53:06.427366+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/6
+- author: InanimateIJK, Conflee
+  changes:
+  - message: Secret Door Textures Fixed
+    type: Fix
+  id: 3
+  time: '2025-07-22T01:10:37.106250+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/11
+- author: DrSmugleaf
+  changes:
+  - message: Added cassettes and the cassette player. The custom cassette allows you
+      to play any ogg file on your computer, but only you can hear it.
+    type: Add
+  id: 4
+  time: '2025-08-02T23:56:32.105760+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/36
+- author: InanimateIJK
+  changes:
+  - message: Legal.MD is implemented.
+    type: Add
+  - message: AFTERLIGHT Source License 1.1 is implemented.
+    type: Tweak
+  id: 5
+  time: '2025-08-03T01:56:16.106999+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/38
+- author: DrSmugleaf
+  changes:
+  - message: Added xeno hybrids as a playable species.
+    type: Add
+  id: 6
+  time: '2025-08-03T02:10:08.107402+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/34
+- author: DrSmugleaf
+  changes:
+  - message: Added kink preference, comparison, and importing UI.
+    type: Add
+  id: 7
+  time: '2025-08-03T04:03:56.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/32
+- author: DrSmugleaf
+  changes:
+  - message: Fixed not being able to open the kinks window for someone else if you
+      reconnect to the server without restarting your game.
+    type: Fix
+  id: 8
+  time: '2025-08-03T23:25:55.709706+00:00'
+  url: null
+- author: DrSmugleaf
+  changes:
+  - message: Updated how mob collision works. Small mobs (mice, cockroaches, Ian,
+      etc) do not block you anymore.
+    type: Tweak
+  - message: Syringes and healing items now allow you to move more while performing
+      their do-after, 0.75 tiles instead of only 0.1 tiles.
+    type: Tweak
+  - message: Forensics, vampire abilities, toggling internals, eating, drinking, and
+      envelopes now allow you to move more while performing their do-after, 0.5 tiles,
+      instead of only 0.01 or 0.1 tiles.
+    type: Tweak
+  id: 9
+  time: '2025-08-04T00:04:52.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/39
+- author: DrSmugleaf
+  changes:
+  - message: Fixed vulp tail tip and vulp tail fox tip being unable to wag.
+    type: Fix
+  id: 10
+  time: '2025-08-04T00:48:04.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/40
+- author: DrSmugleaf
+  changes:
+  - message: Fixed species not being ordered alphabetically in the character customization
+      UI.
+    type: Fix
+  id: 11
+  time: '2025-08-04T01:01:38.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/41
+- author: DrSmugleaf
+  changes:
+  - message: Renamed golobby to golobbynoreallythiswillbringeveryonetothelobbyareyousure
+    type: Tweak
+  id: 12
+  time: '2025-08-05T01:33:19.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/46
+- author: Fractalflower
+  changes:
+  - message: FashionVend prices are now 33% of what they were. Go wild!
+    type: Tweak
+  - message: Femboy equipment no longer requires 40 hours of playtime.
+    type: Tweak
+  - message: Fixed some internal typos, and switched to using trans keys.
+    type: Tweak
+  - message: Scurrets are now 80% off!
+    type: Tweak
+  id: 13
+  time: '2025-08-05T06:18:38.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/45
+- author: Fractalflower
+  changes:
+  - message: Humans can now have foxlike ears and tails.
+    type: Add
+  - message: Humans can now yip, bark, and whine if they have a foxlike ear or tail.
+    type: Add
+  id: 14
+  time: '2025-08-05T06:25:46.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/42
+- author: Gwonk
+  changes:
+  - message: Bitrunner Machine Sprites
+    type: Add
+  - message: Dildo Sprites
+    type: Add
+  - message: Semen and Milk Splatters
+    type: Add
+  id: 15
+  time: '2025-08-05T08:26:36.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/43
+- author: Aexxie
+  changes:
+  - message: AFTERLIGHT Server Rules
+    type: Add
+  - message: AFTERLIGHT SOP
+    type: Add
+  id: 16
+  time: '2025-08-05T12:09:48.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/48
+- author: Fractalflower
+  changes:
+  - message: Shuttleless gamma alert
+    type: Add
+  id: 17
+  time: '2025-08-07T08:41:39.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/53
+- author: neomoth, FractalFlower
+  changes:
+  - message: yes erp poster
+    type: Add
+  id: 18
+  time: '2025-08-08T00:38:18.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/57
+- author: Fractalflower
+  changes:
+  - message: Small players can now be given uppies
+    type: Add
+  id: 19
+  time: '2025-08-08T00:41:52.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/58
+- author: themageofmicrosoftpaints, Fractalflower
+  changes:
+  - message: Nine new slime tails
+    type: Add
+  - message: Eight new slime ears
+    type: Add
+  - message: Five new glass floors
+    type: Add
+  id: 20
+  time: '2025-08-08T21:34:25.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/62
+- author: CptPuddleboat
+  changes:
+  - message: Traits are now organised into tabs
+    type: Add
+  - message: Trait incompatibility, and make Spanish, French, Italian, and German
+      accents incompatible with each other
+    type: Add
+  id: 21
+  time: '2025-08-09T08:08:38.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/10
+- author: DrSmugleaf
+  changes:
+  - message: Added breasts. You can choose between pair, quad, and sextuple, and anywhere
+      from flat-chested to S-Cup (20 sizes). Nipples can be colored separately from
+      the breast. Inner and outer clothing hides them while worn.
+    type: Add
+  id: 22
+  time: '2025-08-10T07:30:17.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/67
+- author: Fractalflower
+  changes:
+  - message: Sorry. Mommy? Sorry. Mommy? Sorry.
+    type: Tweak
+  - message: Max height is now 340cm across the board!
+    type: Tweak
+  id: 23
+  time: '2025-08-10T06:59:54.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/65
+- author: Fractalflower, themageofmicrosoftpaints
+  changes:
+  - message: Twelve new horn markings
+    type: Add
+  - message: Seven new tail markings
+    type: Add
+  id: 24
+  time: '2025-08-10T08:29:28.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/69
+- author: Fractalflower
+  changes:
+  - message: Set minimum width to 0.725
+    type: Tweak
+  id: 25
+  time: '2025-08-10T21:52:28.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/73
+- author: DrSmugleaf
+  changes:
+  - message: Added xeno hybrid speech and scream sounds.
+    type: Add
+  id: 26
+  time: '2025-08-10T22:19:43.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/72
+- author: Jezithyr
+  changes:
+  - message: Added the ability to inspect other players and open up a character window
+      of their character.
+    type: Add
+  - message: Added OOC notes (visible to other players), and personal notes (only
+      visible to you).
+    type: Add
+  - message: Added character secrets (visible only to the player controlling the character
+      or clone)
+    type: Add
+  - message: Added exploitable info for characters (visible to ghosts and traitors
+      on examine).
+    type: Add
+  - message: Added tabs to character window and character editor for the new flavour
+      text sections.
+    type: Tweak
+  - message: Split flavortext into physical (attached to the character) and personality
+      descriptions (attached to the mind).
+    type: Tweak
+  id: 27
+  time: '2025-08-14T00:28:13.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/47
+- author: Fractalflower
+  changes:
+  - message: Kitsune mask trinket, selectable at roundstart. For all One (1) people
+      who use it.
+    type: Add
+  - message: Satanic bibles no longer hurt unholy creatures. (Can be VVed onto any
+      bible too)
+    type: Tweak
+  - message: The kitsune mask does not have 95% blunt resistance anymore. Tiders rejoice.
+    type: Remove
+  id: 28
+  time: '2025-08-14T08:17:09.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/77
+- author: Fractalflower
+  changes:
+  - message: Added "Demonic Wings" marking for humans and vulps.
+    type: Add
+  id: 29
+  time: '2025-08-14T08:20:37.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/79
+- author: Fractalflower
+  changes:
+  - message: Added "Yes ERP" poster to random spawns.
+    type: Add
+  id: 30
+  time: '2025-08-15T02:35:24.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/80
+- author: DrSmugleaf
+  changes:
+  - message: Fixed flashing your breasts when you start wagging your tail, and sometimes
+      briefly on your screen after spawning.
+    type: Fix
+  id: 31
+  time: '2025-08-15T02:34:52.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/83
+- author: Veritable-Calamity
+  changes:
+  - message: Added Rene Weingartener plushie.
+    type: Add
+  id: 32
+  time: '2025-08-15T08:40:01.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/87
+- author: DrSmugleaf
+  changes:
+  - message: Added butts with 8 sizes, from small to dumptruck, selectable in the
+      markings menu.
+    type: Add
+  id: 33
+  time: '2025-08-15T08:58:50.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/86
+- author: DrSmugleaf
+  changes:
+  - message: Added xeno hybrid tail wagging.
+    type: Add
+  id: 34
+  time: '2025-08-15T10:51:25.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/89
+- author: DrSmugleaf
+  changes:
+  - message: Removed the lobby playtime reminders.
+    type: Remove
+  id: 35
+  time: '2025-08-15T10:56:48.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/90
+- author: JustAni
+  changes:
+  - message: AFTERLIGHT Branding got a makeover by JustAni.
+    type: Tweak
+  id: 36
+  time: '2025-08-17T17:30:04.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/84
+- author: Fractalflower
+  changes:
+  - message: CVar for disabling loadout playtime requirements.
+    type: Add
+  id: 37
+  time: '2025-08-30T02:27:38.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/78
+- author: Gneiss, InanimateIJK
+  changes:
+  - message: Gneiss's tracks ported from Imperial Space.
+    type: Add
+  - message: Lobby SoundCollection curated.
+    type: Tweak
+  id: 38
+  time: '2025-08-28T23:29:46.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/101
+- author: lunarcomets
+  changes:
+  - message: Cyborg subtypes are now possible!
+    type: Add
+  id: 39
+  time: '2025-08-30T09:00:22.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/91
+- author: DrSmugleaf
+  changes:
+  - message: Improved performance specially during high player counts and long rounds.
+    type: Tweak
+  id: 40
+  time: '2025-08-31T10:19:30.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/94
+- author: Fractalflower, InanimateIJK, themageofmicrosoftpaints
+  changes:
+  - message: Bnuuy
+    type: Add
+  id: 41
+  time: '2025-08-31T23:28:27.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/100
+- author: Veritable-Calamity
+  changes:
+  - message: a subset of raptorial borgs for all departments!
+    type: Add
+  id: 42
+  time: '2025-09-01T00:10:38.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/104
+- author: Citrea
+  changes:
+  - message: Coordinate sensors are now attached to your PDA.
+    type: Tweak
+  - message: PDA and ID readout now works from your belt slot.
+    type: Tweak
+  id: 43
+  time: '2025-09-04T23:05:30.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/98
+- author: TacoLlama
+  changes:
+  - message: Added Tallborgs!
+    type: Add
+  id: 44
+  time: '2025-09-04T23:07:27.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/107
+- author: lunarcomets
+  changes:
+  - message: borg subtypes should now show properly for other players without needing
+      to reconnect to the server
+    type: Fix
+  id: 45
+  time: '2025-09-04T23:08:08.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/105
+- author: Fractalflower, InanimateIJK, conflee
+  changes:
+  - message: Major lagomorph update :3
+    type: Add
+  id: 46
+  time: '2025-09-07T12:01:46.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/110
+- author: TacoLlama
+  changes:
+  - message: Mining raptor fixed
+    type: Fix
+  id: 47
+  time: '2025-09-07T12:13:49.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/108
+- author: DrSmugleaf
+  changes:
+  - message: Added subtle and subtler anti-ghost emoting, accessible through the RP
+      button at the bottom right of the chat box. Subtle emotes are sent to everyone
+      within a 1.5 tile range, giving confirmation of receival with a popup. Ghosts
+      can enable a setting to see all subtle emotes that are not marked as anti-ghost,
+      defaulting to off. Marking your subtle emote as anti-ghost overrides this setting,
+      and prevents it from ever being seen by any ghosts. All subtle emotes are logged
+      to admins via admin logs. Receiving subtle emotes plays a sound for the receiver,
+      disableable in the settings, defaulting to on.
+    type: Add
+  id: 48
+  time: '2025-09-07T12:14:32.0000000+00:00'
+  url: https://github.com/Afterlight-RnD/Afterlight-14/pull/111
+Order: -100

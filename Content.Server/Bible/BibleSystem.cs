@@ -8,6 +8,7 @@ using Content.Shared.Actions;
 using Content.Shared.Bible;
 using Content.Shared.Clumsy; //Starlight
 using Content.Shared.Cluwne; //Starlight
+using Content.Shared.Bible.Components;
 using Content.Shared.Damage;
 using Content.Shared.Ghost.Roles.Components;
 using Content.Shared.Hands.Components; //Starlight
@@ -66,9 +67,10 @@ namespace Content.Server.Bible
             //If an unholy creature picks up the bible, knock them down
             if (HasComp<UnholyComponent>(args.Container.Owner))
             {
+                if (HasComp<UnholyBibleComponent>(uid)) return; // afterlight
                 Timer.Spawn(500, () =>
                 {
-                    _stun.TryParalyze(args.Container.Owner, TimeSpan.FromSeconds(10), true);
+                    _stun.TryUpdateParalyzeDuration(args.Container.Owner, TimeSpan.FromSeconds(10));
                     _damageableSystem.TryChangeDamage(args.Container.Owner, component.DamageOnUnholyUse);
                     _audio.PlayPvs(component.SizzleSoundPath, args.Container.Owner);
                 });

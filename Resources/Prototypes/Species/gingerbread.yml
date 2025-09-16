@@ -25,6 +25,10 @@
     RLeg: MobGingerbreadRLeg
     LFoot: MobGingerbreadLFoot
     RFoot: MobGingerbreadRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: humanoidBaseSprite
   id: MobGingerbreadEyes

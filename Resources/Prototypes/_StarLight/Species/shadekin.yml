@@ -16,6 +16,8 @@
   maxAge: 300
   youngAge: 30
   oldAge: 250
+  minWidth: 0.725 # afterlight
+  maxHeight: 2 # afterlight
   customName: true
 
 - type: speciesBaseSprites
@@ -38,6 +40,10 @@
     RLeg: MobShadekinRLeg
     LFoot: MobShadekinLFoot
     RFoot: MobShadekinRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobShadekinMarkingLimits
@@ -71,6 +77,14 @@
     Arms:
       points: 2
       required: false
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    Butts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobShadekinAnyMarkingFollowSkin

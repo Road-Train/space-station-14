@@ -1,0 +1,83 @@
+﻿{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/15908b1183be72020f98bcff7cf50622cc5e68a9/modular_skyrat/modules/bodyparts/icons/xeno_parts_greyscale.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "r_arm",
+      "directions": 4
+    },
+    {
+      "name": "l_arm",
+      "directions": 4
+    },
+    {
+      "name": "r_hand",
+      "directions": 4
+    },
+    {
+      "name": "l_hand",
+      "directions": 4
+    },
+    {
+      "name": "torso_m",
+      "directions": 4
+    },
+    {
+      "name": "torso_f",
+      "directions": 4
+    },
+    {
+      "name": "head_m",
+      "directions": 4
+    },
+    {
+      "name": "head_f",
+      "directions": 4
+    },
+    {
+      "name": "r_leg",
+      "directions": 4
+    },
+    {
+      "name": "l_leg",
+      "directions": 4
+    },
+    {
+      "name": "r_foot",
+      "directions": 4
+    },
+    {
+      "name": "l_foot",
+      "directions": 4
+    },
+    {
+      "name": "digitigrade_1_r_leg",
+      "directions": 4
+    },
+    {
+      "name": "digitigrade_1_l_leg",
+      "directions": 4
+    },
+    {
+      "name": "digitigrade_2_l_leg",
+      "directions": 4
+    },
+    {
+      "name": "digitigrade_2_r_leg",
+      "directions": 4
+    },
+    {
+      "name": "digitigrade_r_leg",
+      "directions": 4
+    },
+    {
+      "name": "digitigrade_l_leg",
+      "directions": 4
+    }
+  ]
+}

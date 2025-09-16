@@ -13,6 +13,8 @@
   lastNames: NamesDionaLast
   naming: TheFirstofLast
   customName: true # Starlight start
+  maxHeight: 2 # afterlight
+  minWidth: 0.725 # afterlight
   standardSize: 200
   standardWeight: 145
   standardDensity: 130 # Starlight end
@@ -35,6 +37,10 @@
     RLeg: MobDionaRLeg
     LFoot: MobDionaLFoot
     RFoot: MobDionaRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobDionaMarkingLimits
@@ -68,6 +74,14 @@
       points: 1
       required: true
       defaultMarkings: [ DionaVineOverlay ]
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    Butts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobDionaEyes

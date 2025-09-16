@@ -35,7 +35,7 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
         [NotNullWhen(false)] out FormattedMessage? reason)
     {
         reason = new FormattedMessage();
-
+        
         // If playTimes is null, we're not going to check against playtime requirements
         if (playTimes == null)
             return true;

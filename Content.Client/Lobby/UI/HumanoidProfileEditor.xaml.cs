@@ -1,13 +1,10 @@
-using System.IO;
-using System.Linq;
-using System.Numerics;
+using Content.Client._Starlight.TTS;
 using Content.Client.Humanoid;
 using Content.Client.Lobby.UI.Loadouts;
 using Content.Client.Lobby.UI.Roles;
 using Content.Client.Message;
 using Content.Client.Players.PlayTimeTracking;
 using Content.Client.Sprite;
-using Content.Client._Starlight.TTS;
 using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
@@ -33,6 +30,10 @@ using Robust.Shared.ContentPack;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using System;
+using System.IO;
+using System.Linq;
+using System.Numerics;
 
 namespace Content.Client.Lobby.UI
 {
@@ -53,9 +54,6 @@ namespace Content.Client.Lobby.UI
         // CCvar.
         private int _maxNameLength;
         private bool _allowFlavorText;
-
-        private FlavorText.FlavorText? _flavorText;
-        private TextEdit? _flavorTextEdit;
 
         // One at a time.
         private LoadoutWindow? _loadoutWindow;
@@ -190,8 +188,6 @@ namespace Content.Client.Lobby.UI
             // Starlight - End
 
             #region Appearance
-
-            TabContainer.SetTabTitle(0, Loc.GetString("humanoid-profile-editor-appearance-tab"));
 
             #region Sex
 
@@ -461,7 +457,7 @@ namespace Content.Client.Lobby.UI
 
             #region Jobs
 
-            TabContainer.SetTabTitle(1, Loc.GetString("humanoid-profile-editor-jobs-tab"));
+
 
             _jobCategories = new Dictionary<string, BoxContainer>();
 
@@ -470,13 +466,13 @@ namespace Content.Client.Lobby.UI
 
             #endregion Jobs
 
-            TabContainer.SetTabTitle(2, Loc.GetString("humanoid-profile-editor-antags-tab"));
+
 
             RefreshTraits();
 
             #region Markings
 
-            TabContainer.SetTabTitle(4, Loc.GetString("humanoid-profile-editor-markings-tab"));
+
 
             Markings.OnMarkingAdded += OnMarkingChange;
             Markings.OnMarkingRemoved += OnMarkingChange;
@@ -487,11 +483,10 @@ namespace Content.Client.Lobby.UI
 
             // Starlight
             #region Cybernetics
-            TabContainer.SetTabTitle(5, Loc.GetString("humanoid-profile-editor-cybernetics-tab"));
             Cybernetics.OnCyberneticsUpdated += OnCyberneticsUpdated;
             #endregion Cybernetics
 
-            RefreshFlavorText();
+            RefreshCharacterInfo();
 
             #region Dummy
 
@@ -540,6 +535,10 @@ namespace Content.Client.Lobby.UI
             };
             SiliconVoicePreviewButton.OnPressed +=
                 _ => _entManager.System<TextToSpeechSystem>().RequestPreviewTts(Profile?.SiliconVoice ?? "");
+
+            SetupTabs();
+            SetupInfoEditors();
+            RefreshCharacterInfo();
             // 🌟Starlight🌟 end
         }
         private void UpdateVoicesControls()
@@ -570,6 +569,18 @@ namespace Content.Client.Lobby.UI
                 VoiceButton.TrySelectId(voiceChoiceId);
         }
         // 🌟Starlight🌟 Start
+
+        private void SetupTabs()
+        {
+            TabContainer.SetTabTitle(0, Loc.GetString("humanoid-profile-editor-appearance-tab"));
+            TabContainer.SetTabTitle(1, Loc.GetString("humanoid-profile-editor-jobs-tab"));
+            TabContainer.SetTabTitle(2, Loc.GetString("humanoid-profile-editor-antags-tab"));
+            TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-traits-tab"));
+            TabContainer.SetTabTitle(4, Loc.GetString("humanoid-profile-editor-markings-tab"));
+            TabContainer.SetTabTitle(5, Loc.GetString("humanoid-profile-editor-cybernetics-tab"));
+            TabContainer.SetTabTitle(6, Loc.GetString("humanoid-profile-editor-ic-info-tab"));
+            TabContainer.SetTabTitle(7, Loc.GetString("humanoid-profile-editor-ooc-info-tab"));
+        }
         private void UpdateSiliconVoicesControls()
         {
             if (Profile is null)
@@ -600,34 +611,48 @@ namespace Content.Client.Lobby.UI
         }
         // 🌟Starlight🌟 end
 
+        private void SetupInfoEditors()
+        {
+            ICInfoEditor.PhysicalDescInput.OnTextChanged += OnPhysicalDescChanged;
+            ICInfoEditor.PersonalityDescInput.OnTextChanged += OnPersonalityDescChanged;
+            ICInfoEditor.ExploitableInput.OnTextChanged += OnExploitablesChanged;
+            ICInfoEditor.SecretsInput.OnTextChanged += OnSecretsChanged;
+
+
+            OOCInfoEditor.PersonalNotesInput.OnTextChanged += OnPersonalNotesChanged;
+            OOCInfoEditor.OOCNotesInput.OnTextChanged += OnOOCNotesChanged;
+        }
+
+        private void ShutdownInfoEditors()
+        {
+            ICInfoEditor.PhysicalDescInput.OnTextChanged -= OnPhysicalDescChanged;
+            ICInfoEditor.PersonalityDescInput.OnTextChanged -= OnPersonalityDescChanged;
+            ICInfoEditor.ExploitableInput.OnTextChanged -= OnExploitablesChanged;
+            ICInfoEditor.SecretsInput.OnTextChanged -= OnSecretsChanged;
+
+            OOCInfoEditor.Visible = false;
+            OOCInfoEditor.PersonalNotesInput.OnTextChanged -= OnPersonalNotesChanged;
+            OOCInfoEditor.OOCNotesInput.OnTextChanged -= OnOOCNotesChanged;
+        }
+
         /// <summary>
         /// Refreshes the flavor text editor status.
         /// </summary>
-        public void RefreshFlavorText()
+        public void RefreshCharacterInfo()
         {
             if (_allowFlavorText)
             {
-                if (_flavorText != null)
+                if (ICInfoEditor.Visible)
                     return;
-
-                _flavorText = new FlavorText.FlavorText();
-                TabContainer.AddChild(_flavorText);
-                TabContainer.SetTabTitle(TabContainer.ChildCount - 1, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
-                _flavorTextEdit = _flavorText.CFlavorTextInput;
-
-                _flavorText.OnFlavorTextChanged += OnFlavorTextChange;
+                ICInfoEditor.Visible = true;
+                OOCInfoEditor.Visible = true;
             }
             else
             {
-                if (_flavorText == null)
+                if (!ICInfoEditor.Visible)
                     return;
-
-                TabContainer.RemoveChild(_flavorText);
-                _flavorText.OnFlavorTextChanged -= OnFlavorTextChange;
-                _flavorText.Dispose();
-                _flavorTextEdit?.Dispose();
-                _flavorTextEdit = null;
-                _flavorText = null;
+                ICInfoEditor.Visible = false;
+                OOCInfoEditor.Visible = false;
             }
         }
 
@@ -636,20 +661,22 @@ namespace Content.Client.Lobby.UI
         /// </summary>
         public void RefreshTraits()
         {
-            TraitsList.DisposeAllChildren();
+            // Afterlight Start
+            TraitTabContainer.DisposeAllChildren();
 
             var traits = _prototypeManager.EnumeratePrototypes<TraitPrototype>().OrderBy(t => Loc.GetString(t.Name)).ToList();
-            TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-traits-tab"));
 
             if (traits.Count < 1)
             {
-                TraitsList.AddChild(new Label
+                TabContainer.AddChild(new Label
                 {
                     Text = Loc.GetString("humanoid-profile-editor-no-traits"),
-                    FontColorOverride = Color.Gray,
+                    Margin = new Thickness(0, 10, 0, 0),
+                    StyleClasses = { StyleBase.StyleClassLabelHeading },
                 });
                 return;
             }
+            // Afterlight Stop
 
             // Setup model
             Dictionary<string, List<string>> traitGroups = new();
@@ -672,21 +699,50 @@ namespace Content.Client.Lobby.UI
             }
 
             // Create UI view from model
+            // Afterlight Start
+            var traitTabs = new Dictionary<string, BoxContainer>();
             foreach (var (categoryId, categoryTraits) in traitGroups)
             {
                 TraitCategoryPrototype? category = null;
 
+                var boxContainer = new BoxContainer
+                {
+                    Orientation = LayoutOrientation.Vertical,
+                    Margin = new Thickness(0, 10, 0, 0),
+                };
+                var scrollContainer = new ScrollContainer
+                {
+                    VerticalExpand = true,
+                };
+                var tabBoxContainer = new BoxContainer
+                {
+                    Orientation = LayoutOrientation.Vertical,
+                    Name = categoryId,
+                };
+
+                scrollContainer.AddChild(tabBoxContainer);
+                boxContainer.AddChild(scrollContainer);
+                TraitTabContainer.AddChild(boxContainer);
+
+                traitTabs.Add(categoryId, tabBoxContainer);
+                var traitTab = traitTabs[categoryId];
+
+                var categoryName = Loc.GetString("trait-category-uncategorized");
                 if (categoryId != TraitCategoryPrototype.Default)
                 {
                     category = _prototypeManager.Index<TraitCategoryPrototype>(categoryId);
+                    categoryName = Loc.GetString(category.Name);
                     // Label
-                    TraitsList.AddChild(new Label
+                    traitTab.AddChild(new Label
                     {
-                        Text = Loc.GetString(category.Name),
+                        Text = categoryName,
                         Margin = new Thickness(0, 10, 0, 0),
                         StyleClasses = { StyleBase.StyleClassLabelHeading },
                     });
                 }
+                // Title
+                TraitTabContainer.SetTabTitle(traitTabs.Count - 1, categoryName);
+                // Afterlight Stop
 
                 List<TraitPreferenceSelector?> selectors = new();
                 var selectionCount = 0;
@@ -720,11 +776,13 @@ namespace Content.Client.Lobby.UI
                 // Selection counter
                 if (category is { MaxTraitPoints: >= 0 })
                 {
-                    TraitsList.AddChild(new Label
+                    // Afterlight Start
+                    traitTab.AddChild(new Label
                     {
                         Text = Loc.GetString("humanoid-profile-editor-trait-count-hint", ("current", selectionCount), ("max", category.MaxTraitPoints)),
                         FontColorOverride = Color.Gray
                     });
+                    // Afterlight Stop
                 }
 
                 foreach (var selector in selectors)
@@ -737,10 +795,27 @@ namespace Content.Client.Lobby.UI
                     {
                         selector.Checkbox.Label.FontColorOverride = Color.Red;
                     }
-
-                    TraitsList.AddChild(selector);
+                    // Afterlight Start
+                    if (Profile != null)
+                    {
+                        if (_prototypeManager.TryIndex<TraitPrototype>(selector.TraitId, out var selectorTrait) &&
+                            selectorTrait.IncompatibleWith.Any(s => Profile.TraitPreferences.Contains(s)))
+                        {
+                            selector.Checkbox.Label.FontColorOverride = Color.Red;
+                        }
+                    }
+                    traitTab.AddChild(selector);
+                    // Afterlight End
                 }
             }
+
+            // Afterlight Start
+            // If we got no uncategorized traits, hide the tab
+            if (traitGroups.GetOrNew("Default").Count() == 0)
+            {
+                TraitTabContainer.SetTabVisible(0, false);
+            }
+            // Afterlight Stop
         }
 
         /// <summary>
@@ -893,7 +968,7 @@ namespace Content.Client.Lobby.UI
 
             UpdateNameEdit();
             UpdateCustomSpecieNameEdit(); // Starlight
-            UpdateFlavorTextEdit();
+            UpdateCharacterInfoEditorText();
             UpdateSexControls();
             UpdateGenderControls();
             UpdateSizeControls(); //starlight
@@ -915,7 +990,7 @@ namespace Content.Client.Lobby.UI
             RefreshLoadouts();
             RefreshSpecies();
             RefreshTraits();
-            RefreshFlavorText();
+            RefreshCharacterInfo();
             Preview.Initialize(this, _entManager, _preferencesManager, _prototypeManager, _playerManager);
             ReloadPreview();
         }
@@ -1148,7 +1223,7 @@ namespace Content.Client.Lobby.UI
 
             _loadoutWindow = new LoadoutWindow(Profile, roleLoadout, roleLoadoutProto, _playerManager.LocalSession, collection)
             {
-                Title = jobProto?.ID + "-loadout",
+                Title = Loc.GetString("loadout-window-title-loadout", ("job", $"{jobProto?.LocalizedName}")),
             };
 
             // Refresh the buttons etc.
@@ -1193,13 +1268,58 @@ namespace Content.Client.Lobby.UI
             UpdateJobPreferences();
         }
 
-        private void OnFlavorTextChange(string content)
+        private void OnPhysicalDescChanged(TextEdit.TextEditEventArgs args)
         {
             if (Profile is null)
                 return;
 
-            Profile = Profile.WithFlavorText(content);
-            SetDirty();
+            Profile = Profile.WithPhysicalDesc(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
+        }
+
+
+        private void OnPersonalityDescChanged(TextEdit.TextEditEventArgs args)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithPersonalityDesc(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
+        }
+
+        private void OnExploitablesChanged(TextEdit.TextEditEventArgs args)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithExploitable(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
+        }
+
+        private void OnSecretsChanged(TextEdit.TextEditEventArgs args)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithSecrets(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
+        }
+
+        private void OnPersonalNotesChanged(TextEdit.TextEditEventArgs args)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithPersonalNotes(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
+        }
+        private void OnOOCNotesChanged(TextEdit.TextEditEventArgs args)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithOOCNotes(Rope.Collapse(args.TextRope).Trim());
+            IsDirty = true;
         }
 
         private void OnMarkingChange(MarkingSet markings)
@@ -1425,12 +1545,17 @@ namespace Content.Client.Lobby.UI
         }
         // Starlight - End
 
-        private void UpdateFlavorTextEdit()
+        private void UpdateCharacterInfoEditorText()
         {
-            if (_flavorTextEdit != null)
-            {
-                _flavorTextEdit.TextRope = new Rope.Leaf(Profile?.FlavorText ?? "");
-            }
+            if (!_allowFlavorText)
+                return;
+            ICInfoEditor.PhysicalDescInput.TextRope = new Rope.Leaf(Profile?.PhysicalDescription ?? "");
+            ICInfoEditor.PersonalityDescInput.TextRope = new Rope.Leaf(Profile?.PersonalityDescription ?? "");
+            ICInfoEditor.ExploitableInput.TextRope = new Rope.Leaf(Profile?.ExploitableInfo ?? "");
+            ICInfoEditor.SecretsInput.TextRope = new Rope.Leaf(Profile?.Secrets ?? "");
+
+            OOCInfoEditor.PersonalNotesInput.TextRope = new Rope.Leaf(Profile?.PersonalNotes ?? "");
+            OOCInfoEditor.OOCNotesInput.TextRope = new Rope.Leaf(Profile?.OOCNotes ?? "");
         }
 
         private void UpdateAgeEdit()

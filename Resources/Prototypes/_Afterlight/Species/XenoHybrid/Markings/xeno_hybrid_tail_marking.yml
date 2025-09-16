@@ -1,0 +1,27 @@
+﻿- type: marking
+  parent: XenoHybridBase
+  id: XenoHybridTail
+  bodyPart: Chest
+  markingCategory: Tail
+  sprites:
+  - sprite: _Afterlight/Species/XenoHybrid/Markings/Tail/xeno_tail.rsi
+    state: m_tail_xeno_behind_primary # Yes this is intentional, for some reason 13's sprites are backwards
+  backSprites:
+  - map: Tail
+    offset: 1
+    rsi:
+      sprite: _Afterlight/Species/XenoHybrid/Markings/Tail/xeno_tail.rsi
+      state: m_tail_xeno_front_primary
+
+- type: marking
+  parent: XenoHybridTail
+  id: XenoHybridTailWag
+  sprites:
+  - sprite: _Afterlight/Species/XenoHybrid/Markings/Tail/xeno_tail.rsi
+    state: m_tail_xeno_behind_primary_wagging
+  backSprites:
+  - map: Tail
+    offset: 1
+    rsi:
+      sprite: _Afterlight/Species/XenoHybrid/Markings/Tail/xeno_tail.rsi
+      state: m_tail_xeno_front_primary_wagging

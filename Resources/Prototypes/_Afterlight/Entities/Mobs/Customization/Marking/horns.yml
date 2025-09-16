@@ -1,0 +1,108 @@
+- type: marking
+  id: DemonHornsCyber
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: cyberdemon
+
+- type: marking
+  id: DemonHornsSuccubus
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: dickhead
+
+- type: marking
+  id: DemonHornsFullpipe
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: fullpipe
+
+- type: marking
+  id: DemonHornsHalfpipeLeft
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: halfpipe_left
+
+- type: marking
+  id: DemonHornsHalfpipeRight
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: halfpipe_right
+
+- type: marking
+  id: DemonHornsHellboy
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: hellboy
+
+- type: marking
+  id: DemonHornsLastWill
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: last_will
+
+- type: marking
+  id: DemonHornsShoulderAngel
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: shoulder_angel
+
+- type: marking
+  id: DemonHornsThorns
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: thorns
+
+- type: marking
+  id: DemonHornsTorus
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: torus
+
+- type: marking
+  id: DemonHornsUnicorn
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: unicorn
+
+- type: marking
+  id: DemonHornsWings
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Vulpkanin, Human, Reptilian]
+  sprites:
+  - sprite: _Afterlight/Species/Markings/horns.rsi
+    state: wings
+

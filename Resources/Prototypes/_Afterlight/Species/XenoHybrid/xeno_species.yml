@@ -1,0 +1,169 @@
+﻿- type: species
+  id: XenoHybrid
+  name: species-name-xeno-hybrid
+  roundStart: true
+  prototype: MobXenoHybridPlayer
+  sprites: MobXenoHybridSprites
+  defaultSkinTone: "#525288"
+  markingLimits: MobXenoHybridMarkingLimits
+  dollPrototype: MobXenoHybridDummy
+  skinColoration: Hues
+  maleFirstNames: NamesFirstMale
+  femaleFirstNames: NamesFirstFemale
+  lastNames: NamesLast
+  sexes:
+  - Unsexed
+  customName: true
+  maxHeight: 2
+  maxAge: 500
+
+- type: speciesBaseSprites
+  id: MobXenoHybridSprites
+  sprites:
+    Head: MobXenoHybridHead
+    Snout: MobHumanoidAnyMarking
+    UndergarmentTop: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
+    Chest: MobXenoHybridTorso
+    HeadTop: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    Eyes: MobHumanoidEyes
+    LArm: MobXenoHybridLArm
+    RArm: MobXenoHybridRArm
+    LHand: MobXenoHybridLHand
+    RHand: MobXenoHybridRHand
+    LLeg: MobXenoHybridLLeg
+    RLeg: MobXenoHybridRLeg
+    LFoot: MobXenoHybridLFoot
+    RFoot: MobXenoHybridRFoot
+    XenoHybridHead: MobHumanoidAnyMarking
+    XenoHybridDorsal: MobHumanoidAnyMarking
+    XenoHybridTail: MobHumanoidAnyMarking
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+
+- type: markingPoints
+  id: MobXenoHybridMarkingLimits
+  onlyWhitelisted: true
+  points:
+    Hair:
+      points: 0
+      required: false
+    FacialHair:
+      points: 0
+      required: false
+    Tail:
+      points: 1
+      required: false
+    HeadTop:
+      points: 1
+      required: false
+    Chest:
+      points: 2
+      required: false
+    Legs:
+      points: 2
+      required: false
+    Arms:
+      points: 2
+      required: false
+    XenoHybridHead:
+      points: 1
+      required: false
+    XenoHybridDorsal:
+      points: 1
+      required: false
+    XenoHybridTail:
+      points: 1
+      required: false
+    Breasts:
+      points: 1
+      required: false
+    Butts:
+      points: 1
+      required: false
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridHead
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridHeadMale
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridHeadFemale
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridTorso
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridTorsoMale
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridTorsoFemale
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridLLeg
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridLHand
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridLArm
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridLFoot
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridRLeg
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridRHand
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridRArm
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobXenoHybridRFoot
+  baseSprite:
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: r_foot

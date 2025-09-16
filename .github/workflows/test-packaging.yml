@@ -2,7 +2,7 @@
 
 on:
   push:
-    branches: [ master, staging, stable, Starlight ]
+    branches: [ master, staging, stable, Starlight, main ]
     paths:
       - '**.cs'
       - '**.csproj'
@@ -13,24 +13,27 @@ on:
       # why not just do both
       - 'RobustToolbox'
       - 'RobustToolbox/**'
-  merge_group:
-  pull_request:
-    types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master, staging, stable, Starlight ]
-    paths:
-      - '**.cs'
-      - '**.csproj'
-      - '**.sln'
-      - '**.git**'
-      - '**.yml'
-      - 'RobustToolbox'
-      - 'RobustToolbox/**'
+  # merge_group:
+  # pull_request:
+  #   types: [ opened, reopened, synchronize, ready_for_review ]
+  #   branches: [ master, staging, stable, Starlight, main ]
+  #   paths:
+  #     - '**.cs'
+  #     - '**.csproj'
+  #     - '**.sln'
+  #     - '**.git**'
+  #     - '**.yml'
+  #     - 'RobustToolbox'
+  #     - 'RobustToolbox/**'
 
 jobs:
   build:
     name: Test Packaging
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false
-    runs-on: ubuntu-latest
+    if: github.actor != 'Dogborg' && github.event.pull_request.draft == false
+    runs-on: self-hosted
+
+    env:
+      DOTNET_INSTALL_DIR: "./.dotnet"
 
     steps:
       - name: Checkout Master
@@ -49,9 +52,12 @@ jobs:
           git submodule update --init --recursive
 
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v4.1.0
+        uses: actions/setup-dotnet@v4.3.1
         with:
-          dotnet-version: 9.0.x
+          dotnet-version: |
+            8.0.x
+            9.0.x
+            10.0.x
 
       - name: Install dependencies
         run: dotnet restore

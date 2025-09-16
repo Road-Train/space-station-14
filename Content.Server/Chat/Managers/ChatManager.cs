@@ -292,6 +292,7 @@ internal sealed partial class ChatManager : IChatManager
             var prefs = _preferencesManager.GetPreferences(player.UserId);
             colorOverride = prefs.AdminOOCColor;
             messageColor = prefs.AdminOOCColor;
+            nameColor = prefs.AdminOOCNameColor;
         }
 
         var wrappedMessage = Loc.GetString("chat-manager-send-ooc-wrap-message", ("playerTitle", playerTitle), ("nameColor", nameColor), ("messageColor", messageColor), ("playerName", playerName), ("message", FormattedMessage.EscapeText(message)));
@@ -300,8 +301,7 @@ internal sealed partial class ChatManager : IChatManager
         {
             wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", patronColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
         }
-
-        //TODO: player.Name color, this will need to change the structure of the MsgChatMessage
+        
         ChatMessageToAll(ChatChannel.OOC, message, wrappedMessage, EntityUid.Invalid, hideChat: false, recordReplay: true, colorOverride: colorOverride, author: player.UserId);
         _discordLink.SendMessage(message, player.Name, ChatChannel.OOC);
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"OOC from {player:Player}: {message}");

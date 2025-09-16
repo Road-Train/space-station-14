@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Client._Afterlight.Subtle;
 using Content.Client.UserInterface.Systems.Chat.Controls;
 using Content.Shared.Chat;
 using Content.Shared.Input;
@@ -47,6 +48,10 @@ public partial class ChatBox : UIWidget
         _controller.MessageAdded += OnMessageAdded;
         _controller.HighlightsUpdated += OnHighlightsUpdated;
         _controller.RegisterChat(this);
+
+        // Afterlight start
+        RPButton.OnPressed += _ => _entManager.SystemOrNull<SubtleUISystem>()?.OpenWindow();
+        // Afterlight end
     }
 
     private void OnTextEntered(LineEditEventArgs args)

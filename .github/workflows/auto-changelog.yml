@@ -5,17 +5,17 @@ on:
     branches:
       - Starlight
       - starlight-dev
-      
+
 permissions:
   contents: write
   pull-requests: read
 
 env:
- BRANCH_NAME: ${{ github.ref_name	 }} 
+ BRANCH_NAME: ${{ github.ref_name	 }}
 
 jobs:
   update-changelog:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -33,7 +33,7 @@ jobs:
           fi
           echo "PR Number: $PR_NUMBER"
           echo "::set-output name=PR_NUMBER::$PR_NUMBER"
-          
+
       - name: Set up Python
         if: steps.get_pr.outputs.PR_NUMBER != ''
         uses: actions/setup-python@v2
@@ -44,7 +44,7 @@ jobs:
         if: steps.get_pr.outputs.PR_NUMBER != ''
         run: |
           pip install pyyaml PyGithub
-    
+
       - name: Parse PR and Update Changelog
         if: steps.get_pr.outputs.PR_NUMBER != ''
         env:
@@ -79,4 +79,3 @@ jobs:
             git commit -m "Update changelog for PR #${{ steps.get_pr.outputs.PR_NUMBER }} [skip ci]"
             git push
           fi
-          

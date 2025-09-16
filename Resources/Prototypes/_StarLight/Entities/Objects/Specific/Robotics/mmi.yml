@@ -46,3 +46,38 @@
         components:
         - SecretStash
     - type: StationAIShunt # allow shunting into this brain.
+    - type: LanguageSpeaker
+    - type: LanguageKnowledge
+      speaks:
+      - GalacticCommon
+      - Machine
+      - Canilunzt # AL 
+      - Bubblish # AL
+      #- Chittin # AL
+      - Draconic # AL
+      - Marish # AL
+      - Moffic # AL
+      - Nekomimetic # AL
+      - Sylvan # AL
+      - Terrum # AL
+      - VoxPidgin # AL
+      - Scratch # AL
+      - SolCommon # AL
+      - Lagomorphian # AL
+      understands:
+      - GalacticCommon
+      - Machine
+      - Canilunzt
+      - Sign
+      - Bubblish
+      - Chittin
+      - Draconic
+      - Marish
+      - Moffic
+      - Nekomimetic
+      - Sylvan
+      - Terrum
+      - VoxPidgin
+      - Scratch
+      - SolCommon
+      - Lagomorphian # AL

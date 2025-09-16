@@ -19,7 +19,15 @@ namespace Content.Shared.Humanoid.Markings
         Arms,
         Legs,
         Tail,
-        Overlay
+        Overlay,
+
+        // Afterlight
+        XenoHybridHead,
+        XenoHybridDorsal,
+        XenoHybridTail,
+        Breasts,
+        Butts,
+        // Afterlight
     }
 
     public static class MarkingCategoriesConversion

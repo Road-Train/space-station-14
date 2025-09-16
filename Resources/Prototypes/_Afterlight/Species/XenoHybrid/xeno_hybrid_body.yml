@@ -1,0 +1,52 @@
+﻿- type: body
+  id: XenoHybrid
+  name: "Xeno Hybrid"
+  root: torso
+  slots:
+    head:
+      part: HeadXenoHybrid
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+        tongue: OrganHumanTongue
+        eye_implant: null
+    torso:
+      part: TorsoXenoHybrid
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        heart: OrganHumanHeart
+        lungs: OrganAnimalLungs
+        stomach: OrganHumanStomach
+        liver: OrganHumanLiver
+        kidneys: OrganHumanKidneys
+        cavity: null
+    right arm:
+      part: RightArmXenoHybrid
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmXenoHybrid
+      connections:
+      - left hand
+    right hand:
+      part: RightHandXenoHybrid
+    left hand:
+      part: LeftHandXenoHybrid
+    right leg:
+      part: RightLegXenoHybrid
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegXenoHybrid
+      connections:
+      - left foot
+    right foot:
+      part: RightFootXenoHybrid
+    left foot:
+      part: LeftFootXenoHybrid

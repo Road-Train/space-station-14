@@ -72,7 +72,7 @@ public sealed partial class ShakeableSystem : EntitySystem
             NeedHand = true,
             BreakOnDamage = true,
             DistanceThreshold = 1,
-            MovementThreshold = 0.01f,
+            MovementThreshold = 0.5f, // Afterlight
             BreakOnHandChange = entity.Comp.RequireInHand,
         };
         if (entity.Comp.RequireInHand)

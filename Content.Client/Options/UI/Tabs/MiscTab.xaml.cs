@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Content.Client.UserInterface.Screens;
+using Content.Shared._Afterlight.CCVar;
 using Content.Shared.CCVar;
 using Content.Shared.HUD;
 using Content.Shared.Starlight.CCVar;
@@ -56,6 +57,10 @@ public sealed partial class MiscTab : Control
         //starlight
         Control.AddOptionSlider(StarlightCCVars.ChatSeparatedMinWidth, SeparatedChatWidthSlider, 300, 580);
         //starlight end
+
+        //afterlight start
+        Control.AddOptionCheckBox(ALCVars.ALGhostSeeAllEmotes, GhostSeeAllEmotes);
+        //afterlight end
 
         Control.Initialize();
     }

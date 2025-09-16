@@ -1,0 +1,29 @@
+﻿- type: marking
+  parent: XenoHybridBase
+  id: XenoHybridHeadStandard
+  bodyPart: Head
+  markingCategory: XenoHybridHead
+  sprites:
+  - sprite: _Afterlight/Species/XenoHybrid/Markings/Head/xeno_head_standard.rsi
+    state: m_xenohead_standard_adj
+
+- type: marking
+  parent: XenoHybridHeadStandard
+  id: XenoHybridHeadNet
+  sprites:
+  - sprite: _Afterlight/Species/XenoHybrid/Markings/Head/xeno_head_net.rsi
+    state: m_xenohead_net_adj
+
+- type: marking
+  parent: XenoHybridHeadStandard
+  id: XenoHybridHeadRoyal
+  sprites:
+  - sprite: _Afterlight/Species/XenoHybrid/Markings/Head/xeno_head_royal.rsi
+    state: m_xenohead_royal_adj
+
+- type: marking
+  parent: XenoHybridHeadStandard
+  id: XenoHybridHeadWarrior
+  sprites:
+  - sprite: _Afterlight/Species/XenoHybrid/Markings/Head/xeno_head_warrior.rsi
+    state: m_xenohead_warrior_adj

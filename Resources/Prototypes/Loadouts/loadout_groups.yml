@@ -36,6 +36,12 @@
   - ClothingNeckTransPin
   - ClothingNeckAutismPin
   - ClothingNeckGoldAutismPin
+  - OffsetCane
+  - OffsetCaneWood
+  - OffsetCaneClown
+  - OffsetCaneMime
+  - OffsetCaneNT
+  - Cane
   - TowelColorBlack
   - TowelColorDarkBlue
   - TowelColorDarkGreen
@@ -57,6 +63,7 @@
   - ClothWrap # 🌟Starlight🌟
   - ClothingUniformJumpskirtElegantMaid # 🌟Starlight🌟
   - ClothingHeadHatCatEars # 🌟Starlight🌟
+  - AliceMask # afterlight
   - RolliePack #SL
   - GoldRing #SL
   - SilverRing #SL
@@ -88,6 +95,10 @@
   - DaBling #SL
   - CrapPlushie #SL ##not a typo
   - LighterGatcha #SL
+  # Afterlight
+  - Heels
+  - HighHeelBoots
+  # Afterlight
 
 - type: loadoutGroup
   id: Glasses

@@ -1,4 +1,6 @@
 using System.Numerics;
+using Content.Shared._Afterlight.CCVar;
+using Content.Shared._Afterlight.Movement;
 using Content.Shared.CCVar;
 using Content.Shared.Movement.Components;
 using Robust.Shared;
@@ -48,6 +50,13 @@ public abstract class SharedMobCollisionSystem : EntitySystem
 
     private float _massDiffCap;
 
+    // Afterlight
+    // Taken from https://github.com/RMC-14/RMC-14
+    private EntityQuery<ALMobCollisionMassComponent> _rmcMobCollisionMassQuery;
+
+    private float _penCapSubtract;
+    // Afterlight
+
     public override void Initialize()
     {
         base.Initialize();
@@ -70,6 +79,12 @@ public abstract class SharedMobCollisionSystem : EntitySystem
         SubscribeLocalEvent<MobCollisionComponent, RefreshMovementSpeedModifiersEvent>(OnMoveModifier);
 
         UpdatesBefore.Add(typeof(SharedPhysicsSystem));
+
+        // Afterlight
+        // Taken from https://github.com/RMC-14/RMC-14
+        _rmcMobCollisionMassQuery = GetEntityQuery<ALMobCollisionMassComponent>();
+        Subs.CVar(CfgManager, ALCVars.ALMovementPenCapSubtract, v => _penCapSubtract = v, true);
+        // Afterlight
     }
 
     private void UpdatePushCap()
@@ -268,7 +283,10 @@ public abstract class SharedMobCollisionSystem : EntitySystem
             // Clamp so we don't get a heap of penetration depth and suddenly lurch other mobs.
             // This is also so we don't have to trigger the speed-cap above.
             // Maybe we just do speedcap and dump this? Though it's less configurable and the cap is just there for cheaters.
-            var penDepth = Math.Clamp(0.7f - diff.Length(), 0f, _penCap);
+            // Afterlight
+            // Taken from https://github.com/RMC-14/RMC-14
+            var penDepth = Math.Clamp(_penCapSubtract - diff.Length(), 0f, _penCap);
+            // Afterlight
 
             // Sum the strengths so we get pushes back the same amount (impulse-wise, ignoring prediction).
             var mobMovement = penDepth * diff.Normalized() * (entity.Comp1.Strength + otherComp.Strength);
@@ -276,8 +294,18 @@ public abstract class SharedMobCollisionSystem : EntitySystem
             // Big mob push smaller mob, needs fine-tuning and potentially another co-efficient.
             if (_massDiffCap > 0f)
             {
+                // Afterlight
+                // Taken from https://github.com/RMC-14/RMC-14
+                var mass = otherPhysics.FixturesMass;
+                if (_rmcMobCollisionMassQuery.TryComp(other, out var otherCollision))
+                    mass = otherCollision.Mass;
+                // Afterlight
+
                 var modifier = Math.Clamp(
-                    otherPhysics.FixturesMass / ourMass,
+                    // Afterlight
+                    // Taken from https://github.com/RMC-14/RMC-14
+                    mass / ourMass,
+                    // Afterlight
                     1f / _massDiffCap,
                     _massDiffCap);
 

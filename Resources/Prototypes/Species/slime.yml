@@ -9,6 +9,8 @@
   dollPrototype: MobSlimePersonDummy
   skinColoration: Hues
   customName: true # Starlight
+  maxHeight: 2 # afterlight
+  minWidth: 0.725 # afterlight
 
 - type: speciesBaseSprites
   id: MobSlimeSprites
@@ -20,6 +22,8 @@
     UndergarmentBottom: MobHumanoidAnyMarking
     Chest: MobSlimeTorso
     Eyes: MobHumanoidAnyMarking # Starlight
+    Tail: MobHumanoidAnyMarking # Starlight
+    HeadTop: MobHumanoidAnyMarking # Starlight
     LArm: MobSlimeLArm
     RArm: MobSlimeRArm
     LHand: MobSlimeLHand
@@ -28,6 +32,10 @@
     RLeg: MobSlimeRLeg
     LFoot: MobSlimeLFoot
     RFoot: MobSlimeRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobSlimeMarkingLimits
@@ -51,6 +59,20 @@
     Arms:
       points: 4
       required: false
+    Tail: # Starlight
+      points: 1
+      required: false
+    HeadTop: # Starlight
+      points: 1
+      required: false
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    Butts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobSlimeMarkingAlfa

@@ -482,4 +482,8 @@ public enum LogType
     #region Starlight log flags
     Railroading = 1000,
     #endregion
+
+    #region Afterlight log flags
+    ALSubtle = 20000,
+    #endregion
 }

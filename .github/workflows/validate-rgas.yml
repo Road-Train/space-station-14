@@ -1,7 +1,7 @@
 name: RGA schema validator
 on:
   push:
-    branches: [ master, staging, stable, Starlight ]
+    branches: [ master, staging, stable, Starlight, main ]
   merge_group:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
@@ -9,8 +9,8 @@ on:
 jobs:
   yaml-schema-validation:
     name: YAML RGA schema validator
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false
-    runs-on: ubuntu-latest
+    if: github.actor != 'Dogborg' && github.event.pull_request.draft == false
+    runs-on: [self-hosted, image-x86-app-docker-ce]
     steps:
     - uses: actions/checkout@v4.2.2
     - name: Setup Submodule

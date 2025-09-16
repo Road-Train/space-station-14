@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Server.Database;
 using Content.Server.Preferences.Managers;
 using Content.Shared.Administration;
@@ -34,14 +35,15 @@ namespace Content.Server.Administration.Commands
                 shell.WriteError(Loc.GetString("shell-invalid-color-hex"));
                 return;
             }
+            
+            // Disabled - AFTERLIGHT
+            // var luminance = (0.2126f * color.Value.R) + (0.7152f * color.Value.G) + (0.0722f * color.Value.B);
 
-            var luminance = (0.2126f * color.Value.R) + (0.7152f * color.Value.G) + (0.0722f * color.Value.B);
-
-            if (luminance is < 0.2f or > 0.8f)
-            {
-                shell.WriteError("The color is too close to black or white — pick a more contrasting shade.");
-                return;
-            }
+            // if (luminance is < 0.2f or > 0.8f)
+            // {
+            //     shell.WriteError("The color is too close to black or white — pick a more contrasting shade.");
+            //     return;
+            // }
 
             var userId = shell.Player.UserId;
             // Save the DB

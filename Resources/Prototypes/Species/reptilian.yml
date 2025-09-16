@@ -12,6 +12,8 @@
   femaleFirstNames: NamesReptilianFemale
   naming: FirstDashFirst
   customName: true # Starlight
+  maxHeight: 2 # afterlight
+  minWidth: 0.725 # afterlight
 
 - type: speciesBaseSprites
   id: MobReptilianSprites
@@ -33,6 +35,10 @@
     RLeg: MobReptilianRLeg
     LFoot: MobReptilianLFoot
     RFoot: MobReptilianRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobReptilianMarkingLimits
@@ -73,6 +79,14 @@
     Arms:
       points: 2
       required: false
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    Butts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobReptilianHead

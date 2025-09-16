@@ -59,6 +59,8 @@
   - type: ShowElectrocutionHUD
   - type: IntrinsicRadioReceiver
   - type: ShowNullSpace # Starlight
+  - type: LanguageSpeaker # Starlight
+  - type: UniversalLanguageSpeaker # Starlight
   - type: ActiveRadio
     receiveAllChannels: true
     globalReceive: true
@@ -70,6 +72,7 @@
     radius: 6
     castShadows: false
     enabled: false
+  - type: ActiveInputMover # Afterlight
 
 # proto for player ghosts specifically
 - type: entity

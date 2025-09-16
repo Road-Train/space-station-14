@@ -1,13 +1,11 @@
+using System.Linq;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
-using System.Linq;
-using Content.Shared.FixedPoint;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
-using Content.Shared.Audio;
 using Content.Shared.Damage;
 using Content.Shared.Database;
 using Content.Shared.DoAfter;
@@ -260,6 +258,7 @@ public sealed class HealingSystem : EntitySystem
                 NeedHand = true,
                 BreakOnMove = true,
                 BreakOnWeightlessMove = false,
+                MovementThreshold = 0.75f, // Afterlight
             };
 
         _doAfter.TryStartDoAfter(doAfterEventArgs);

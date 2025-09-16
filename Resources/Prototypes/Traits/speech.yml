@@ -56,6 +56,10 @@
   cost: 1
   components:
   - type: GermanAccent
+  incompatibleWith:
+  - FrenchAccent
+  - ItalianAccent
+  - SpanishAccent
 
 - type: trait
   id: ItalianAccent
@@ -66,6 +70,10 @@
   components:
   - type: ReplacementAccent
     accent: italian
+  incompatibleWith:
+  - FrenchAccent
+  - SpanishAccent
+  - GermanAccent
 
 - type: trait
   id: FrenchAccent
@@ -75,6 +83,10 @@
   cost: 1
   components:
   - type: FrenchAccent
+  incompatibleWith:
+  - ItalianAccent
+  - SpanishAccent
+  - GermanAccent
 
 - type: trait
   id: SpanishAccent
@@ -84,6 +96,10 @@
   cost: 1
   components:
   - type: SpanishAccent
+  incompatibleWith:
+  - FrenchAccent
+  - ItalianAccent
+  - GermanAccent
 
 - type: trait
   id: Liar

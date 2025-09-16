@@ -2,22 +2,26 @@
 
 on:
   push:
-    branches: [ master, staging, stable ]
-  merge_group:
-  pull_request:
-    types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master, staging, stable, Starlight ]
+    branches: [ master, staging, stable, main ]
+  # merge_group:
+  # pull_request:
+  #   types: [ opened, reopened, synchronize, ready_for_review ]
+  #   branches: [ master, staging, stable, Starlight, main ]
 
 jobs:
   build:
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
+    if: github.actor != 'Dogborg' && github.event.pull_request.draft == false
 
-    runs-on: ${{ matrix.os }}
+    runs-on: [self-hosted]
+
+    env:
+      DOTNET_INSTALL_DIR: "./.dotnet"
 
     steps:
+      - name: Install libraries
+        run: |
+          sudo apt-get update && sudo apt-get install -y libfreetype6
+
       - name: Checkout Master
         uses: actions/checkout@v4.2.2
 
@@ -34,9 +38,12 @@ jobs:
           git submodule update --init --recursive
 
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v4.1.0
+        uses: actions/setup-dotnet@v4.3.1
         with:
-          dotnet-version: 9.0.x
+          dotnet-version: |
+            8.0.x
+            9.0.x
+            10.0.x
 
       - name: Install dependencies
         run: dotnet restore
@@ -51,7 +58,7 @@ jobs:
     name: Build & Test Debug
     needs:
       - build
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: CI succeeded
         run: exit 0

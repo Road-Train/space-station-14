@@ -1,0 +1,121 @@
+﻿# TODO: Add descriptions (many)
+# TODO BODY: Part damage
+- type: entity
+  id: PartXenoHybrid
+  parent: [BaseItem, BasePart]
+  name: "xeno hybrid body part"
+  abstract: true
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: SulfuricAcid
+        Quantity: 10
+
+- type: entity
+  id: TorsoXenoHybrid
+  name: "xeno hybrid torso"
+  parent: [PartXenoHybrid, BaseTorso]
+  components:
+  - type: Sprite
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: "torso_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: SulfuricAcid
+        Quantity: 20
+
+- type: entity
+  id: HeadXenoHybrid
+  name: "xeno hybrid head"
+  parent: [PartXenoHybrid, BaseHead]
+  components:
+  - type: Sprite
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: "head_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: SulfuricAcid
+        Quantity: 10
+
+- type: entity
+  id: LeftArmXenoHybrid
+  name: "left xeno hybrid arm"
+  parent: [PartXenoHybrid, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmXenoHybrid
+  name: "right xeno hybrid arm"
+  parent: [PartXenoHybrid, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandXenoHybrid
+  name: "left xeno hybrid hand"
+  parent: [PartXenoHybrid, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandXenoHybrid
+  name: "right xeno hybrid hand"
+  parent: [PartXenoHybrid, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: "r_hand"
+
+- type: entity
+  id: LeftLegXenoHybrid
+  name: "left xeno hybrid leg"
+  parent: [PartXenoHybrid, BaseLeftLeg]
+  components:
+  - type: Sprite
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: "l_leg"
+  - type: MovementBodyPart
+
+- type: entity
+  id: RightLegXenoHybrid
+  name: "right xeno hybrid leg"
+  parent: [PartXenoHybrid, BaseRightLeg]
+  components:
+  - type: Sprite
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: "r_leg"
+  - type: MovementBodyPart
+
+- type: entity
+  id: LeftFootXenoHybrid
+  name: "left xeno hybrid foot"
+  parent: [PartXenoHybrid, BaseLeftFoot]
+  components:
+  - type: Sprite
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: "l_foot"
+
+- type: entity
+  id: RightFootXenoHybrid
+  name: "right xeno hybrid foot"
+  parent: [PartXenoHybrid, BaseRightFoot]
+  components:
+  - type: Sprite
+    sprite: _Afterlight/Species/XenoHybrid/parts.rsi
+    state: "r_foot"

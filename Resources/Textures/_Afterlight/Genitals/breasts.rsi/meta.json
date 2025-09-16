@@ -1,0 +1,1935 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from S.P.L.U.R.T-tg at https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/blob/dc9e6242c8781b17f307f65755fd8b0cec7aebf0/modular_zzplurt/icons/mob/sprite_accessories/genitals/breasts_onmob.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "test_human",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_0_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_1_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_2_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_3_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_4_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_5_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_6_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_7_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_8_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_9_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_10_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_11_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_12_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_13_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_14_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_15_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_16_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_17_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_18_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_19_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_0_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_1_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_2_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_3_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_4_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_5_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_6_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_7_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_8_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_9_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_10_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_11_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_12_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_13_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_14_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_15_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_16_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_17_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_18_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_19_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_0_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_1_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_2_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_3_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_4_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_5_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_6_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_7_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_8_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_9_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_10_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_11_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_12_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_13_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_14_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_15_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_16_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_17_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_18_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_19_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_0_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_1_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_2_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_3_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_4_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_5_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_6_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_7_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_8_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_9_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_10_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_11_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_12_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_13_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_14_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_15_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_16_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_17_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_18_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_19_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_0_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_1_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_2_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_3_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_4_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_5_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_6_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_7_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_8_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_9_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_10_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_11_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_12_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_13_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_14_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_15_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_16_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_17_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_18_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_19_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_0_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_1_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_2_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_3_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_4_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_5_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_6_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_7_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_8_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_9_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_10_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_11_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_12_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_13_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_14_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_15_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_16_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_17_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_18_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_19_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_0_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_1_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_2_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_3_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_4_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_5_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_6_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_7_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_8_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_9_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_10_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_11_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_12_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_13_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_14_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_15_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_16_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_17_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_18_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_19_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_0_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_1_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_2_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_3_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_4_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_5_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_6_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_7_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_8_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_9_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_10_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_11_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_12_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_13_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_14_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_15_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_16_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_17_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_18_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_19_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_0_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_1_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_2_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_3_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_4_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_5_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_6_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_7_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_8_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_9_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_10_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_11_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_12_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_13_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_14_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_15_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_16_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_17_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_18_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_19_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_0_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_1_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_2_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_3_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_4_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_5_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_6_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_7_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_8_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_9_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_10_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_11_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_12_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_13_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_14_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_15_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_16_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_17_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_18_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_19_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_0_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_1_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_2_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_3_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_4_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_5_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_6_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_7_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_8_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_9_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_10_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_11_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_12_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_13_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_14_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_15_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_16_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_17_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_18_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_19_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_0_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_1_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_2_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_3_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_4_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_5_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_6_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_7_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_8_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_9_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_10_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_11_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_12_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_13_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_14_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_15_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_16_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_17_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_18_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_19_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_0_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_1_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_2_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_3_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_4_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_5_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_6_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_7_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_8_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_9_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_10_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_11_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_12_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_13_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_14_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_15_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_16_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_17_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_18_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_19_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_0_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_1_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_2_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_3_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_4_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_5_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_6_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_7_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_8_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_9_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_10_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_11_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_12_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_13_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_14_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_15_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_16_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_17_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_18_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_19_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_0_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_1_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_2_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_3_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_4_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_5_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_6_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_7_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_8_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_9_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_10_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_11_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_12_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_13_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_14_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_15_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_16_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_17_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_18_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_19_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_0_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_1_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_2_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_3_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_4_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_5_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_6_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_7_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_8_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_9_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_10_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_11_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_12_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_13_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_14_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_15_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_16_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_17_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_18_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_pair_19_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_0_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_1_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_2_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_3_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_4_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_5_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_6_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_7_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_8_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_9_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_10_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_11_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_12_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_13_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_14_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_15_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_16_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_17_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_18_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_19_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_0_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_1_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_2_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_3_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_4_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_5_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_6_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_7_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_8_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_9_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_10_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_11_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_12_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_13_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_14_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_15_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_16_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_17_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_18_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_19_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_0_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_1_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_2_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_3_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_4_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_5_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_6_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_7_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_8_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_9_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_10_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_11_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_12_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_13_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_14_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_15_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_16_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_17_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_18_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_19_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_0_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_1_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_2_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_3_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_4_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_5_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_6_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_7_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_8_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_9_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_10_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_11_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_12_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_13_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_14_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_15_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_16_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_17_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_18_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_quad_19_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_0_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_1_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_2_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_3_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_4_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_5_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_6_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_7_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_8_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_9_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_10_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_11_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_12_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_13_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_14_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_15_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_16_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_17_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_18_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_19_s_front_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_0_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_1_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_2_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_3_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_4_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_5_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_6_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_7_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_8_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_9_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_10_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_11_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_12_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_13_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_14_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_15_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_16_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_17_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_18_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_19_s_front_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_0_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_1_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_2_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_3_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_4_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_5_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_6_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_7_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_8_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_9_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_10_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_11_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_12_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_13_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_14_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_15_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_16_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_17_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_18_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_19_s_behind_primary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_0_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_1_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_2_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_3_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_4_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_5_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_6_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_7_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_8_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_9_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_10_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_11_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_12_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_13_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_14_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_15_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_16_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_17_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_18_s_behind_secondary",
+      "directions": 4
+    },
+    {
+      "name": "m_breasts_sextuple_19_s_behind_secondary",
+      "directions": 4
+    }
+  ]
+}

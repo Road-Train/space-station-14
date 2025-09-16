@@ -1,0 +1,7 @@
+- type: jobIcon
+  parent: JobIcon
+  id: LanguageIconLagomorph
+  icon:
+    sprite: /Textures/_Afterlight/Interface/language_icon.rsi
+    state: lagomorph
+  allowSelection: false

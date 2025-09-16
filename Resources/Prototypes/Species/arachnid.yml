@@ -14,6 +14,8 @@
   sexes:
   - Unsexed
   customName: true # Starlight
+  maxHeight: 2 # afterlight
+  minWidth: 0.725 # afterlight
 
 - type: speciesBaseSprites
   id: MobArachnidSprites
@@ -35,6 +37,10 @@
     RLeg: MobArachnidRLeg
     LFoot: MobArachnidLFoot
     RFoot: MobArachnidRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: humanoidBaseSprite
   id: MobArachnidEyes
@@ -72,6 +78,14 @@
     Arms:
       points: 2
       required: false
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    Butts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobArachnidHead

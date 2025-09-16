@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Numerics;
 using Content.Client._Starlight.NewLife;
-using Content.Client._Starlight.UI;
+using Content.Client._Starlight.UI.Controls;
 using Content.Client.Eui;
 using Content.Client.Lobby;
 using Content.Shared._Starlight.Railroading;
@@ -124,7 +124,7 @@ public sealed class CardSelectionEui : BaseEui
                 .WithHorizontalExp()
                 .WithVAlignment(Control.VAlignment.Bottom);
 
-            // To-do: rework the layout once it becomes clear why the alignment isn’t working.
+            // To-do: rework the layout once it becomes clear why the alignment isnâ€™t working.
             panel.Margin = new Thickness(0, 185, 0, 0);
             panel.MinSize = _cardDescSize;
             panel.MaxSize = _cardDescSize;

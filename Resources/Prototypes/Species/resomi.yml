@@ -17,9 +17,15 @@
   oldAge: 257
   maxAge: 430
   customName: true # Starlight
+  minWidth: 0.725 # afterlight
+  defaultWidth: 1
+  maxWidth: 1.2
+  minHeight: 0.8
+  defaultHeight: 1
   standardSize: 150
   standardWeight: 40
   standardDensity: 17
+  maxHeight: 2 # afterlight
 
 - type: speciesBaseSprites
   id: MobResomiSprites
@@ -37,6 +43,10 @@
     LFoot: MobResomiLFoot
     RFoot: MobResomiRFoot
     Tail: MobHumanoidAnyMarking
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: markingPoints
   id: MobResomiMarkingLimits
@@ -61,6 +71,14 @@
     Chest:
       points: 1
       required: false
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    Butts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobResomiEyes

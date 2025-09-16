@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from YWPolarisVore at https://github.com/Yawn_Wider/YWPolarisVore/blob/28411457736e5e86ca2587dbb305f1d45b9f676b/icons/mob/raptorborg/raptor.dmi",
+  "size": {
+    "x": 64,
+    "y": 45
+  },
+  "states": [
+    {
+      "name": "borg",
+      "directions": 4
+    },
+    {
+      "name": "borg_rest",
+      "directions": 4
+    },
+    {
+      "name": "borg_bellyup",
+      "directions": 4
+    },
+    {
+      "name": "borg_e",
+      "directions": 4
+    },
+    {
+      "name": "borg_e_r",
+      "directions": 4
+    },
+    {
+      "name": "borg_l",
+      "directions": 4
+    },
+    {
+      "name": "borg_sleeper",
+      "directions": 4
+    },
+    {
+      "name": "borg_wreck"
+    }
+  ]
+}

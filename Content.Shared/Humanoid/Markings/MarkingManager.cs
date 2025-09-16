@@ -1,6 +1,5 @@
 using System.Collections.Frozen;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using Content.Shared.Humanoid.Prototypes;
 using Robust.Shared.Prototypes;
 
@@ -67,7 +66,8 @@ namespace Content.Shared.Humanoid.Markings
 
             foreach (var (key, marking) in MarkingsByCategory(category))
             {
-                if ((markingPoints.OnlyWhitelisted || markingPoints.Points[category].OnlyWhitelisted) && marking.SpeciesRestrictions == null)
+                // Afterlight
+                if (!marking.AllSpecies && (markingPoints.OnlyWhitelisted || markingPoints.Points[category].OnlyWhitelisted) && marking.SpeciesRestrictions == null)
                 {
                     continue;
                 }
@@ -130,7 +130,8 @@ namespace Content.Shared.Humanoid.Markings
 
             foreach (var (key, marking) in MarkingsByCategory(category))
             {
-                if (onlyWhitelisted && marking.SpeciesRestrictions == null)
+                // Afterlight
+                if (!marking.AllSpecies && onlyWhitelisted && marking.SpeciesRestrictions == null)
                 {
                     continue;
                 }
@@ -171,8 +172,9 @@ namespace Content.Shared.Humanoid.Markings
                 return false;
             }
 
+            // Afterlight
             if (proto.MarkingCategory != category ||
-                proto.SpeciesRestrictions != null && !proto.SpeciesRestrictions.Contains(species) ||
+                (!proto.AllSpecies && proto.SpeciesRestrictions != null && !proto.SpeciesRestrictions.Contains(species)) ||
                 proto.SexRestriction != null && proto.SexRestriction != sex)
             {
                 return false;
@@ -204,7 +206,8 @@ namespace Content.Shared.Humanoid.Markings
                 return false;
             }
 
-            if (onlyWhitelisted && prototype.SpeciesRestrictions == null)
+            // Afterlight
+            if (!prototype.AllSpecies && onlyWhitelisted && prototype.SpeciesRestrictions == null)
             {
                 return false;
             }
@@ -230,7 +233,8 @@ namespace Content.Shared.Humanoid.Markings
             var speciesProto = prototypeManager.Index<SpeciesPrototype>(species);
             var onlyWhitelisted = prototypeManager.Index(speciesProto.MarkingPoints).OnlyWhitelisted;
 
-            if (onlyWhitelisted && prototype.SpeciesRestrictions == null)
+            // Afterlight
+            if (!prototype.AllSpecies && onlyWhitelisted && prototype.SpeciesRestrictions == null)
             {
                 return false;
             }

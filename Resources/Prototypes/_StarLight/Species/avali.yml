@@ -18,7 +18,8 @@
   maxAge: 430
   minHeight: 0.8
   defaultHeight: 0.91
-  maxHeight: 1
+  minWidth: 0.725 # afterlight
+  maxHeight: 2 # afterlight
   standardSize: 150 # gives a range of 130-150cm and 27-31kg
   standardWeight: 31
   standardDensity: 11
@@ -41,6 +42,10 @@
     RLeg: MobAvaliRLeg
     LFoot: MobAvaliLFoot
     RFoot: MobAvaliRFoot
+    # Afterlight Start
+    Breasts: MobHumanoidAnyMarking
+    Butts: MobHumanoidAnyMarking
+    # Afterlight End
 
 - type: humanoidBaseSprite
   id: MobAvaliEyes
@@ -81,6 +86,14 @@
     Arms:
       points: 4
       required: false
+    # Afterlight
+    Breasts:
+      points: 1
+      required: false
+    Butts:
+      points: 1
+      required: false
+    # Afterlight
 
 - type: humanoidBaseSprite
   id: MobAvaliHead

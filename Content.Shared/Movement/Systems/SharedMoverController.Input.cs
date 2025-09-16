@@ -1,5 +1,5 @@
 ﻿using System.Numerics;
-using System.Security.Cryptography;
+using Content.Shared._Afterlight.Movement;
 using Content.Shared._Starlight.Actions.Jump;
 using Content.Shared.Alert;
 using Content.Shared.CCVar;
@@ -10,9 +10,6 @@ using Content.Shared.Movement.Events;
 using Robust.Shared.GameStates;
 using Robust.Shared.Input;
 using Robust.Shared.Input.Binding;
-using Robust.Shared.Map.Components;
-using Robust.Shared.Maths;
-using Robust.Shared.Physics;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -101,7 +98,7 @@ namespace Content.Shared.Movement.Systems
             Vector2 vector2 = DirVecForButtons(buttons);
             Vector2i vector2i = new Vector2i((int)vector2.X, (int)vector2.Y);
             Direction dir = (vector2i == Vector2i.Zero) ? Direction.Invalid : vector2i.AsDirection();
-            
+
             var moveEvent = new MoveInputEvent(entity, buttons, dir, buttons != 0);
             entity.Comp.HeldMoveButtons = buttons;
             RaiseLocalEvent(entity, ref moveEvent);
@@ -126,7 +123,7 @@ namespace Content.Shared.Movement.Systems
             // Reset
             entity.Comp.LastInputTick = GameTick.Zero;
             entity.Comp.LastInputSubTick = 0;
-            
+
             Vector2 vector2 = DirVecForButtons(entity.Comp.HeldMoveButtons);
             Vector2i vector2i = new Vector2i((int)vector2.X, (int)vector2.Y);
             Direction dir = (vector2i == Vector2i.Zero) ? Direction.Invalid : vector2i.AsDirection();
@@ -140,6 +137,11 @@ namespace Content.Shared.Movement.Systems
                 var ev = new SpriteMoveEvent(entity.Comp.HasDirectionalMovement);
                 RaiseLocalEvent(entity, ref ev);
             }
+
+            // Afterlight
+            var rotationEv = new ALRelativeRotationChangedEvent();
+            RaiseLocalEvent(entity, ref rotationEv);
+            // Afterlight
         }
 
         private void OnMoverGetState(Entity<InputMoverComponent> entity, ref ComponentGetState args)
@@ -254,6 +256,11 @@ namespace Content.Shared.Movement.Systems
 
             mover.RelativeEntity = relative;
             Dirty(uid, mover);
+
+            // Afterlight
+            var rotationEv = new ALRelativeRotationChangedEvent();
+            RaiseLocalEvent(uid, ref rotationEv);
+            // Afterlight
             return true;
         }
 
@@ -303,6 +310,11 @@ namespace Content.Shared.Movement.Systems
                 entity.Comp.RelativeRotation = Angle.Zero;
                 entity.Comp.LerpTarget = TimeSpan.Zero;
                 Dirty(entity.Owner, entity.Comp);
+
+                // Afterlight
+                var rotationEv = new ALRelativeRotationChangedEvent();
+                RaiseLocalEvent(entity, ref rotationEv);
+                // Afterlight
                 return;
             }
 
@@ -344,11 +356,11 @@ namespace Content.Shared.Movement.Systems
 
             if (!MoverQuery.TryGetComponent(entity, out var moverComp))
                 return;
-            
+
             var moverEntity = new Entity<InputMoverComponent>(entity, moverComp);
 
             // Relay the fact we had any movement event.
-            // TODO: Ideally we'd do these in a tick instead of out of sim.            
+            // TODO: Ideally we'd do these in a tick instead of out of sim.
             var moveEvent = new MoveInputEvent(moverEntity, moverComp.HeldMoveButtons, dir, state);
             RaiseLocalEvent(entity, ref moveEvent);
 

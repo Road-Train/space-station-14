@@ -1,0 +1,5 @@
+- type: holiday
+  id: VoreDay
+  name: holiday-name-vore-day
+  beginDay: 8
+  beginMonth: August

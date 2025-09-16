@@ -1,21 +1,21 @@
 - type: soundCollection
   id: LobbyMusic
   files:
-    - /Audio/Lobby/thunderdome.ogg
-    - /Audio/Lobby/space_asshole.ogg
-    # - /Audio/Lobby/the_wizard.ogg Starlight-edit: does not fall under the definition of "suitable" music
-    - /Audio/Lobby/endless_space.ogg
-    - /Audio/Lobby/singuloose.ogg
-    - /Audio/Lobby/comet_haley.ogg
-    - /Audio/Lobby/title2.ogg
-    - /Audio/Lobby/title3.ogg
-    - /Audio/Lobby/mod.flip-flap.ogg
-    - /Audio/Lobby/Spac_Stac.ogg
-    - /Audio/Lobby/pwmur.ogg
-    - /Audio/Lobby/lasers_rip_apart_the_bulkhead.ogg
-    - /Audio/Lobby/every_light_is_blinking_at_once.ogg
-    - /Audio/Lobby/atomicamnesiammx.ogg
-    - /Audio/Lobby/skubstep.ogg
+    # - /Audio/Lobby/thunderdome.ogg # Afterlight-edit: Freeing out for our curated collection.
+    - /Audio/Lobby/space_asshole.ogg # Afterlight-comment: You can stay. You are based.
+    # - /Audio/Lobby/the_wizard.ogg # Starlight-edit: does not fall under the definition of "suitable" music
+    # - /Audio/Lobby/endless_space.ogg # Afterlight-edit: Freeing out for our curated collection.
+    # - /Audio/Lobby/singuloose.ogg # Afterlight-edit: Freeing out for our curated collection.
+    # - /Audio/Lobby/comet_haley.ogg # Afterlight-edit: Freeing out for our curated collection.
+    # - /Audio/Lobby/title2.ogg # Afterlight-edit: Freeing out for our curated collection.
+    # - /Audio/Lobby/title3.ogg # Afterlight-edit: Freeing out for our curated collection.
+    # - /Audio/Lobby/mod.flip-flap.ogg Afterlight-edit: Freeing out for our curated collection.
+    - /Audio/Lobby/Spac_Stac.ogg # Afterlight-comment: You can stay. You are based.
+    # - /Audio/Lobby/pwmur.ogg # Afterlight-edit: Freeing out for our curated collection.
+    # - /Audio/Lobby/lasers_rip_apart_the_bulkhead.ogg # Afterlight-edit: Freeing out for our curated collection.
+    # - /Audio/Lobby/every_light_is_blinking_at_once.ogg # Afterlight-edit: Freeing out for our curated collection.
+    # - /Audio/Lobby/atomicamnesiammx.ogg # Afterlight-edit: Freeing out for our curated collection.
+    # - /Audio/Lobby/skubstep.ogg # Afterlight-edit: We hate skubstep in this house.
     # Starlight
     - /Audio/_Starlight/Music/Lobby/cosmonaut.ogg
     - /Audio/_Starlight/Music/Lobby/breacher.ogg
@@ -24,3 +24,12 @@
     - /Audio/_Starlight/Music/Lobby/timefracture.ogg
     - /Audio/_Starlight/Music/Lobby/762_treastise.ogg
     - /Audio/_Starlight/Music/Lobby/hull_rupture.ogg
+    # Afterlight
+    - /Audio/_Afterlight/Music/Lobby/gneiss_bluespace.ogg
+    - /Audio/_Afterlight/Music/Lobby/gneiss_codebrain.ogg
+    - /Audio/_Afterlight/Music/Lobby/gneiss_downtown.ogg
+    - /Audio/_Afterlight/Music/Lobby/gneiss_exploring.ogg
+    - /Audio/_Afterlight/Music/Lobby/gneiss_metropolis.ogg
+    - /Audio/_Afterlight/Music/Lobby/gneiss_phoron_industry.ogg
+    - /Audio/_Afterlight/Music/Lobby/gneiss_phoron_leak.ogg
+    - /Audio/_Afterlight/Music/Lobby/gneiss_quantums_escape_plan.ogg

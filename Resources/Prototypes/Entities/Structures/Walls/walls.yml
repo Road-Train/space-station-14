@@ -605,9 +605,9 @@
   - type: Ricochetable
     chance: 0.75
   - type: Sprite
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Afterlight/Structures/Walls/solid.rsi # pulls from _Afterlight
   - type: Icon
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Afterlight/Structures/Walls/solid.rsi # pulls from _Afterlight
     state: rgeneric
   - type: Construction
     graph: Girder
@@ -675,9 +675,9 @@
   suffix: rusted
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Afterlight/Structures/Walls/solid_rust.rsi # pulls from _Afterlight
   - type: Icon
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Afterlight/Structures/Walls/solid_rust.rsi # pulls from _Afterlight
     state: rgeneric
   - type: Construction
     graph: Girder
@@ -715,10 +715,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/reinforced_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/reinforced_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Icon
-    sprite: Structures/Walls/reinforced_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/reinforced_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -1002,13 +1002,13 @@
   name: solid wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Afterlight/Structures/Walls/solid.rsi # Pulls from _Afterlight
   - type: WallReplacementMarker
   - type: Construction
     graph: Girder
     node: wall
   - type: Icon
-    sprite: Structures/Walls/solid.rsi
+    sprite: _Afterlight/Structures/Walls/solid.rsi # Pulls from _Afterlight
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -1046,10 +1046,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/solid_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Icon
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _Afterlight/Structures/Walls/solid_diagonal.rsi # pulls from _Afterlight
     state: state0
   - type: Ricochetable
     chance: 0.4
@@ -1082,9 +1082,9 @@
   suffix: rusted
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Afterlight/Structures/Walls/solid_rust.rsi # Pulls from _Afterlight
   - type: Icon
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Afterlight/Structures/Walls/solid_rust.rsi # Pulls from _Afterlight
     state: full
   - type: Construction
     graph: Girder
@@ -1661,3 +1661,74 @@
   - type: IconSmooth
     key: cobblebricks
     base: cobblebrick
+
+# Cardboard
+
+- type: entity
+  id: Cardwall
+  parent: BaseStructure
+  name: cardboard wall
+  description: Budget cuts are hitting hard.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/pierce.ogg"
+  - type: Tag
+    tags:
+    - Wall
+  - type: Sprite
+    drawdepth: SmallObjects #so bullets pass 'through'
+    sprite: Structures/Walls/card.rsi
+  - type: Icon
+    sprite: Structures/Walls/card.rsi
+    state: full
+  - type: Construction
+    graph: Cardwall
+    node: cardwall
+    deconstructionTarget: start
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Card
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - FlimsyLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80 #excess damage (nuke?). avoid computational cost of spawning entities.
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialCardboard:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: cards
+    base: card
+  - type: Occluder 
+  - type: BlockWeather
+  - type: SunShadowCast

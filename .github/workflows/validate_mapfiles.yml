@@ -9,8 +9,8 @@ on:
 jobs:
   yaml-schema-validation:
     name: YAML map schema validator
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false
-    runs-on: ubuntu-latest
+    if: github.actor != 'Dogborg' && github.event.pull_request.draft == false
+    runs-on: [self-hosted, image-x86-app-docker-ce]
     steps:
     - uses: actions/checkout@v4.2.2
     - name: Setup Submodule
